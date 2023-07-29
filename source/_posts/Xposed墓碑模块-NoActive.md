@@ -1,10 +1,10 @@
 ---
 title: Xposed墓碑模块-NoActive
-date: 2022-04-07 00:28:46
-updated: 2022-04-07 00:28:46
+date: 2022-08-14
+updated: 2022-08-14
 tags:
-banner_img: https://img.xzh.gs/i/2022/08/19/62ffac120d9a5.png #大图
-index_img: https://img.xzh.gs/i/2022/08/19/62ffac120d9a5.png #首页图标
+banner_img: img/uploadfile/202208/30831660473623.png
+index_img: img/uploadfile/202208/30831660473623.png
 ---
 
 ## <i id="声明"></i>声明
@@ -104,12 +104,12 @@ magiskpolicy --live "allow system_server * process {sigstop}"
 - 目录 /data/system/NoActive/log 会出现的两个文件
 1. current.log (本次开机日志)
 2. last.log (上一次开机日志)
-[![](https://bzmshang.top/content/uploadfile/202208/312a1660985666.jpg)](https://bzmshang.top/content/uploadfile/202208/312a1660985666.jpg)
+[![](img/uploadfile/202208/312a1660985666.jpg)](img/uploadfile/202208/312a1660985666.jpg)
 
 ### <i id="如何开启详细日志"></i>5-1. 如何开启详细日志：
 <font color="red">(PS：正常无需开启，一般用于跟作者讨论bug时所需)</font>
 - NoActive版本在2.0+的可以在APP的设置里面打开详细日志这个按钮，并重启
-[![](https://bzmshang.top/content/uploadfile/202210/fc601664966003.jpg)](https://bzmshang.top/content/uploadfile/202210/fc601664966003.jpg)
+[![](img/uploadfile/202210/fc601664966003.jpg)](img/uploadfile/202210/fc601664966003.jpg)
 
 ### <i id="日志级别"></i>5-2. 日志级别：
 1. DEBUG(调试信息)
@@ -121,25 +121,25 @@ magiskpolicy --live "allow system_server * process {sigstop}"
 ### <i id="重载"></i>6-1. 重载：
 - 解释1：挂在后台的应用长时间不打开，等到下次打开，明明后台和进程都还在，但是应用会重新冷启动
 - 解释2：应用卡片依旧存在于多任务界面，切换应用或是亮屏后进入应用（从多任务界面进入或是直接点击应用图标进入），该应用冷启动，丢失离开时的界面
-[![](https://bzmshang.top/content/uploadfile/202210/868b1666883078.gif)](https://bzmshang.top/content/uploadfile/202210/868b1666883078.gif)
+[![](img/uploadfile/202210/868b1666883078.gif)](img/uploadfile/202210/868b1666883078.gif)
 
 ### <i id="闪弹"></i>6-2. 闪弹：
 - 解释1：应用进入后台之后，你再次打开，应用在动画没结束之前闪退，你必须点击第二次，闪弹触发条件不明
 - 解释2：应用卡片依旧存在于多任务界面，切换应用或是亮屏后进入应用（从多任务界面进入或是直接点击应用图标进入），该应用对操作无反应或是短时间内掉出应用界面，打开多任务界面任务卡片丢失，应用将冷启动
 - 其中搜图神器出现的问题就是经典的闪弹
-[![](https://bzmshang.top/content/uploadfile/202210/2a241666765033.gif)](https://bzmshang.top/content/uploadfile/202210/2a241666765033.gif)
+[![](img/uploadfile/202210/2a241666765033.gif)](img/uploadfile/202210/2a241666765033.gif)
 
 ### <i id="内存泄漏"></i>6-3. 内存泄漏：
 - 解释1：当你打开软件，然后清掉后台，重复操作，内存占用会一直累加，等到内存耗尽，就会出现卡顿和死机
 - 解释2：正常情况下杀死应用后会回收应用占用内存（如QQ占用1.7G内存，杀死QQ及其后台以后系统应能空闲出1.7G左右内存），但是内存泄漏情况下杀死应用后内存不会被回收，导致内存占用越来越多。目前仅freezer.v1存在此问题。
 - <font color="red">下图中的只是比较经典的内存泄漏（多生进程），并不代表，这就是内存泄漏的唯一样式</font>
-[![](https://bzmshang.top/content/uploadfile/202210/26851666766142.jpg)](https://bzmshang.top/content/uploadfile/202210/26851666766142.jpg)
+[![](img/uploadfile/202210/26851666766142.jpg)](img/uploadfile/202210/26851666766142.jpg)
 
 ### <i id="掉卡片"></i>6-4. 掉卡片：
 - 解释1：软件进程还在，但是后台卡片被系统清理了
 - 解释2：长时间待机的应用在划出多任务界面后，该应用卡片消失，有可能该应用进程也被杀。
 - <font color="red">下图中以**抖音**为例</font>
-[![](https://bzmshang.top/content/uploadfile/202210/79c91666792638.jpg)](https://bzmshang.top/content/uploadfile/202210/79c91666792638.jpg)
+[![](img/uploadfile/202210/79c91666792638.jpg)](img/uploadfile/202210/79c91666792638.jpg)
 
 ### <i id="所需软件"></i>7. 所需软件：
 1. NoActive：<u>[**`最新内测下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "最新内测下载")</u>、<u>[**`官网`**](https://app.myflv.cn/ "官网")</u>
@@ -152,12 +152,12 @@ magiskpolicy --live "allow system_server * process {sigstop}"
 ## <i id="模块内设置介绍"></i>8. 模块内设置介绍：
 ### <i id="模块设置"></i>8-1. 模块设置：
 - 打开NoActive，并点击右上角的设置 **(如下)**
-[![](https://bzmshang.top/content/uploadfile/202209/03171663724011.jpg)](https://bzmshang.top/content/uploadfile/202209/03171663724011.jpg)
+[![](img/uploadfile/202209/03171663724011.jpg)](img/uploadfile/202209/03171663724011.jpg)
 
 #### <i id="冻结方式"></i>8-1-1. 冻结方式：
 - `v1+`用来 **缓解** 部分系统使用v1造成内存泄露导致手机卡死所使用的冻结模式
 - 其余冻结方式详情请查看<u>[**`冻结方式说明`**](#冻结方式说明)</u>
-[![](https://bzmshang.top/content/uploadfile/202212/e75e1672220923.jpg)](https://bzmshang.top/content/uploadfile/202212/e75e1672220923.jpg)
+[![](img/uploadfile/202212/e75e1672220923.jpg)](img/uploadfile/202212/e75e1672220923.jpg)
 
 #### <i id="提权模式"></i>8-1-2. 提权模式：
 - 使原本NoActive的XP权限提升至ROOT权限
@@ -186,7 +186,7 @@ magiskpolicy --live "allow system_server * process {sigstop}"
 	那么就是
 	D-A-B-C
 	接下来就会解冻D
-[![](https://bzmshang.top/content/uploadfile/202209/b0191663999135.jpg)](https://bzmshang.top/content/uploadfile/202209/b0191663999135.jpg)
+[![](img/uploadfile/202209/b0191663999135.jpg)](img/uploadfile/202209/b0191663999135.jpg)
 
 #### <i id="详细日志"></i>8-1-5. 详细日志：
 - 其实就是开启debug，一般无需开启， **除非作者跟你说你需要开启，才开启**
@@ -206,7 +206,7 @@ magiskpolicy --live "allow system_server * process {sigstop}"
 PS：(每个人使用的APP不一样，所以展示的仅为本人自用的)
 - 在搜索框中搜索QQ，并打开他，在这，就是单独设置QQ（）
 PS：(设置完成即可回到主页面)
-[![](https://bzmshang.top/content/uploadfile/202208/41ea1660543582.jpg)](https://bzmshang.top/content/uploadfile/202208/41ea1660543582.jpg)
+[![](img/uploadfile/202208/41ea1660543582.jpg)](img/uploadfile/202208/41ea1660543582.jpg)
 
 ##### <i id="应用白名单"></i>8-2-1(1). 应用白名单：
 - 让整个应用成为白名单
@@ -218,12 +218,12 @@ PS：(设置完成即可回到主页面)
 	 - 例如使用第三方MiPush的时候就需要他来开关电池优化<u>[**`查看`**](https://bzmshang.top/MiPush-Framework_User-Guide#%E7%94%B5%E6%B1%A0%E4%BC%98%E5%8C%96 "查看")</u>
 - PS：只有白名单情况下可开启
 - QQ
-[![](https://bzmshang.top/content/uploadfile/202210/365d1665990544.jpg)](https://bzmshang.top/content/uploadfile/202210/365d1665990544.jpg)
-[![](https://bzmshang.top/content/uploadfile/202210/4df11665990838.jpg)](https://bzmshang.top/content/uploadfile/202210/4df11665990838.jpg)
+[![](img/uploadfile/202210/365d1665990544.jpg)](img/uploadfile/202210/365d1665990544.jpg)
+[![](img/uploadfile/202210/4df11665990838.jpg)](img/uploadfile/202210/4df11665990838.jpg)
 
 - Play商店
-[![](https://bzmshang.top/content/uploadfile/202210/ada71665990544.jpg)](https://bzmshang.top/content/uploadfile/202210/ada71665990544.jpg)
-[![](https://bzmshang.top/content/uploadfile/202210/81231665990394.jpg)](https://bzmshang.top/content/uploadfile/202210/81231665990394.jpg)
+[![](img/uploadfile/202210/ada71665990544.jpg)](img/uploadfile/202210/ada71665990544.jpg)
+[![](img/uploadfile/202210/81231665990394.jpg)](img/uploadfile/202210/81231665990394.jpg)
 
 ##### <i id="保持连接"></i>8-2-1(2). 保持连接：
 1. ~~网络解冻（MIUI专属）~~
@@ -245,50 +245,50 @@ PS：(设置完成即可回到主页面)
 - 前台服务≠前台窗口
 - 前台服务包括：可以看见窗口、通知栏、可以听到声音看到视频，只要你能凭借感官感知到这个应用在运行，他都是前台服务
 - 图标长相（啥也不显示）
-[![](https://bzmshang.top/content/uploadfile/202210/31361665137564.jpg)](https://bzmshang.top/content/uploadfile/202210/31361665137564.jpg)
+[![](img/uploadfile/202210/31361665137564.jpg)](img/uploadfile/202210/31361665137564.jpg)
 
 ##### <i id="可见窗口"></i>8-2-2(4/2). 可见窗口：
 - 切换应用或回到桌面3s后冻结
 - 可见窗口：范围就很窄了，你看得见的前台窗口(当前界面显示的应用)，系统小窗(反应在oomadj分数上，就是0.1.2的应用)
-[![](https://bzmshang.top/content/uploadfile/202210/295e1665137989.png)](https://bzmshang.top/content/uploadfile/202210/295e1665137989.png)
+[![](img/uploadfile/202210/295e1665137989.png)](img/uploadfile/202210/295e1665137989.png)
 
 - 图标长相
-[![](https://bzmshang.top/content/uploadfile/202210/093e1665137564.jpg)](https://bzmshang.top/content/uploadfile/202210/093e1665137564.jpg)
+[![](img/uploadfile/202210/093e1665137564.jpg)](img/uploadfile/202210/093e1665137564.jpg)
 
 ##### <i id="强制冻结"></i>8-2-2(4/3). 强制冻结：
 - 切换应用或回到桌面0s后冻结（俗称秒冻）
 - 无脑冻结，只要不再当前应用的界面，就直接冻结
 - 猜测是oomadj除了0，全都冻结
 - 图标长相
-[![](https://bzmshang.top/content/uploadfile/202210/afa61665137564.jpg)](https://bzmshang.top/content/uploadfile/202210/afa61665137564.jpg)
+[![](img/uploadfile/202210/afa61665137564.jpg)](img/uploadfile/202210/afa61665137564.jpg)
 
 ##### <i id="进程设置"></i>8-2-1(5). 进程设置：
 - 剩下的就是QQ的进程，我们可以对每一个进程进行单独设置
 - PS：例如：冻结、杀死、白名单(只是单个进程的白名单，跟APP白名单同理)
-[![](https://bzmshang.top/content/uploadfile/202303/d7ac1677723655.jpg)](https://bzmshang.top/content/uploadfile/202303/d7ac1677723655.jpg)
+[![](img/uploadfile/202303/d7ac1677723655.jpg)](img/uploadfile/202303/d7ac1677723655.jpg)
 
 #### <i id="黑白名单介绍"></i>8-2-2. 黑白名单介绍：
 - 用户应用（QQ为例）
 1. 黑名单
-[![](https://bzmshang.top/content/uploadfile/202210/31361664967021.jpg)](https://bzmshang.top/content/uploadfile/202210/31361664967021.jpg)
+[![](img/uploadfile/202210/31361664967021.jpg)](img/uploadfile/202210/31361664967021.jpg)
 2. 白名单
-[![](https://bzmshang.top/content/uploadfile/202210/e12b1664967021.jpg)](https://bzmshang.top/content/uploadfile/202210/e12b1664967021.jpg)
+[![](img/uploadfile/202210/e12b1664967021.jpg)](img/uploadfile/202210/e12b1664967021.jpg)
 
 - 系统应用（谷歌商店为例）
 1. 黑名单
-[![](https://bzmshang.top/content/uploadfile/202210/2e881664967021.jpg)](https://bzmshang.top/content/uploadfile/202210/2e881664967021.jpg)
+[![](img/uploadfile/202210/2e881664967021.jpg)](img/uploadfile/202210/2e881664967021.jpg)
 2. 白名单
-[![](https://bzmshang.top/content/uploadfile/202210/e4d61664967021.jpg)](https://bzmshang.top/content/uploadfile/202210/e4d61664967021.jpg)
+[![](img/uploadfile/202210/e4d61664967021.jpg)](img/uploadfile/202210/e4d61664967021.jpg)
 
 ## <i id="How_to_use_NoActive"></i>9. 如何使用NoActive：
 1. 下载《NoActive》<u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
 2. 安装NoActive，并在LSPosed中，将NoActive的作用域勾选为《系统框架》
-[![](https://bzmshang.top/content/uploadfile/202209/f6521663559631.jpg)](https://bzmshang.top/content/uploadfile/202209/f6521663559631.jpg)
+[![](img/uploadfile/202209/f6521663559631.jpg)](img/uploadfile/202209/f6521663559631.jpg)
 
 3. 在LSPosed勾选玩作用域后，打开NoActive，这时候，就是跳出申请ROOT权限的提示，允许即可
-[![](https://bzmshang.top/content/uploadfile/202209/5f301663725944.jpg)](https://bzmshang.top/content/uploadfile/202209/5f301663725944.jpg)
+[![](img/uploadfile/202209/5f301663725944.jpg)](img/uploadfile/202209/5f301663725944.jpg)
 (<font color="red">如果没有弹出，请自行前往Magisk授予权限</font>)
-[![](https://bzmshang.top/content/uploadfile/202209/a05e1663725944.jpg)](https://bzmshang.top/content/uploadfile/202209/a05e1663725944.jpg)
+[![](img/uploadfile/202209/a05e1663725944.jpg)](img/uploadfile/202209/a05e1663725944.jpg)
 
 4. 重启手机
 > 	 - PS:
@@ -305,15 +305,15 @@ PS：(设置完成即可回到主页面)
 > 1. 使用Scene
 > 	a. 打开Scene
 > 	b. 点击功能，选择进程管理
-> 	[![](https://bzmshang.top/content/uploadfile/202210/ee831664968988.jpg)](https://bzmshang.top/content/uploadfile/202210/ee831664968988.jpg)
+> 	[![](img/uploadfile/202210/ee831664968988.jpg)](img/uploadfile/202210/ee831664968988.jpg)
 > 	c. 在搜索框中搜索《**抖音**》，如果抖音的CPU为0%，则说明冻结成功，反之，则冻结失败
-> 	[![](https://bzmshang.top/content/uploadfile/202210/439a1664968988.jpg)](https://bzmshang.top/content/uploadfile/202210/439a1664968988.jpg)
+> 	[![](img/uploadfile/202210/439a1664968988.jpg)](img/uploadfile/202210/439a1664968988.jpg)
 > 2. Thanox
 > 	a. 打开Thanox
 > 	b. 点击箭头的地方
-> 	[![](https://bzmshang.top/content/uploadfile/202210/7c8d1664968988.jpg)](https://bzmshang.top/content/uploadfile/202210/7c8d1664968988.jpg)
+> 	[![](img/uploadfile/202210/7c8d1664968988.jpg)](img/uploadfile/202210/7c8d1664968988.jpg)
 > 	c. 进来后，找到《**抖音**》，如果抖音的CPU为0%，则说明冻结成功，反之，则冻结失败
-> 	[![](https://bzmshang.top/content/uploadfile/202210/1cf31664968988.jpg)](https://bzmshang.top/content/uploadfile/202210/1cf31664968988.jpg)
+> 	[![](img/uploadfile/202210/1cf31664968988.jpg)](img/uploadfile/202210/1cf31664968988.jpg)
 
 8. 如果冻结成功，请继续第9步，如果冻结失败，请<u>[**`切换冻结方式`**](#Help7)</u>
 9. <font color="Darkgreen">你可以正常使用NoActive了</font>
@@ -321,7 +321,7 @@ PS1：NoActive是不需要保留后台就可以运行的，所以你设置好后
 PS2：其中关于“定时冻结”与“轮番解冻”，建议所有非MIUI系统的都开启该选项，开启后，须重启手机
 PS3：提权模式，如果你将，v1、v2、kill-（19、20）四种冻结方式都使用后，还是冻结失败，你可以开启提权模式再次尝试，该配置须重启
 (PS3-1：关于<u>[**`提权模式`**](#提权模式)</u>)
-[![](https://bzmshang.top/content/uploadfile/202209/cdf01663723844.jpg)](https://bzmshang.top/content/uploadfile/202209/cdf01663723844.jpg)
+[![](img/uploadfile/202209/cdf01663723844.jpg)](img/uploadfile/202209/cdf01663723844.jpg)
 
 ### <i id="Help0"></i>帮助0：白名单使用推荐
 1. `Magiak`(任何版本，包括第三方)
@@ -386,7 +386,7 @@ com.tencent.mobileqq:MSF
 > - 方法4：
 > - 使用`Thanox`的新功能`后台保护`，将自己需要保后台的应用选上
 PS1：这个是新版本才有的功能，如果自己当前版本的`Thanox`没有这个功能，请升级
-[![](https://bzmshang.top/content/uploadfile/202212/165e1672220923.jpg)](https://bzmshang.top/content/uploadfile/202212/165e1672220923.jpg)
+[![](img/uploadfile/202212/165e1672220923.jpg)](img/uploadfile/202212/165e1672220923.jpg)
 PS2：`Thanox`的`后台保护`属于让系统认为该应用在前台运行，会导致墓碑失效，导致在后台冻结失败，所以使用此方法保后台，不建议对大量应用使用
 
 - 重要须知
@@ -426,13 +426,13 @@ binder是系统中负责应用间通讯的，完整版V2在冻结应用时，会
 
 ### <i id="Help7"></i>帮助7：切换冻结方式
 1. 打开NoActive，点击右上角的设置会进入设置界面(如下)
-[![](https://bzmshang.top/content/uploadfile/202209/03171663724011.jpg)](https://bzmshang.top/content/uploadfile/202209/03171663724011.jpg)
+[![](img/uploadfile/202209/03171663724011.jpg)](img/uploadfile/202209/03171663724011.jpg)
 2. 更改冻结方式
 	- 冻结方式，只需右边选择即可
-	[![](https://bzmshang.top/content/uploadfile/202212/e75e1672220923.jpg)](https://bzmshang.top/content/uploadfile/202212/e75e1672220923.jpg)
+	[![](img/uploadfile/202212/e75e1672220923.jpg)](img/uploadfile/202212/e75e1672220923.jpg)
 3. 选择好冻结方式后，就可以重启手机，例如我这换成v2模式的
 <font color="Dark green">冻结方式推荐：API & V2 > Kill -19 & Kill -20 </font>
-[![](https://bzmshang.top/content/uploadfile/202212/ff6a1672220923.jpg)](https://bzmshang.top/content/uploadfile/202212/ff6a1672220923.jpg)
+[![](img/uploadfile/202212/ff6a1672220923.jpg)](img/uploadfile/202212/ff6a1672220923.jpg)
 4. 重启完成后即可
 (PS：<u>[**`如何使用NoActive`**](#如何使用NoActive)</u>的6~9步，讲述的如何确定冻结模式生效)
 
@@ -476,14 +476,14 @@ su
 ```
 ps -A | grep -E "refrigerator|do_freezer|signal"
 ```
-[![](https://bzmshang.top/content/uploadfile/202211/98b11669518520.png)](https://bzmshang.top/content/uploadfile/202211/98b11669518520.png)
+[![](img/uploadfile/202211/98b11669518520.png)](img/uploadfile/202211/98b11669518520.png)
 
 3. 显示所有安卓应用进程的状态信息，无论是否冻结状态
 
 ```
 ps -A | grep u0_a
 ```
-[![](https://bzmshang.top/content/uploadfile/202211/a22a1669518520.png)](https://bzmshang.top/content/uploadfile/202211/a22a1669518520.png)
+[![](img/uploadfile/202211/a22a1669518520.png)](img/uploadfile/202211/a22a1669518520.png)
 
 ### <i id="Help9"></i>帮助9：查询本机支持的冻结模式(Freezerv1/v2)
 - 看前须知
@@ -545,7 +545,7 @@ su
 ```
 cmd greezer ls lsfz
 ```
-[![](https://bzmshang.top/content/uploadfile/202210/6d2e1664968988.png)](https://bzmshang.top/content/uploadfile/202210/6d2e1664968988.png)
+[![](img/uploadfile/202210/6d2e1664968988.png)](img/uploadfile/202210/6d2e1664968988.png)
 
 3. 再接着继续输入以下代码
 
@@ -571,7 +571,7 @@ persist.sys.millet.newversion
 4. 为true则可以使用网络解冻，false则不行
 persist.sys.millet.handshake
 ```
-[![](https://bzmshang.top/content/uploadfile/202210/74501665050098.jpg)](https://bzmshang.top/content/uploadfile/202210/74501665050098.jpg)
+[![](img/uploadfile/202210/74501665050098.jpg)](img/uploadfile/202210/74501665050098.jpg)
 TIP：<font color="red">上图内容，只是**部分内核**支持，不是**所有**内核都可以</font>
 
 5. 如果跟第2步与图片不同或者第三步中的(必须false)不满足，请下载并刷入到Magisk中<u>[**`Millet禁用`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/%E4%BD%9C%E8%80%85%E7%9A%84millet%E9%85%8D%E7%BD%AE%E7%A6%81%E7%94%A8%E6%94%B9%E7%89%883.zip "Millet禁用")</u>

@@ -1,10 +1,10 @@
 ---
 title: Thanox（情景模式）
-date: 2022-04-07 00:28:46
-updated: 2022-04-07 00:28:46
+date: 2022-09-10
+updated: 2022-09-10
 tags:
-banner_img: https://img.xzh.gs/i/2022/08/19/62ffac120d9a5.png
-index_img: https://img.xzh.gs/i/2022/08/19/62ffac120d9a5.png
+banner_img: img/uploadfile/202209/5a3e1663656468.png
+index_img: img/uploadfile/202209/5a3e1663656468.png
 ---
 
 ## <i id="声明"></i>声明

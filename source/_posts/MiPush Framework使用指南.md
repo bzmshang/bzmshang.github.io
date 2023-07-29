@@ -1,8 +1,9 @@
 ---
-title: MiPush Framework使用指南-t
+title: MiPush Framework使用指南
 date: 2022-07-21
 updated: 2022-07-21
-index_img: img/57a41675408064.png
+biannr_img: img/uploadfile/202302/57a41675408064.png
+index_img: img/uploadfile/202302/57a41675408064.png
 ---
 
 ## <i id="声明"></i>声明
@@ -167,17 +168,17 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 
 ### <i id="强制注册"></i>2. 强制注册
 - 具体操作
-[![](https://bzmshang.top/content/uploadfile/202302/b4961676027252.jpg)](https://bzmshang.top/content/uploadfile/202302/b4961676027252.jpg)
+[![](img/uploadfile/202302/b4961676027252.jpg)](img/uploadfile/202302/b4961676027252.jpg)
 
 - 强制注册成功
-[![](https://bzmshang.top/content/uploadfile/202302/d97c1676016787.png)](https://bzmshang.top/content/uploadfile/202302/d97c1676016787.png)
+[![](img/uploadfile/202302/d97c1676016787.png)](img/uploadfile/202302/d97c1676016787.png)
 	 - 如果出现上图情况，基本问题不大，强制停止一次该应用，再打开基本就注册成功了
 	 - 注册成功，能不能推是另外一回事（大部分能注册成功就能推送，除了一些奇葩的，比如：酷安、抖音）
 	 - 咸鱼为例(框出来的是应用包名，每个应用都不一样)
 
 - 强制注册失败
 如果出现下图情况
-[![](https://bzmshang.top/content/uploadfile/202302/00061676016787.png)](https://bzmshang.top/content/uploadfile/202302/00061676016787.png)
+[![](img/uploadfile/202302/00061676016787.png)](img/uploadfile/202302/00061676016787.png)
 	 - Color系统的就没必要关注了，直接去推送服务里面看就行，根据我Color13使用来看，这个提示跟注册成功与否，没有半毛钱关系
 	 - 非Color系统,出现这个，大概率就是注册失败
 
@@ -292,7 +293,7 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 
 ### <i id="使用配置文件后无通知"></i>2. 使用配置文件后无通知
 - 如果使用配置文件后，会话消息无法通知的话，打开相应软件的添加桌面快捷方式的权限试试
-[![](https://bzmshang.top/content/uploadfile/202302/d8ce1676971871.jpg)](https://bzmshang.top/content/uploadfile/202302/d8ce1676971871.jpg)
+[![](img/uploadfile/202302/d8ce1676971871.jpg)](img/uploadfile/202302/d8ce1676971871.jpg)
 
 ### <i id="配置文件起名规范"></i>3. 配置文件起名规范
 - 为什么配置文件里面包名不可以用|或其他字符进行连接？
@@ -324,11 +325,11 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 > 1. `2_后置配置.json`
 > 	- PS：使用任何`2_后置配置_xxx`都需要其配合其使用
 > 2. `2_后置配置_自动提取意图.json`
-> 	- PS1：提取意图即从数据里面提取出 intent[![](https://bzmshang.top/content/uploadfile/202307/47181688821935.png)](https://bzmshang.top/content/uploadfile/202307/47181688821935.png)
+> 	- PS1：提取意图即从数据里面提取出 intent[![](img/uploadfile/202307/47181688821935.png)](img/uploadfile/202307/47181688821935.png)
 > 	- PS2：直观的效果是通知点击的处理逻辑不走推送服务，可以下拉小窗。
 > 	- PS3：与`直接打开意图相`配合：【`直接打开意图是`让通知有可能通过小窗打开，`自动提取意图`是增加这个支持的范围】
 > 3. `2_后置配置_移除通知副标题.json`
-> 	- PS：如图[![](https://bzmshang.top/content/uploadfile/202307/74801688815746.png)](https://bzmshang.top/content/uploadfile/202307/74801688815746.png)
+> 	- PS：如图[![](img/uploadfile/202307/74801688815746.png)](img/uploadfile/202307/74801688815746.png)
 > 4. `2_后置配置_只显示一条消息-白名单.json`
 > 	- PS：
 > 5. `2_后置配置_点击时清理会话通知组-白名单.json`
@@ -342,12 +343,12 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 > 	- PS2：
 > 9. `2_后置配置_将透传消息作为通知显示-白名单.json`
 > 	- PS1：原MiPushFramework的按钮功能，新版改为配置文件实现功能
-> 	- PS2：部分消息为透传消息[![](https://bzmshang.top/content/uploadfile/202307/16321688817897.png)](https://bzmshang.top/content/uploadfile/202307/16321688817897.png)
+> 	- PS2：部分消息为透传消息[![](img/uploadfile/202307/16321688817897.png)](img/uploadfile/202307/16321688817897.png)
 > 	- PS3：<u>[**`什么是透传消息`**](#什么是透传消息)</u>
 > 10. `2_后置配置_屏蔽运营消息-白名单.json`
 > 11. `2_后置配置_屏蔽运营消息-黑名单.json`
 > 	- PS1：运营消息一般为广告通知，在MiPush中有专门的通知渠道，该配置将会把所有运营消息渠道的通知全部拦截，即MiPush不通知运营消息渠道的消息
-> 	- PS2：该配置属于全局拦截，有些APP例如抖音等，运营消息发送的是正常的消息，所以，自行斟酌使用黑/白名单[![](https://bzmshang.top/content/uploadfile/202307/861e1688816846.jpg)](https://bzmshang.top/content/uploadfile/202307/861e1688816846.jpg)
+> 	- PS2：该配置属于全局拦截，有些APP例如抖音等，运营消息发送的是正常的消息，所以，自行斟酌使用黑/白名单[![](img/uploadfile/202307/861e1688816846.jpg)](img/uploadfile/202307/861e1688816846.jpg)
 > 12. `2_后置配置_直接打开意图-白名单.json`
 > 13. `2_后置配置_直接打开意图-黑名单.json`
 > 	- PS1：直接打开意图可以理解为使用小窗打开该APP
@@ -403,19 +404,19 @@ PS:待继续完善
 - 没有相应参数的时候就是用首字作为头像
 
 ### <i id="为什么我没有推送服务几个字"></i>2. 为什么我没有推送服务几个字
-[![](https://bzmshang.top/content/uploadfile/202302/ff041676027895.png)](https://bzmshang.top/content/uploadfile/202302/ff041676027895.png)
+[![](img/uploadfile/202302/ff041676027895.png)](img/uploadfile/202302/ff041676027895.png)
 - 没用MiPush模块勾选系统框架且能推送才这么显示
 
 ### <i id="通知渠道"></i>3. 通知渠道
 - 只有推送过相关消息才有，不是注册完就有了，下图QQ为例
-[![](https://bzmshang.top/content/uploadfile/202302/69a21676186811.jpg)](https://bzmshang.top/content/uploadfile/202302/69a21676186811.jpg)
+[![](img/uploadfile/202302/69a21676186811.jpg)](img/uploadfile/202302/69a21676186811.jpg)
 
 ### <i id="铃声/悬浮通知"></i>4. 铃声/悬浮通知
 - 怎么开启悬浮通知(QQ群聊消息为例)
-[![](https://bzmshang.top/content/uploadfile/202302/d3c11676187466.jpg)](https://bzmshang.top/content/uploadfile/202302/d3c11676187466.jpg)
+[![](img/uploadfile/202302/d3c11676187466.jpg)](img/uploadfile/202302/d3c11676187466.jpg)
 
 - 操作方法
-[![](https://bzmshang.top/content/uploadfile/202302/faad1676202329.jpg)](https://bzmshang.top/content/uploadfile/202302/faad1676202329.jpg)
+[![](img/uploadfile/202302/faad1676202329.jpg)](img/uploadfile/202302/faad1676202329.jpg)
 
 ### <i id="无法收到推送"></i>5. 无法收到推送
 - 如果您无法收到任何推送，请按以下方法排查：
@@ -434,14 +435,14 @@ PS:待继续完善
 	 1. MIUI会折叠一些推送消息，归类为不重要通知
 	 2. 但是根据缘由来看，消息就 ≈ 无了
 	 3. 所以要全部设置通知为重要
-[![](https://bzmshang.top/content/uploadfile/202302/9fdd1676971050.jpg)](https://bzmshang.top/content/uploadfile/202302/9fdd1676971050.jpg)
+[![](img/uploadfile/202302/9fdd1676971050.jpg)](img/uploadfile/202302/9fdd1676971050.jpg)
 
 - 操作：
 	 1. 通知过滤规则设成重要
 		 - 否则有推送消息记录，通知栏因缘由被吞
 		 - 把不重要消息的收纳栏显示出来了
 	 - 如果默认还不出现在通知栏。去MIUI原生通知图标那可以开启收纳栏
-[![](https://bzmshang.top/content/uploadfile/202302/13651676970319.jpg)](https://bzmshang.top/content/uploadfile/202302/13651676970319.jpg)
+[![](img/uploadfile/202302/13651676970319.jpg)](img/uploadfile/202302/13651676970319.jpg)
 
 ### <i id="如何解决QQ只显示最新一条消息"></i>7. 如何解决QQ只显示最新一条消息
 - **注意：下面两种办法不要同时使用，可能会有bug**
@@ -449,17 +450,17 @@ PS:待继续完善
 	 - <u>[**`应用配置`**](#应用配置)</u>中的关于QQ的拉满，简单粗暴
 2. 不推荐堆叠开关
 	 - 在推送服务里面设置QQ堆叠(新版已将开关改为配置文件)
-[![](https://bzmshang.top/content/uploadfile/202302/2a9a1676984515.png)](https://bzmshang.top/content/uploadfile/202302/2a9a1676984515.png)
+[![](img/uploadfile/202302/2a9a1676984515.png)](img/uploadfile/202302/2a9a1676984515.png)
 
 ### <i id="通知上的按钮"></i>8. 通知上的按钮
 - 如果遇到下图中类似的按钮，且不喜欢的，请换用release版本
 - 推送服务v0.3.9+，该功能做成开关了，默认关闭的
-[![](https://bzmshang.top/content/uploadfile/202302/e6ca1675765006.jpg)](https://bzmshang.top/content/uploadfile/202302/e6ca1675765006.jpg)
-[![](https://bzmshang.top/content/uploadfile/202302/2a611675765006.jpg)](https://bzmshang.top/content/uploadfile/202302/2a611675765006.jpg)
+[![](img/uploadfile/202302/e6ca1675765006.jpg)](img/uploadfile/202302/e6ca1675765006.jpg)
+[![](img/uploadfile/202302/2a611675765006.jpg)](img/uploadfile/202302/2a611675765006.jpg)
 
 ### <i id="关闭-推送服务运行中"></i>9. 关闭-推送服务运行中
 - 进入推送服务的系统通知设置界面，关闭status组通知，强行停止推送服务
-[![](https://bzmshang.top/content/uploadfile/202303/d0131679626729.jpg)](https://bzmshang.top/content/uploadfile/202303/d0131679626729.jpg)
+[![](img/uploadfile/202303/d0131679626729.jpg)](img/uploadfile/202303/d0131679626729.jpg)
 
 ### <i id="通知数量"></i>10. 通知数量
 - 每个 APP 的通知同时显示数量是有上限的，可能是50，可能是24。
@@ -503,7 +504,7 @@ PS:待继续完善
 
 ## <i id="权限"></i>权限
 ### <i id="修改权限"></i>1. 修改权限
-[![](https://bzmshang.top/content/uploadfile/202302/50cd1676984120.png)](https://bzmshang.top/content/uploadfile/202302/50cd1676984120.png)
+[![](img/uploadfile/202302/50cd1676984120.png)](img/uploadfile/202302/50cd1676984120.png)
 
 - 该目录里面的所有开关，无特殊需求，默认即可，无需开关
 - 如果非要开关，除非你明白它的含义
@@ -638,7 +639,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 		 - 若一直为尚未注册，可以试试<u>[**`强制注册`**](#强制注册)</u>
 		 - 则尝试使用MiPushDeviceFake或MiPushfaker，倘若变成注册失败，请看下面
 	 - 注册失败
-		 [![](https://bzmshang.top/content/uploadfile/202302/bb401675496609.png)](https://bzmshang.top/content/uploadfile/202302/bb401675496609.png)
+		 [![](img/uploadfile/202302/bb401675496609.png)](img/uploadfile/202302/bb401675496609.png)
 
 ### <i id="QQ注册-不推送"></i>1-2. QQ注册-不推送
 - 注册成功后，需要重启注册应用，切记
@@ -647,7 +648,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 3. 使用墓碑，来迫使QQ走推送通道
 > - 如果使用墓碑后QQ推送，仍不走MiPush，可以使用Thanox或者Scene来配合
 > 1. 使用`Thanox`情景模式中Process trim(可从`Thanox`的示例中导入)，然后添加全局变量：process_trim_list，并添加QQ的推送服务MSF，如图所示
-> [![](https://bzmshang.top/content/uploadfile/202302/ecad1675932698.jpg)](https://bzmshang.top/content/uploadfile/202302/ecad1675932698.jpg)
+> [![](img/uploadfile/202302/ecad1675932698.jpg)](img/uploadfile/202302/ecad1675932698.jpg)
 > 2. 使用`Scene`的应用偏见，直接选择QQ即可
 
 ### <i id="QQ无法接通QQ推送电话"></i>1-3. QQ无法接通QQ推送电话
@@ -698,7 +699,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 	- Tip1：酷安注册很容易，难就难在注册成功不推送，所以，使用内置版的13.0.1酷安注册成功后，划卡酷安，测试推送，如果刚注册完，划卡推送没用，重启手机并打开酷安，再次测试
 	- Tip2：如果不行，也对酷安隐藏root后再启动酷安进行注册推送
 	- Tip3：(需要ROOT)如果你推送没有问题了，且不喜欢修改的酷安，可以通过核心破解并打开图中功能，进行酷安版本切换
-[![](https://bzmshang.top/content/uploadfile/202302/56f01676008356.jpg)](https://bzmshang.top/content/uploadfile/202302/56f01676008356.jpg)
+[![](img/uploadfile/202302/56f01676008356.jpg)](img/uploadfile/202302/56f01676008356.jpg)
 
 ### <i id="抖音注册-推送"></i>3-1. 抖音注册-推送
 - 方法由群友<u>[wyj809](http://www.coolapk.com/u/21035894 "wyj809")</u>提出
