@@ -7,6 +7,15 @@ banner_img: img/uploadfile/202205/87db1653372754.png
 index_img: img/uploadfile/202205/87db1653372754.png
 ---
 
+# <i id="教程版本"></i>教程版本
+```
+ver=v4.2.1
+
+latest-update=2023.03.03
+
+以下内容全文为米窗激活教程，请告诉给有需要的人
+```
+
 ## <i id="声明"></i>声明
 阅读须知：
 > 1. 本文分为《简略版》跟《详细版》

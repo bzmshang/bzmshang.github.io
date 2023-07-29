@@ -7,6 +7,15 @@ banner_img: img/uploadfile/202205/87db1653372754.png
 index_img: img/uploadfile/202205/87db1653372754.png
 ---
 
+# <i id="教程版本"></i>教程版本
+```
+ver=v0.0.6
+
+latest-update=2023.04.22
+
+以下内容全文为米窗的介绍与使用，请分享给有需要的人
+```
+
 ## <i id="声明"></i>声明
 > 1. 本文档
 > 	 - 依据米窗版本:`v2.5.18`

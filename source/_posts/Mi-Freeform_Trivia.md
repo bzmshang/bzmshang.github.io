@@ -7,6 +7,15 @@ banner_img: img/uploadfile/202205/87db1653372754.png
 index_img: img/uploadfile/202205/87db1653372754.png
 ---
 
+# 帮助版本
+```
+ver=v2.2.1
+
+latest-update=2023.02.07
+
+以下内容全文为米窗小知识，请传给有需要的人
+```
+
 ## 关于米窗常见问题
 ### 问题1：如何激活米窗
 - 请查看<u>[**`米窗激活教程`**](https://bzmshang.top/Mi-Freeform_activation "米窗激活教程")</u>

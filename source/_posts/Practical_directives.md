@@ -7,6 +7,14 @@ banner_img: img/uploadfile/202302/c9241675755393.jpg
 index_img: img/uploadfile/202302/c9241675755393.jpg
 ---
 
+# <i id="用指令版本"></i>实用指令版本
+```
+ver=v0.0.7
+
+latest-update=2023.03.08
+
+```
+
 ## <i id="声明"></i>声明
 -  本文所有内容皆为网上收集
 

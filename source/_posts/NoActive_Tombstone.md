@@ -7,6 +7,15 @@ banner_img: img/uploadfile/202208/30831660473623.png
 index_img: img/uploadfile/202208/30831660473623.png
 ---
 
+# <i id="文档版本"></i>文档版本
+```
+ver=v2.9.6
+
+latest-update=2023.06.17
+
+以下内容全文为NoActive的介绍与使用，请分享给有需要的人
+```
+
 ## <i id="声明"></i>声明
 > 1. 本文档
 > 	 - 依据NoActive版本:`v2.9-Alpha(282)`<u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
