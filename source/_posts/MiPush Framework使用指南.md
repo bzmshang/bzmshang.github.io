@@ -1,10 +1,19 @@
 ---
 title: MiPush Framework使用指南
-date: 2022-07-21
-updated: 2022-07-21
+permalink: MiPush-Framework_User-Guide.html
+date: 2023-02-03
 biannr_img: img/uploadfile/202302/57a41675408064.png
 index_img: img/uploadfile/202302/57a41675408064.png
 ---
+
+# <i id="指南版本"></i>指南版本
+```
+ver=v0.7.1
+
+latest-update=2022.07.21
+
+以下内容全文为MiPush Framework使用指南，请分享给有需要的人
+```
 
 ## <i id="声明"></i>声明
 > 1. 本文档

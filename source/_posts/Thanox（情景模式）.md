@@ -1,11 +1,21 @@
 ---
 title: Thanox（情景模式）
+permalink: Thanox_SceneModel.html
 date: 2022-09-10
-updated: 2022-09-10
 tags:
 banner_img: img/uploadfile/202209/5a3e1663656468.png
 index_img: img/uploadfile/202209/5a3e1663656468.png
 ---
+
+# <i id="情景模式版本"></i>情景模式版本
+```
+ver=v0.2.7
+
+latest-update=2023.06.02
+
+以下内容全文为Thanox的情景模式收集，请告诉给有需要的人
+
+```
 
 ## <i id="声明"></i>声明
 > 1. 下面所有的情景模式皆为 JSON 格式
