@@ -1,11 +1,9 @@
-# <i id="指南版本"></i>指南版本
-```
-ver=v0.7.1
-
-latest-update=2022.07.21
-
-以下内容全文为MiPush Framework使用指南，请分享给有需要的人
-```
+---
+title: MiPush Framework使用指南-t
+date: 2022-07-21
+updated: 2022-07-21
+index_img: img/57a41675408064.png
+---
 
 ## <i id="声明"></i>声明
 > 1. 本文档
