@@ -6,7 +6,6 @@ tags:
 banner_img: img/uploadfile/202208/30831660473623.png
 index_img: img/uploadfile/202208/30831660473623.png
 ---
-
 # <i id="文档版本"></i>文档版本
 ```
 ver=v2.9.6
