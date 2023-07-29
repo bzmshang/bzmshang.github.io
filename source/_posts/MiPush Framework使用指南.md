@@ -1,7 +1,7 @@
 ---
 title: MiPush Framework使用指南
-permalink: MiPush-Framework_User-Guide.html
-date: 2023-02-03
+date: 2022-07-21
+updated: 2022-07-21
 biannr_img: img/uploadfile/202302/57a41675408064.png
 index_img: img/uploadfile/202302/57a41675408064.png
 ---
