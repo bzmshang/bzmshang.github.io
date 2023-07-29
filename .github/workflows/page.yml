@@ -1,4 +1,4 @@
-name: Hexo Deploy Automatically
+name: Hexo Deploy 
 
 on: [push]
 
