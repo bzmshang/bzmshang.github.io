@@ -9,9 +9,9 @@ index_img: img/uploadfile/202209/5a3e1663656468.png
 
 # <i id="情景模式版本"></i>情景模式版本
 ```
-ver=v0.2.7
+ver=v0.2.8
 
-latest-update=2023.06.02
+latest-update=2023.07.30
 
 以下内容全文为Thanox的情景模式收集，请告诉给有需要的人
 
@@ -181,6 +181,66 @@ latest-update=2023.06.02
 ]
 ```
 
+### <i id="应用被杀死，则移除卡片"></i>1-9. 应用被杀死，则移除卡片
+- <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
+- 应用被后台杀死，记录被杀死的应用和被杀死的时间到日志文件里。该情景模式不记录你自己划走卡片杀死的应用，只记录在最近任务里被后台杀死的应用。如何查看？日志文件路径"/data/system/thanos_ynokiMHEVHZWWdDH/profile_user_io/kill/killLog.txt"，打开日志文件即可查看。代码如下，请用情景模式json编写。
+```
+[
+{
+"name": "应用被杀死，则移除卡片",
+"description": "应用被后台杀死时，移除卡片，历史写入日志",
+"priority": 1,
+"condition": "pkgKilled == true && globalVarOf$s_app.contains(pkgName) && task.hasTaskFromPackage(pkgName)",
+"actions": [
+"task.removeTasksForPackage(pkgName);",
+"io.writeAppend(\"kill/killLog.txt\",pkgName+\"应用被后台杀死，移除卡片，移除时间:\"+ new java.util.Date() +\"\\r\")"
+]
+}
+]
+```
+
+### <i id="开机工作"></i>1-10. 开机工作
+- <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
+- 开机划掉没有运行的卡片，并且删除旧日志，同时后台开启一些需要自启动的应用。使用方法，全局变量: all_app 是开机后需要在最近任务划掉的应用集; ziqidong 是开机需要后台启动的应用集。代码如下:
+
+```
+[
+{
+"name": "开机工作",
+"description": "开机自启动一些程序，来自变量名ziqidong，划掉除去变量all_app的卡片，此变量除去了微信，删除一些日志",
+"priority": 3,
+"condition": "systemReady == true",
+"delay": 1000,
+"actions": [
+"foreach (pkn : globalVarOf$all_app){task.removeTasksForPackage(pkn);}",
+"ui.showShortToast(\"清理卡片完成\")",
+"foreach (zq : globalVarOf$ziqidong){activity.launchProcessForPackage(zq)}",
+"ui.showShortToast(\"自启动应用完成\")",
+"io.write(\"kill/killLog.txt\", \"本次启动时间:\" + new java.util.Date() + \"\\r\")",
+"ui.showShortToast(\"重置日志完成\")"
+]
+}
+]
+```
+
+### <i id="游戏时清理部分后台"></i>1-11. 游戏时清理部分后台
+- <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
+- 游戏时清理一些顽固后台，变量notNitian_apps放需要被杀的应用，注意该应用如果在最近任务，将不会被杀。变量qlapps是你要打卡的游戏应用或其他应用。代码如下:
+
+```
+[
+{
+"name": "游戏时清理部分后台",
+"description": "游戏时清理部分不在卡片的后台",
+"priority": 2,
+"condition": "frontPkgChanged=true && globalVarOf$qlapps.contains(to)",
+"actions": [
+"ui.showShortToast(\"清理一些后台中\");",
+"foreach (pkn : globalVarOf$notNitian_apps) {if (su.exe('pidof ' + pkn).out != [] && ! task.hasTaskFromPackage(pkn)) {su.exe(\"kill -15 $(ps -ATf | grep \" + pkn + \" | grep -v grep | awk '{print $2}' | sort | uniq)\");};}"
+]
+}
+]
+```
 
 ## <i id="保活"></i>2. 保活
 ### <i id="应用保活(方案1)"></i>2-1. 应用保活(方案1)
@@ -191,17 +251,17 @@ latest-update=2023.06.02
 
 ```
 [
-    {
-    "name": "应用保活",
-    "description": "应用被杀死则启动其进程",
-    "priority": 1,
-    "condition": "pkgKilled == true && globalVarOf$baohuo.contains(pkgName)",
-    "delay": 1000,
-    "actions": [
-    "activity.launchProcessForPackage(pkgName)",
-    "ui.showShortToast(\"启动了:\" + pkgName)"
-        ]
-    }
+{
+"name": "应用保活",
+"description": "应用被杀死则启动其进程",
+"priority": 1,
+"condition": "pkgKilled == true && globalVarOf$baohuo.contains(pkgName)",
+"delay": 1000,
+"actions": [
+"activity.launchProcessForPackage(pkgName)",
+"ui.showShortToast(\"启动了:\" + pkgName)"
+]
+}
 ]
 ```
 
@@ -292,6 +352,24 @@ latest-update=2023.06.02
 "actions": [
 "su.exe('settings put secure enabled_accessibility_services 无障碍服务名1:服务名2:服务名3');",
 "ui.showShortToast(\"[无障碍已启动]\")"
+]
+}
+]
+```
+
+### <i id="一键启动很多应用"></i>2-7. 一键启动很多应用
+- <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
+- 一键启动很多很多应用，每隔4秒启动一个应用，把需要启动的应用放在变量 hd 里面，新建一个qdyy 的快捷应用连接，快捷名字随意。代码如下:
+
+```
+[
+{
+"name": "一键启动很多应用",
+"description": "监听一个快捷方式启动事件",
+"priority": -1,
+"condition": "shortcutLaunched == true && shortcutValue == \"qdyy\"",
+"actions": [
+"foreach (pkn : globalVarOf$hd){ui.showShortToast(\"启动中\");Thread.sleep(4000);activity.launchMainActivityForPackage(pkn)}"
 ]
 }
 ]
@@ -1201,8 +1279,27 @@ done
 ]
 ```
 
-## <i id="管家流"></i>16. 管家流
-### <i id="多后台管家"></i>16-1. 多后台管家
+## <i id="屏幕"></i>16. 屏幕
+## <i id="开关屏日志"></i>16-1. 开关屏日志
+- <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
+- 开关屏日志，该情景模式记录你开屏和关屏的时间到日志里，这样你可以更直观的知道应用是在亮屏时候杀死的还是灭屏后杀死的。日志文件路径"/data/system/thanos_ynokiMHEVHZWWdDH/profile_user_io/kill/killLog.txt"，打开日志文件即可查看。代码如下，请用情景模式json编写。
+
+```
+[
+{
+"name": "开关屏日志",
+"description": "冻结对象来自dongjie变量",
+"priority": 1,
+"condition": "if(screenOff == true){io.writeAppend(\"kill/killLog.txt\",\"手机在此时间关屏:\"+ new java.util.Date() +\"\\r\")}else if(screenOn== true || userPresent == true){io.writeAppend(\"kill/killLog.txt\",\"手机在此时间打开屏幕:\"+ new java.util.Date() +\"\\r\")}",
+"actions": [
+""
+]
+}
+]
+```
+
+## <i id="管家流"></i>17. 管家流
+### <i id="多后台管家"></i>17-1. 多后台管家
 群里有教程，等我旅游完也写一份
 <details>
 <summary>点击查看</summary>

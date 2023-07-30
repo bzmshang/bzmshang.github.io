@@ -50,6 +50,12 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 - MIUI是自带小米推送的，如果为了通知自定义使用这个第三方的MiPush，需要先使用模块精简原有的小米服务框架
 - 使用Delta版面具，请不要开强制使用超级用户列表，会导致精简模块失效
 
+###  <i id="关于新版本"></i>4. 关于新版本
+- 此部分待定(预计8月中旬更新)
+> 提示1：推荐将推送服务安装为系统应用，拥有系统应用身份能让所有应用检测到推送服务
+> 提示2：MIUI 下，使用核心破解安装即可，不需要精简，安装完后推送服务带有系统应用身份
+> 提示3：version code 修改后，若触发注册失败，自行将 version code 修改至 105 使用
+
 ## <i id="指南"></i>指南
 ### <i id="MiPush使用教程-ROOT"></i>1. MiPush使用教程-ROOT
 - 图文版：<u>[**`查看`**](https://www.coolapk.com/feed/41357294?shareKey=ZmQ2MWNhZTgxMzI4NjNjYjlmODk~&shareUid=330645&shareFrom=com.coolapk.market_12.4.2 "查看")</u>
