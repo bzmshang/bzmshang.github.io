@@ -9,9 +9,9 @@ index_img: img/uploadfile/202209/5a3e1663656468.png
 
 # <i id="情景模式版本"></i>情景模式版本
 ```
-ver=v0.2.8
+ver=v0.2.9
 
-latest-update=2023.07.30
+latest-update=2023.07.31
 
 以下内容全文为Thanox的情景模式收集，请告诉给有需要的人
 
@@ -237,6 +237,25 @@ latest-update=2023.07.30
 "actions": [
 "ui.showShortToast(\"清理一些后台中\");",
 "foreach (pkn : globalVarOf$notNitian_apps) {if (su.exe('pidof ' + pkn).out != [] && ! task.hasTaskFromPackage(pkn)) {su.exe(\"kill -15 $(ps -ATf | grep \" + pkn + \" | grep -v grep | awk '{print $2}' | sort | uniq)\");};}"
+]
+}
+]
+```
+
+### <i id="应用被杀，自动复活"></i>1-12. 应用被杀，自动复活
+- 来自酷友提供<u>[**`eriswu`**](http://www.coolapk.com/u/21207768 "**`eriswu`**")</u>
+
+```
+[
+{
+"name": "All Start app process",
+"description": "检测到应用被杀死时，启动该应用进程,全局变量JCFH，作者eriswu提供代码",
+"priority": 1,
+"condition": "pkgKilled == true && globalVarOf$JCFH.contains(pkgName)",
+"delay": 5000,
+"actions": [
+"ui.showShortToast(\"Process resurrection👻\");",
+"activity.launchProcessForPackage(pkgName)"
 ]
 }
 ]
