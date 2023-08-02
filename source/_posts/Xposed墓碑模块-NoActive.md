@@ -9,9 +9,9 @@ index_img: img/uploadfile/202208/30831660473623.png
 
 # <i id="文档版本"></i>文档版本
 ```
-ver=v2.9.6
+ver=v2.9.7
 
-latest-update=2023.06.17
+latest-update=2023.08.02
 
 以下内容全文为NoActive的介绍与使用，请分享给有需要的人
 ```
@@ -222,6 +222,7 @@ PS：(设置完成即可回到主页面)
 - PS：就是NoActvie不对QQ做任何操作
 
 ##### <i id="电池优化"></i>8-2-1(1/1). 电池优化：
+- Tip：NoActive只要安装并激活后，就会接管`电池优化`
 - 想要不限制应用又想优化续航
 - 此功能在激活NoActive后，就会接管系统的电池优化
 	 - 例如使用第三方MiPush的时候就需要他来开关电池优化<u>[**`查看`**](https://bzmshang.top/MiPush-Framework_User-Guide#%E7%94%B5%E6%B1%A0%E4%BC%98%E5%8C%96 "查看")</u>
