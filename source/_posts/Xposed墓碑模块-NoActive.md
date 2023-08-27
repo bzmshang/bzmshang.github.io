@@ -18,7 +18,7 @@ latest-update=2023.08.02
 
 ## <i id="声明"></i>声明
 > 1. 本文档
-> 	 - 依据NoActive版本:`v2.9-Alpha(282)`<u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
+> 	 - 依据NoActive版本:`v2.9-Alpha(282)`<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
 > 	 - 依据设备：`一加9PRO Color13`
 > 2. 本文档是借鉴<u>[**`NoActive墓碑Xposed模块`**](https://www.myflv.cn/mobile/282.html "NoActive墓碑Xposed模块")</u>究极改良
 > 3. 如搬运本文档的任何内容，请说明文档来源
@@ -49,9 +49,9 @@ latest-update=2023.08.02
 ### <i id="电量和性能"></i>2-2. 电量和性能(MIUI专属)：
 -  以下是`NoActive` 跟 `NoActive Plugin` Hook `电量和性能`的作用
 1. NoActive：防止夜间后台掉卡片
-	 - <u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
+	 - <u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
 2. NoActive Plugin：防止杀掉后台
-	 - <u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/NoActive+Plugin_1.0.apk "下载")</u>
+	 - <u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive+Plugin_1.0.apk "下载")</u>
 - PS：`NoActive` 跟 `NoActive Plugin` Hook `电量和性能`不与任何模块冲突
 ## <i id="冻结方式说明"></i>3. 冻结方式说明：
 - 目前Linux进程冻结方式有：
@@ -151,7 +151,7 @@ magiskpolicy --live "allow system_server * process {sigstop}"
 [![](img/uploadfile/202210/79c91666792638.jpg)](img/uploadfile/202210/79c91666792638.jpg)
 
 ### <i id="所需软件"></i>7. 所需软件：
-1. NoActive：<u>[**`最新内测下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "最新内测下载")</u>、<u>[**`官网`**](https://app.myflv.cn/ "官网")</u>
+1. NoActive：<u>[**`最新内测下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "最新内测下载")</u>、<u>[**`官网`**](https://app.myflv.cn/ "官网")</u>
 2. MT管理器：<u>[**`官网`**](https://mt2.cn/ "MT管理器")</u>
 3. 查看CPU占比：
 > 1. Scene：<u>[**`酷安下载`**](https://www.coolapk.com/apk/com.omarea.vtools "酷安下载")</u>
@@ -225,7 +225,7 @@ PS：(设置完成即可回到主页面)
 - Tip：NoActive只要安装并激活后，就会接管`电池优化`
 - 想要不限制应用又想优化续航
 - 此功能在激活NoActive后，就会接管系统的电池优化
-	 - 例如使用第三方MiPush的时候就需要他来开关电池优化<u>[**`查看`**](https://bzmshang.top/MiPush-Framework_User-Guide#%E7%94%B5%E6%B1%A0%E4%BC%98%E5%8C%96 "查看")</u>
+	 - 例如使用第三方MiPush的时候就需要他来开关电池优化<u>[**`查看`**](https://blog.bzmshang.top/MiPush-Framework_User-Guide#%E7%94%B5%E6%B1%A0%E4%BC%98%E5%8C%96 "查看")</u>
 - PS：只有白名单情况下可开启
 - QQ
 [![](img/uploadfile/202210/365d1665990544.jpg)](img/uploadfile/202210/365d1665990544.jpg)
@@ -291,7 +291,7 @@ PS：(设置完成即可回到主页面)
 [![](img/uploadfile/202210/e4d61664967021.jpg)](img/uploadfile/202210/e4d61664967021.jpg)
 
 ## <i id="How_to_use_NoActive"></i>9. 如何使用NoActive：
-1. 下载《NoActive》<u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
+1. 下载《NoActive》<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/官方版/NoActive-2.9-Alpha(282).apk "下载")</u>
 2. 安装NoActive，并在LSPosed中，将NoActive的作用域勾选为《系统框架》
 [![](img/uploadfile/202209/f6521663559631.jpg)](img/uploadfile/202209/f6521663559631.jpg)
 
@@ -302,7 +302,7 @@ PS：(设置完成即可回到主页面)
 
 4. 重启手机
 > 	 - PS:
-> 1. 如果是MIUI系统需在重启前多一步，刷入<u>[**`Millet禁用`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/%E4%BD%9C%E8%80%85%E7%9A%84millet%E9%85%8D%E7%BD%AE%E7%A6%81%E7%94%A8%E6%94%B9%E7%89%883.zip "Millet禁用")</u>，NoActive默认是禁用Millet的，但是my写NoActive的时候是基于米10开发版7月那一版，所以后面版本的MIUI都需要刷入Millet禁用(NoActive的理念就是干掉Millet，所以没有所谓的启用Millet，想启用可以试试f19没有新欢的MiT Lite，<u>[下载官网](mitlite.tf19.co "下载官网")</u>)
+> 1. 如果是MIUI系统需在重启前多一步，刷入<u>[**`Millet禁用`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/%E4%BD%9C%E8%80%85%E7%9A%84millet%E9%85%8D%E7%BD%AE%E7%A6%81%E7%94%A8%E6%94%B9%E7%89%883.zip "Millet禁用")</u>，NoActive默认是禁用Millet的，但是my写NoActive的时候是基于米10开发版7月那一版，所以后面版本的MIUI都需要刷入Millet禁用(NoActive的理念就是干掉Millet，所以没有所谓的启用Millet，想启用可以试试f19没有新欢的MiT Lite，<u>[下载官网](mitlite.tf19.co "下载官网")</u>)
 > 2. 如果重启手你设置的配置没有了，请看<u>[**`帮助3`**](#Help3 "帮助3")</u>)
 
 5. 因为NoActive默认第三方APP都是黑名单，所以打开NoActive，并(**强烈建议**)将以下软件添加至白名单<u>[**`查看帮助0`**](#Help0 "查看帮助14")、</u>（不了解黑白名单请看<u>[**`黑白名单介绍`**](#黑白名单介绍)</u>）
@@ -362,7 +362,7 @@ com.tencent.mobileqq
 com.tencent.mobileqq:MSF
 ```
 > 3. 将QQ黑名单，使用MiPush/Hms推送
-> 	 - 关于MiPush推送，可以查阅<u>[**`MiPush Framework使用指南`**](https://bzmshang.top/MiPush-Framework_User-Guide "MiPush Framework使用指南")</u>
+> 	 - 关于MiPush推送，可以查阅<u>[**`MiPush Framework使用指南`**](https://blog.bzmshang.top/MiPush-Framework_User-Guide "MiPush Framework使用指南")</u>
 
 6. `需要自启动的第三方APP`
 > Color中最常用的模块`Luckytools`，由于他有部分功能，例如磁贴，强制刷新率等等需要软件自启动，所以，就需要给予`Luckytools`白名单
@@ -379,19 +379,19 @@ com.tencent.mobileqq:MSF
 > - 方法1：
 > -  使用保后台Magisk模块
 > 1. 下载并安装`保后台`，该模块内置了`Don't Kill`，且针对Color系统，会自动禁用雅典娜
-> 	 - <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/Magisk-%E4%BF%9D%E5%90%8E%E5%8F%B0/%E7%84%95%E6%99%A8 "云盘下载")</u>、作者：<u>[**`焕晨`**](http://www.coolapk.com/u/25022094 "焕晨")</u>
+> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Magisk-%E4%BF%9D%E5%90%8E%E5%8F%B0/%E7%84%95%E6%99%A8 "云盘下载")</u>、作者：<u>[**`焕晨`**](http://www.coolapk.com/u/25022094 "焕晨")</u>
 > 2. 重启手机
 > - <i id="Help1-方法2"></i>方法2：
 > -  使用Don't KillXP模块
 > - 仅Color13可以不用管雅典娜了，Color11/12雅典娜依然是神一般的存在，请自行精简/冻结/卸载等
 > 1. 下载并安装`Don't Kill`
-> 	 - <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/Don.t.Kill "云盘下载")</u>、作者：<u>[**`海浪逃向岛屿`**](http://www.coolapk.com/u/1755624 "海浪逃向岛屿")</u>
+> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Don.t.Kill "云盘下载")</u>、作者：<u>[**`海浪逃向岛屿`**](http://www.coolapk.com/u/1755624 "海浪逃向岛屿")</u>
 > 3. 重启手机
 > - 方法3：
 > -  使用超强保后台Magisk模块
 > - 仅Color13可以不用管雅典娜了，Color11/12雅典娜依然是神一般的存在，请自行精简/冻结/卸载等
 > 2. 下载并安装`超强保后台`
-> 	 - <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/Magisk-%E4%BF%9D%E5%90%8E%E5%8F%B0/%E5%BC%80%E5%BF%83%E5%B0%8F%E9%98%B3%E5%85%89/%E6%96%B0%E7%89%88 "云盘下载")</u>、作者：<u>[**`开心小阳光`**](http://www.coolapk.com/u/3520868 "开心小阳光")</u>
+> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Magisk-%E4%BF%9D%E5%90%8E%E5%8F%B0/%E5%BC%80%E5%BF%83%E5%B0%8F%E9%98%B3%E5%85%89/%E6%96%B0%E7%89%88 "云盘下载")</u>、作者：<u>[**`开心小阳光`**](http://www.coolapk.com/u/3520868 "开心小阳光")</u>
 > 3. 重启手机
 > - 方法4：
 > - 使用`Thanox`的新功能`后台保护`，将自己需要保后台的应用选上
@@ -501,7 +501,7 @@ ps -A | grep u0_a
 2. 这个代码不一定准确，请不要太过依赖此代码
 
 - 操作步骤
-1. 下载.sh脚本<u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/%E6%8C%82%E8%BD%BD%E6%9F%A5%E8%AF%A2 "云盘下载")</u>
+1. 下载.sh脚本<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/%E6%8C%82%E8%BD%BD%E6%9F%A5%E8%AF%A2 "云盘下载")</u>
 2. 在MT管理器中用ROOT执行该脚本
 
 ### <i id="Help10"></i>帮助10：冻结控制器说明
@@ -584,7 +584,7 @@ persist.sys.millet.handshake
 [![](img/uploadfile/202210/74501665050098.jpg)](img/uploadfile/202210/74501665050098.jpg)
 TIP：<font color="red">上图内容，只是**部分内核**支持，不是**所有**内核都可以</font>
 
-5. 如果跟第2步与图片不同或者第三步中的(必须false)不满足，请下载并刷入到Magisk中<u>[**`Millet禁用`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/%E4%BD%9C%E8%80%85%E7%9A%84millet%E9%85%8D%E7%BD%AE%E7%A6%81%E7%94%A8%E6%94%B9%E7%89%883.zip "Millet禁用")</u>
+5. 如果跟第2步与图片不同或者第三步中的(必须false)不满足，请下载并刷入到Magisk中<u>[**`Millet禁用`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/%E4%BD%9C%E8%80%85%E7%9A%84millet%E9%85%8D%E7%BD%AE%E7%A6%81%E7%94%A8%E6%94%B9%E7%89%883.zip "Millet禁用")</u>
 PS：刷入须知，没有所谓的启用Millet，想启用可以试试f19没有新欢的MiT Lite，<u>[下载官网](mitlite.tf19.co "下载官网")</u>)
 
 ### <i id="Help12"></i>帮助12：MIUI如何挂载V2
@@ -602,7 +602,7 @@ PS：刷入须知，没有所谓的启用Millet，想启用可以试试f19没有
 - 这样挂载的v2目前是不支持binder解冻的，可能会闪弹重载，出现了这种现象，记得打开<u>[**`轮番解冻`**](#26)</u>
 
 - 下载链接
-- 挂载模块：<u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/cgroup%E6%8C%82%E8%BD%BD(%E5%98%9F%E5%98%9F%E6%96%AF%E5%9F%BA).zip "挂载模块")</u>
+- 挂载模块：<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/cgroup%E6%8C%82%E8%BD%BD(%E5%98%9F%E5%98%9F%E6%96%AF%E5%9F%BA).zip "挂载模块")</u>
 2. 内核作者：Thevoyager
 
 	- <u>[**`群聊1`**](https://jq.qq.com/?_wv=1027&k=FdE5Y97F)</u><u>[**`群聊2`**](https://jq.qq.com/?_wv=1027&k=A0iSAlSW "群聊")</u><u>[**`群聊2`**](https://jq.qq.com/?_wv=1027&k=1TSh1SHu)</u>
@@ -627,7 +627,7 @@ PS：内核版本决定支持V1/V2, 和MIUI版本无关，因为都是MIUI13
 2. 挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核
 3. 挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核
 
-- 挂载模块：<u>[**`下载`**](https://cloud.bzmshang.top/Software/Tombstone/NoActive/cgroup%E6%8C%82%E8%BD%BD(%E5%98%9F%E5%98%9F%E6%96%AF%E5%9F%BA).zip "挂载模块")</u>
+- 挂载模块：<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/cgroup%E6%8C%82%E8%BD%BD(%E5%98%9F%E5%98%9F%E6%96%AF%E5%9F%BA).zip "挂载模块")</u>
 
 ### <i id="Help-Last"></i>帮助Last：(如何卸载干净NoActive)
 1. 将NoActive卸载

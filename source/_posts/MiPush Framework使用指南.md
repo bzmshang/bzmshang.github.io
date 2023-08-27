@@ -9,16 +9,16 @@ index_img: img/uploadfile/202302/57a41675408064.png
 
 # <i id="指南版本"></i>指南版本
 ```
-ver=v0.7.1
+ver=v0.7.2
 
-latest-update=2022.07.21
+latest-update=2022.08.27
 
 以下内容全文为MiPush Framework使用指南，请分享给有需要的人
 ```
 
 ## <i id="声明"></i>声明
 > 1. 本文档
-> 	- 依据MiPush版本:`v0.3.9-XXXXXXXX`即群内最新内测版
+> 	- 依据MiPush版本:`v0.3.10-XXXXXXXX`即群内最新内测版
 > 	- 依据设备：`一加9PRO Color13`
 > 2. 本文档是大量搬运群内精华消息然后重新排版优化
 > 3. 如搬运本文档的任何内容，请说明文档来源
@@ -28,8 +28,8 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 > 	- MiPush：<u>[**`官网`**](https://github.com/NihilityT/MiPush/releases "官网")</u>
 > 	- 推送服务：<u>[**`官网`**](https://github.com/NihilityT/MiPushFramework/releases "官网")</u>
 > 	- 配置文件：<u>[**`官网`**](https://github.com/NihilityT/MiPushConfigurations "官网")</u>
-> 	- 所需文件(全)：<u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush "云盘下载")</u>
-> 	- QQ历史版本：<u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/QQ_Updates "云盘下载")</u>
+> 	- 所需文件(全)：<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush "云盘下载")</u>
+> 	- QQ历史版本：<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/QQ_Updates "云盘下载")</u>
 >
 > - 更多：(加群，教程，文件)
 > 	 - 手机版：请点击左上角三条杠查看更多
@@ -40,6 +40,7 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 1. 模块的名字为：MiPush
 2. 可以以应用身份发出通知，而不是以推送服务的身份
 - 好处：以目标应用身份来通知，像应用本身发出的
+3. 该应用为XP模块，需勾`选系统框架`并`重启`才能进行分应用通知
 
 ### <i id="什么是透传消息"></i>2. 什么是透传消息？
 - 直接发送给APP的消息，不会在通知栏显示
@@ -51,15 +52,27 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 - 使用Delta版面具，请不要开强制使用超级用户列表，会导致精简模块失效
 
 ###  <i id="关于新版本"></i>4. 关于新版本
-- 此部分待定(预计8月中旬更新)
-> 提示1：推荐将推送服务安装为系统应用，拥有系统应用身份能让所有应用检测到推送服务
-> 提示2：MIUI 下，使用核心破解安装即可，不需要精简，安装完后推送服务带有系统应用身份
-> 提示3：version code 修改后，若触发注册失败，自行将 version code 修改至 105 使用
+- 从`0.3.10`开始，推送服务进行分包，【`versionCode=1003003000`】【 `versionCode=105`】两种
+> 1. 推荐将【推送服务】安装为系统应用，拥有系统应用身份能让所有应用检测到推送服务(所有系统上)
+> 2. 在MIUI上，优先推荐核心破解安装，安装完成后是【系统应用】，不需要使用精简，当然，你也可以使用精简，这样就是麻烦点
+> 3. 如果使用`versionCode=1003003000`后，若注册总是注册没反应，请使用`versionCode=105`的版本
 
 ## <i id="指南"></i>指南
 ### <i id="MiPush使用教程-ROOT"></i>1. MiPush使用教程-ROOT
+#### <i id="MiPush使用教程-ROOT-Version Code为1003003000"></i>1-1. Version Code为1003003000
+PS1:此版本不适合Color使用(在我手机上是这样的)
+PS2:小米推荐使用此版本，无需精简，安装成功后，推送服务为系统应用
+
+- <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/Download "云盘下载")</u>
+- 具体操作
+1. 打开`核心破解`的前四个功能开关[![](img/uploadfile/202308/1bee1693100355.png)](img/content/uploadfile/202308/1bee1693100355.png)
+2. 重启手机
+3. 安装推送服务
+4. 接下来就可以正常使用了
+
+#### <i id="MiPush使用教程-ROOT-Version Code为105"></i>1-2. Version Code为105
 - 图文版：<u>[**`查看`**](https://www.coolapk.com/feed/41357294?shareKey=ZmQ2MWNhZTgxMzI4NjNjYjlmODk~&shareUid=330645&shareFrom=com.coolapk.market_12.4.2 "查看")</u>
-- 文字版：<u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/Download "云盘下载")</u>
+- 文字版：<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/Download "云盘下载")</u>
 
 1. <i id="使用教程-ROOT-小米机型MIUI系"></i>小米机型MIUI系统：
 PS1:黑鲨手机(没刷别的系统的)也使用此方法
@@ -94,9 +107,9 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 ### <i id="MiPush使用教程-免ROOT"></i>2. MiPush使用教程-免ROOT
 - 方法由群友<u>[wyj809](http://www.coolapk.com/u/21035894 "wyj809")</u>提出
 - 下载
-> 1. <u>[**`云盘下载-LSPatch`**](https://cloud.bzmshang.top/Software/LSP/LSPatch "云盘下载-LSPatch")</u>
-> 2. <u>[**`云盘下载-伪装/推送`**](https://cloud.bzmshang.top/Software/MiPush/Download "云盘下载-伪装/推送")</u>
-> 3. <u>[**`云盘下载-配置文件`**](https://cloud.bzmshang.top/Software/MiPush/Download/MiPushConfigurations "云盘下载-配置文件")</u>
+> 1. <u>[**`云盘下载-LSPatch`**](https://backup.bzmshang.top/Software/LSP/LSPatch "云盘下载-LSPatch")</u>
+> 2. <u>[**`云盘下载-伪装/推送`**](https://backup.bzmshang.top/Software/MiPush/Download "云盘下载-伪装/推送")</u>
+> 3. <u>[**`云盘下载-配置文件`**](https://backup.bzmshang.top/Software/MiPush/Download/MiPushConfigurations "云盘下载-配置文件")</u>
 
 - <i id="LSPatch如何使用"></i>LSPatch如何使用
 	- <u>[**`本机网络adb调试、Lspatch使用方法`**](https://www.coolapk.com/feed/38114209?shareKey=MDc5YTgyZjI3ZmZhNjNjZTJlZmI~&shareFrom "本机网络adb调试、Lspatch使用方法")</u>
@@ -259,7 +272,7 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 	 1. 设置配置目录，入口位于：推送服务 - 设置
 	 2. 下载所需配置放入该目录中
 	 3. （可选）若需自定义通知图标，可以在配置目录下创建icon文件夹，将AndroidNotifyIconAdapt仓库的json文件放入其中
-		 - <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87/%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87 "云盘下载")</u>、<u>[**`GitHub下载`**](https://github.com/fankes/AndroidNotifyIconAdapt "GitHub下载")</u>
+		 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87/%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87 "云盘下载")</u>、<u>[**`GitHub下载`**](https://github.com/fankes/AndroidNotifyIconAdapt "GitHub下载")</u>
 
 3. 配置类型
 	 配置共分为两类：
@@ -326,7 +339,7 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 
 ### <i id="配置文件使用介绍(非写法仅使用)"></i>5. 配置文件使用介绍(非写法仅使用)
 > - 该篇主要讲解怎么使用配置文件，不介绍配置文件怎么写，有兴趣学习的可以自行了解
-> - <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/Download/MiPushConfigurations/xmsf-v0.3.9+(%E5%8F%AF%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)"云盘下载")</u>
+> - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/Download/MiPushConfigurations/xmsf-v0.3.9+(%E5%8F%AF%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)"云盘下载")</u>
 
 ##### - <i id="基础配置"></i>基础配置
 > PS1：基础配置由原来的一个拆分成了三个
@@ -347,7 +360,7 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 > 3. `2_后置配置_移除通知副标题.json`
 > 	- PS：如图[![](img/uploadfile/202307/74801688815746.png)](img/uploadfile/202307/74801688815746.png)
 > 4. `2_后置配置_只显示一条消息-白名单.json`
-> 	- PS：
+> 	- PS：添加入该白名单的应用，收到新消息时会覆盖旧消息，且不分联系人及消息类型，只显示最新一条消息。
 > 5. `2_后置配置_点击时清理会话通知组-白名单.json`
 > 	- PS：如QQ有3-4条MiPush消息，当点开QQ软件时，通知栏将清空QQ的消息
 > 6. `2_后置配置_收到消息后台唤醒应用-白名单.json`
@@ -490,7 +503,7 @@ PS:待继续完善
 ## <i id="通知图标"></i>通知图标
 ### <i id="MIUI通知图标"></i>1. MIUI通知图标
 - 云盘下载MiPush模块，安装后勾选推荐应用并重启系统
-- 对于不需要MiPush模块的人：<u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87/MIUI%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87 "云盘下载")</u>
+- 对于不需要MiPush模块的人：<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87/MIUI%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87 "云盘下载")</u>
 	 1. 云盘下载MIUI专用-MIUI 原生通知图标，安装后在LSPosed中启用
 	 2. 在安装的 APP 中启用通知栏中的图标强制显示为 APP 图标、启用通知图标优化名单自动更新
 
@@ -498,7 +511,7 @@ PS:待继续完善
 - 对MIUI_CN和Flyme无作用
 1. 安装推送服务最新版
 2. 在配置目录下面创一个**icon**文件夹，把图标**.json**放进去;
-3. 图标下载：<u>[**`GitHub下载`**](https://github.com/fankes/AndroidNotifyIconAdapt/blob/main/APP/NotifyIconsSupportConfig.json "下载")</u>、<u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87/%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87 "下载")</u>
+3. 图标下载：<u>[**`GitHub下载`**](https://github.com/fankes/AndroidNotifyIconAdapt/blob/main/APP/NotifyIconsSupportConfig.json "下载")</u>、<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87/%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%9A%E7%9F%A5%E5%9B%BE%E6%A0%87 "下载")</u>
 4. 强行停止推送服务
 
 ## <i id="冲突"></i>冲突
@@ -645,7 +658,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 
 ## <i id="常用应用问题解决"></i>常用应用问题解决
 ### <i id="QQ注册"></i>1-1. QQ注册
-- <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/Download/MiPush "云盘下载")</u>
+- <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/Download/MiPush "云盘下载")</u>
 1. 安装MiPush、推送通知
 2. 前往LSPosed中，勾选推荐作用域、QQ
 3. 重启手机
@@ -695,7 +708,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 - root也可以用<u>[**`QAuxiliary`**](https://github.com/cinit/QAuxiliary "QAuxiliary")</u>或者其他重定向至下载目录。
 
 ### <i id="酷安注册-不推送"></i>2-1. 酷安注册-不推送
-- <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/%E9%85%B7%E5%AE%89 "云盘下载")</u>
+- <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/%E9%85%B7%E5%AE%89 "云盘下载")</u>
 - MIUI
 	 1. 卸载酷安，安装官方酷安12.4.2版
 	 2. 先不要启动酷安
