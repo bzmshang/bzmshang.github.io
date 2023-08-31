@@ -1,7 +1,7 @@
 ---
-title: Xposed墓碑模块-NoActive
-permalink: NoActive_Tombstone.html
-date: 2022-08-14
+title: 最好用的安卓毕业第三方墓碑-Noactive的完整教程
+permalink: Noactive-starrhymelodge.html
+date: 2023-08-22
 tags:
 banner_img: img/uploadfile/202308/4b1c1693168868.jpg
 index_img: img/uploadfile/202308/4b1c1693168868.jpg
