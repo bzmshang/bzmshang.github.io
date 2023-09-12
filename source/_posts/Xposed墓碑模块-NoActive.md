@@ -501,7 +501,7 @@ ps -A | grep u0_a
 2. 这个代码不一定准确，请不要太过依赖此代码
 
 - 操作步骤
-1. 下载.sh脚本<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/%E6%8C%82%E8%BD%BD%E6%9F%A5%E8%AF%A2 "云盘下载")</u>
+1. 下载.sh脚本<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Tombstone/挂载查询(脚本) "云盘下载")</u>
 2. 在MT管理器中用ROOT执行该脚本
 
 ### <i id="Help10"></i>帮助10：冻结控制器说明
