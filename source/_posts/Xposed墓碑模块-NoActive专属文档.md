@@ -1,5 +1,5 @@
 ---
-title: Xposed墓碑模块-NoActive
+title: Xposed墓碑模块-NoActive专属文档
 permalink: NoActive_Tombstone.html
 date: 2022-08-14
 tags:

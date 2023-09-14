@@ -59,6 +59,10 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 > 3. 如果使用`versionCode=1003003000`后，若注册总是注册没反应，请使用`versionCode=105`的版本
 > 4. 在0.3.10+开始，【注册成功】这个词汇不再显示了，所以一般来说我现在喜欢去看【/data/data/包名/shared_prefs/mipush.xml】中查看是否有【regID】这个参数，有就是注册成功了
 
+###  <i id="关于版本号"></i>4. 关于版本号
+- 因为：版本号会跟随语义化版本号定义：https://semver.org/
+- 所以：你会看到推送服务的版本号【versionCode=1003003000】跟【versionCode=105】的版本号不太一样
+
 ## <i id="指南"></i>指南
 ### <i id="MiPush使用教程-ROOT"></i>1. MiPush使用教程-ROOT
 #### <i id="MiPush使用教程-ROOT-Version Code为1003003000"></i>1-1. Version Code为1003003000
