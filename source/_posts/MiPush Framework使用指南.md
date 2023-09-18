@@ -30,6 +30,7 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 > 	- 配置文件：<u>[**`官网`**](https://github.com/NihilityT/MiPushConfigurations "官网")</u>
 > 	- 所需文件(全)：<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush "云盘下载")</u>
 > 	- QQ历史版本：<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/QQ_Updates "云盘下载")</u>
+> 	- **QQ频道**：<u>[**`点击加入`**](https://pd.qq.com/s/1k6mez0lg "点击加入")</u>
 >
 > - 更多：(加群，教程，文件)
 > 	 - 手机版：请点击左上角三条杠查看更多
