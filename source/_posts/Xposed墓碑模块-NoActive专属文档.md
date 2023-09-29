@@ -3,8 +3,8 @@ title: Xposed墓碑模块-NoActive专属文档
 permalink: NoActive_Tombstone.html
 date: 2022-08-14
 tags:
-banner_img: img/uploadfile/202208/30831660473623.png
-index_img: img/uploadfile/202208/30831660473623.png
+banner_img: img/uploadfile/202208/30831660473623.jpg
+index_img: img/uploadfile/202208/30831660473623.jpg
 ---
 
 # <i id="文档版本"></i>文档版本
@@ -261,7 +261,7 @@ PS：(设置完成即可回到主页面)
 ##### <i id="可见窗口"></i>8-2-2(4/2). 可见窗口：
 - 切换应用或回到桌面3s后冻结
 - 可见窗口：范围就很窄了，你看得见的前台窗口(当前界面显示的应用)，系统小窗(反应在oomadj分数上，就是0.1.2的应用)
-[![](img/uploadfile/202210/295e1665137989.png)](img/uploadfile/202210/295e1665137989.png)
+[![](img/uploadfile/202210/295e1665137989.jpg)](img/uploadfile/202210/295e1665137989.jpg)
 
 - 图标长相
 [![](img/uploadfile/202210/093e1665137564.jpg)](img/uploadfile/202210/093e1665137564.jpg)
@@ -487,14 +487,14 @@ su
 ```
 ps -A | grep -E "refrigerator|do_freezer|signal"
 ```
-[![](img/uploadfile/202211/98b11669518520.png)](img/uploadfile/202211/98b11669518520.png)
+[![](img/uploadfile/202211/98b11669518520.jpg)](img/uploadfile/202211/98b11669518520.jpg)
 
 3. 显示所有安卓应用进程的状态信息，无论是否冻结状态
 
 ```
 ps -A | grep u0_a
 ```
-[![](img/uploadfile/202211/a22a1669518520.png)](img/uploadfile/202211/a22a1669518520.png)
+[![](img/uploadfile/202211/a22a1669518520.jpg)](img/uploadfile/202211/a22a1669518520.jpg)
 
 ### <i id="Help9"></i>帮助9：查询本机支持的冻结模式(Freezerv1/v2)
 - 看前须知
@@ -556,7 +556,7 @@ su
 ```
 cmd greezer ls lsfz
 ```
-[![](img/uploadfile/202210/6d2e1664968988.png)](img/uploadfile/202210/6d2e1664968988.png)
+[![](img/uploadfile/202210/6d2e1664968988.jpg)](img/uploadfile/202210/6d2e1664968988.jpg)
 
 3. 再接着继续输入以下代码
 

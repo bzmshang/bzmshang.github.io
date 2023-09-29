@@ -3,8 +3,8 @@ title: MiPush Framework使用指南
 permalink: MiPush-Framework_User-Guide.html
 date: 2022-07-21
 tags:
-biannr_img: img/uploadfile/202302/57a41675408064.png
-index_img: img/uploadfile/202302/57a41675408064.png
+biannr_img: img/uploadfile/202302/57a41675408064.jpg
+index_img: img/uploadfile/202302/57a41675408064.jpg
 ---
 
 # <i id="指南版本"></i>指南版本
@@ -75,7 +75,7 @@ PS2:小米推荐使用此版本，无需精简，安装成功后，推送服务�
 
 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/Download "云盘下载")</u>
 - 具体操作
-1. 打开`核心破解`的前四个功能开关[![](img/uploadfile/202308/1bee1693100355.png)](img/uploadfile/202308/1bee1693100355.png)
+1. 打开`核心破解`的前四个功能开关[![](img/uploadfile/202308/1bee1693100355.jpg)](img/uploadfile/202308/1bee1693100355.jpg)
 	 - 由于第四项【安装时始终使用已装APP的签名】还是比较危险的，顾安装完成后，请关闭该功能，并重启手机
 2. 重启手机
 3. 安装推送服务
@@ -220,14 +220,14 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 [![](img/uploadfile/202302/b4961676027252.jpg)](img/uploadfile/202302/b4961676027252.jpg)
 
 - 强制注册成功
-[![](img/uploadfile/202302/d97c1676016787.png)](img/uploadfile/202302/d97c1676016787.png)
+[![](img/uploadfile/202302/d97c1676016787.jpg)](img/uploadfile/202302/d97c1676016787.jpg)
 	 - 如果出现上图情况，基本问题不大，强制停止一次该应用，再打开基本就注册成功了
 	 - 注册成功，能不能推是另外一回事（大部分能注册成功就能推送，除了一些奇葩的，比如：酷安、抖音）
 	 - 咸鱼为例(框出来的是应用包名，每个应用都不一样)
 
 - 强制注册失败
 如果出现下图情况
-[![](img/uploadfile/202302/00061676016787.png)](img/uploadfile/202302/00061676016787.png)
+[![](img/uploadfile/202302/00061676016787.jpg)](img/uploadfile/202302/00061676016787.jpg)
 	 - Color系统的就没必要关注了，直接去推送服务里面看就行，根据我Color13使用来看，这个提示跟注册成功与否，没有半毛钱关系
 	 - 非Color系统,出现这个，大概率就是注册失败
 
@@ -383,12 +383,12 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 > 	- PS：使用任何`2_后置配置_xxx`都需要其配合其使用
 >
 > 2. `2_后置配置_自动提取意图.json`
-> 	- PS1：提取意图即从数据里面提取出 intent[![](img/uploadfile/202307/47181688821935.png)](img/uploadfile/202307/47181688821935.png)
+> 	- PS1：提取意图即从数据里面提取出 intent[![](img/uploadfile/202307/47181688821935.jpg)](img/uploadfile/202307/47181688821935.jpg)
 > 	- PS2：直观的效果是通知点击的处理逻辑不走推送服务，可以下拉小窗。
 > 	- PS3：与`直接打开意图相`配合：【`直接打开意图是`让通知有可能通过小窗打开，`自动提取意图`是增加这个支持的范围】
 >
 > 3. `2_后置配置_移除通知副标题.json`
-> 	- PS：如图[![](img/uploadfile/202307/74801688815746.png)](img/uploadfile/202307/74801688815746.png)
+> 	- PS：如图[![](img/uploadfile/202307/74801688815746.jpg)](img/uploadfile/202307/74801688815746.jpg)
 >
 > 4. `2_后置配置_只显示一条消息-白名单.json`
 > 	- PS：添加入该白名单的应用，收到新消息时会覆盖旧消息，且不分联系人及消息类型，只显示最新一条消息。
@@ -408,7 +408,7 @@ PS2:<u>[**`小米机型MIUI系统视频教程`**](https://b23.tv/6vqqYWs "小米
 >
 > 9. `2_后置配置_将透传消息作为通知显示-白名单.json`
 > 	- PS1：原MiPushFramework的按钮功能，新版改为配置文件实现功能
-> 	- PS2：部分消息为透传消息[![](img/uploadfile/202307/16321688817897.png)](img/uploadfile/202307/16321688817897.png)
+> 	- PS2：部分消息为透传消息[![](img/uploadfile/202307/16321688817897.jpg)](img/uploadfile/202307/16321688817897.jpg)
 > 	- PS3：<u>[**`什么是透传消息`**](#什么是透传消息)</u>
 >
 > 10. `2_后置配置_屏蔽运营消息-黑/白名单.json`
@@ -469,7 +469,7 @@ PS:待继续完善
 - 没有相应参数的时候就是用首字作为头像
 
 ### <i id="为什么我没有推送服务几个字"></i>2. 为什么我没有推送服务几个字
-[![](img/uploadfile/202302/ff041676027895.png)](img/uploadfile/202302/ff041676027895.png)
+[![](img/uploadfile/202302/ff041676027895.jpg)](img/uploadfile/202302/ff041676027895.jpg)
 - 没用MiPush模块勾选系统框架且能推送才这么显示
 
 ### <i id="通知渠道"></i>3. 通知渠道
@@ -515,7 +515,7 @@ PS:待继续完善
 	 - <u>[**`应用配置`**](#应用配置)</u>中的关于QQ的拉满，简单粗暴
 2. 不推荐堆叠开关
 	 - 在推送服务里面设置QQ堆叠(新版已将开关改为配置文件)
-[![](img/uploadfile/202302/2a9a1676984515.png)](img/uploadfile/202302/2a9a1676984515.png)
+[![](img/uploadfile/202302/2a9a1676984515.jpg)](img/uploadfile/202302/2a9a1676984515.jpg)
 
 ### <i id="通知上的按钮"></i>8. 通知上的按钮
 - 如果遇到下图中类似的按钮，且不喜欢的，请换用release版本
@@ -559,7 +559,7 @@ PS:待继续完善
 
 ## <i id="权限"></i>权限
 ### <i id="修改权限"></i>1. 修改权限
-[![](img/uploadfile/202302/50cd1676984120.png)](img/uploadfile/202302/50cd1676984120.png)
+[![](img/uploadfile/202302/50cd1676984120.jpg)](img/uploadfile/202302/50cd1676984120.jpg)
 
 - 该目录里面的所有开关，无特殊需求，默认即可，无需开关
 - 如果非要开关，除非你明白它的含义
@@ -694,7 +694,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 		 - 若一直为尚未注册，可以试试<u>[**`强制注册`**](#强制注册)</u>
 		 - 则尝试使用MiPushDeviceFake或MiPushfaker，倘若变成注册失败，请看下面
 	 - 注册失败
-		 [![](img/uploadfile/202302/bb401675496609.png)](img/uploadfile/202302/bb401675496609.png)
+		 [![](img/uploadfile/202302/bb401675496609.jpg)](img/uploadfile/202302/bb401675496609.jpg)
 
 ### <i id="QQ注册-不推送"></i>1-2. QQ注册-不推送
 - 注册成功后，需要重启注册应用，切记
