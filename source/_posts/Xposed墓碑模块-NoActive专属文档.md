@@ -18,7 +18,7 @@ latest-update=2023.08.02
 
 ## <i id="声明"></i>声明
 > 1. 本文档
-> 	 - 依据NoActive版本:`v2.9-Alpha(282)`<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/Alpha "下载")</u>
+> 	 - 依据NoActive版本:`v2.9-Alpha(282)`<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/历史版本 "下载")</u>
 > 	 - 依据设备：`一加9PRO Color13`
 > 2. 本文档是借鉴<u>[**`NoActive墓碑Xposed模块`**](https://www.myflv.cn/mobile/282.html "NoActive墓碑Xposed模块")</u>究极改良
 > 3. 如搬运本文档的任何内容，请说明文档来源
@@ -50,7 +50,7 @@ latest-update=2023.08.02
 ### <i id="电量和性能"></i>2-2. 电量和性能(MIUI专属)：
 -  以下是`NoActive` 跟 `NoActive Plugin` Hook `电量和性能`的作用
 1. NoActive：防止夜间后台掉卡片
-	 - <u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/Alpha "下载")</u>
+	 - <u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/历史版本 "下载")</u>
 2. NoActive Plugin：防止杀掉后台
 	 - <u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive+Plugin_1.0.apk "下载")</u>
 - PS：`NoActive` 跟 `NoActive Plugin` Hook `电量和性能`不与任何模块冲突
@@ -152,7 +152,7 @@ magiskpolicy --live "allow system_server * process {sigstop}"
 [![](img/uploadfile/202210/79c91666792638.jpg)](img/uploadfile/202210/79c91666792638.jpg)
 
 ### <i id="所需软件"></i>7. 所需软件：
-1. NoActive：<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/Alpha "下载")</u>、<u>[**`官网`**](https://app.myflv.cn/ "官网")</u>
+1. NoActive：<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/历史版本 "下载")</u>、<u>[**`官网`**](https://app.myflv.cn/ "官网")</u>
 2. MT管理器：<u>[**`官网`**](https://mt2.cn/ "MT管理器")</u>
 3. 查看CPU占比：
 > 1. Scene：<u>[**`酷安下载`**](https://www.coolapk.com/apk/com.omarea.vtools "酷安下载")</u>
@@ -292,7 +292,7 @@ PS：(设置完成即可回到主页面)
 [![](img/uploadfile/202210/e4d61664967021.jpg)](img/uploadfile/202210/e4d61664967021.jpg)
 
 ## <i id="How_to_use_NoActive"></i>9. 如何使用NoActive：
-1. 下载《NoActive》<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/Alpha "下载")</u>
+1. 下载《NoActive》<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive官方版/历史版本 "下载")</u>
 2. 安装NoActive，并在LSPosed中，将NoActive的作用域勾选为《系统框架》
 [![](img/uploadfile/202209/f6521663559631.jpg)](img/uploadfile/202209/f6521663559631.jpg)
 

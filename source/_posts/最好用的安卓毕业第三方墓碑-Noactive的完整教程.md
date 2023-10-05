@@ -525,8 +525,8 @@ don't kill?的配置
 来到冻结模式的推荐：
 ###### <i id="tools"></i> 方便检测的工具
 
-jark006的挂载检测脚本：[`冰梦的网盘`](https://backup.bzmshang.top/Software/Tombstone/%E6%8C%82%E8%BD%BD%E6%9F%A5%E8%AF%A2(%E8%84%9A%E6%9C%AC))
-酷安的yqs112358根据检测脚本制作了一个[**`app`**](https://backup.bzmshang.top/Software/Tombstone/TombedAppsMonitor)： 在这里可以使用冻结查看软件，冻结版本。
+jark006的挂载检测脚本：[`冰梦的网盘`](https://backup.bzmshang.top/Software/Tombstone/冻结查询/挂载查询(脚本))
+从N0A3.0拆分出来的一个模块[NoActive-Monitor](https://backup.bzmshang.top/Software/Tombstone/冻结查询/NoActive-Monitor "NoActive-Monitor")： 在这里可以使用冻结查看软件，冻结版本。
 Termux终端：<u>[**`官网`**](https://termux.dev/cn/index.html "官网")</u>
 MT管理器：<u>[**`官网`**](https://mt2.cn/ "MT管理器")</u>
 
