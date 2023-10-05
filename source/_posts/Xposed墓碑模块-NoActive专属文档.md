@@ -380,19 +380,19 @@ com.tencent.mobileqq:MSF
 > - 方法1：
 > -  使用保后台Magisk模块
 > 1. 下载并安装`保后台`，该模块内置了`Don't Kill`，且针对Color系统，会自动禁用雅典娜
-> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Magisk-%E4%BF%9D%E5%90%8E%E5%8F%B0/%E7%84%95%E6%99%A8 "云盘下载")</u>、作者：<u>[**`焕晨`**](http://www.coolapk.com/u/25022094 "焕晨")</u>
+> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Tombstone/保后台/Magisk版-焕晨 "焕晨")</u>
 > 2. 重启手机
 > - <i id="Help1-方法2"></i>方法2：
 > -  使用Don't KillXP模块
 > - 仅Color13可以不用管雅典娜了，Color11/12雅典娜依然是神一般的存在，请自行精简/冻结/卸载等
 > 1. 下载并安装`Don't Kill`
-> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Don.t.Kill "云盘下载")</u>、作者：<u>[**`海浪逃向岛屿`**](http://www.coolapk.com/u/1755624 "海浪逃向岛屿")</u>
+> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Tombstone/保后台/Don.t.Kill "云盘下载")</u>、作者：<u>[**`海浪逃向岛屿`**](http://www.coolapk.com/u/1755624 "海浪逃向岛屿")</u>
 > 3. 重启手机
 > - 方法3：
 > -  使用超强保后台Magisk模块
 > - 仅Color13可以不用管雅典娜了，Color11/12雅典娜依然是神一般的存在，请自行精简/冻结/卸载等
 > 2. 下载并安装`超强保后台`
-> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Magisk-%E4%BF%9D%E5%90%8E%E5%8F%B0/%E5%BC%80%E5%BF%83%E5%B0%8F%E9%98%B3%E5%85%89/%E6%96%B0%E7%89%88 "云盘下载")</u>、作者：<u>[**`开心小阳光`**](http://www.coolapk.com/u/3520868 "开心小阳光")</u>
+> 	 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Tombstone/保后台/Magisk版-开心小阳光 "云盘下载")</u>、作者：<u>[**`开心小阳光`**](http://www.coolapk.com/u/3520868 "开心小阳光")</u>
 > 3. 重启手机
 > - 方法4：
 > - 使用`Thanox`的新功能`后台保护`，将自己需要保后台的应用选上
