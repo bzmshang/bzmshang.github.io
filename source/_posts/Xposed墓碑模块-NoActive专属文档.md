@@ -458,4 +458,5 @@ PS：此系统墓碑为开发者模式中的暂停应用缓存
 ### <i id="Help-Last"></i>帮助Last：(如何卸载干净NoActive)
 1. 将NoActive卸载
 2. 删除在/data/system目录下的NoActive文件夹
-3. 你获得了新生
+3. 重启手机
+4. 你获得了新生
