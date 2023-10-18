@@ -404,10 +404,11 @@ PS2：`Thanox`的`后台保护`属于让系统认为该应用在前台运行，�
 > 1. 上文中的方法2/3/4可以自行组合或单一使用，由于每个人手机不一样，所以，最终效果请自行测试
 > 2. 上文中的方法1不适合给Color13用，因在本机上，杀后台比官方自己还严重，建议，使用方法2`Don't Kill`
 
+- 以上方法可能已经过时，其余方法请自行实验，此部分只是提供思路
 - 接下来你配合着NoActive就可以体验水果墓碑的感受
 
 ### <i id="Help2"></i>帮助2：NoActive支持到安卓几
-最低支持到安卓10，但体验较好的是12-13
+- 【NoActive3.0之前的版本】最低支持到安卓10，但体验较好的是12-13
 
 ### <i id="Help3"></i>帮助3：NoActive重启后配置没了
 1. 在LSPosed里面给NoActive勾选推荐作用域
@@ -432,9 +433,6 @@ PS：此系统墓碑为开发者模式中的暂停应用缓存
 1. MIUI13开始支持, 由电量与性能负责运行，分为FreezerV1和V2两个版本
 2. MIUI13开发版最先支持，有最新特性，而MIUI稳定版在慢慢紧跟(开发板的运行稳定了再下放到稳定版)
 
-### <i id="Help6"></i>帮助6：挂载的v2不支持binder解冻
-binder是系统中负责应用间通讯的，完整版V2在冻结应用时，会顺带冻结它的binder通讯功能，而不完整V2、V1，kill-19 都没有冻结应用的binder通讯。完整版V2冻结应用后，应用是收不到binder通讯请求的，而其他冻结方式都可能会收到，但是应用被冻结了，没法回应，超时了就被系统杀
-
 ### <i id="Help7"></i>帮助7：切换冻结方式
 1. 打开NoActive，点击右上角的设置会进入设置界面(如下)
 [![](img/uploadfile/202209/03171663724011.jpg)](img/uploadfile/202209/03171663724011.jpg)
@@ -448,187 +446,14 @@ binder是系统中负责应用间通讯的，完整版V2在冻结应用时，会
 (PS：<u>[**`如何使用NoActive`**](#如何使用NoActive)</u>的6~9步，讲述的如何确定冻结模式生效)
 
 ### <i id="Help8"></i>帮助8：查看冻结状态(通用)
-- 使用指令前请确保自己以及熟读<u>[**`如何使用NoActive`**](#如何使用NoActive)</u>
-- 根据下方结果来判断当前的冻结方式
-
-```
-1. v1冻结状态:
-__refrigerator
-
-2. v2冻结状态态:
-do_freezer_trap
-
-3. Kill-19冻结状态：
-do_signal_stop
-
-4. 不完整v1/v2冻结(后台容易被杀)：
-get_signal
-
-5. 其他状态，一般是应用正常运行中的各种状态：
-5-1. 等待事件触发：
-xxx_epoll_wait
-
-5-2. 通信中：
-binder_xxx：binder
-
-5-3. 等等
-```
-
-- 打开Termux终端：<u>[**`官网`**](https://termux.dev/cn/index.html "官网")</u>
-
-1. 进入管理员账户：
-
-```
-su
-```
-
-2. 过滤出当前已冻结的进程信息(没有冻结的不会显示出来)：
-
-```
-ps -A | grep -E "refrigerator|do_freezer|signal"
-```
-[![](img/uploadfile/202211/98b11669518520.jpg)](img/uploadfile/202211/98b11669518520.jpg)
-
-3. 显示所有安卓应用进程的状态信息，无论是否冻结状态
-
-```
-ps -A | grep u0_a
-```
-[![](img/uploadfile/202211/a22a1669518520.jpg)](img/uploadfile/202211/a22a1669518520.jpg)
-
-### <i id="Help9"></i>帮助9：查询本机支持的冻结模式(Freezerv1/v2)
-- 看前须知
-1. 4.x内核即使支持v2大概率也是不完整的，不一定有效，实际效果需要下方代码来检测
-2. 这个代码不一定准确，请不要太过依赖此代码
-
-- 操作步骤
-1. 下载.sh脚本<u>[**`云盘下载`**](https://backup.bzmshang.top/Software/Tombstone/挂载查询(脚本) "云盘下载")</u>
-2. 在MT管理器中用ROOT执行该脚本
-
-### <i id="Help10"></i>帮助10：冻结控制器说明
-- 摘自Jark006大佬的<u>[**`冻它教程`**](https://jark006.github.io/FreezeitIntroduction/ "冻它教程")</u>
-
-1. Freezer 是 cgroup 的其中一个子控制器，用于冻结进程的CPU使用。冻它日志顶部有说明本机当前支持的V1或V2版本，内核启动时一般只会启用其中一个，少数魔改内核会同时启用。Freezer 在冻结进程时，如果此时进程处于一些特殊状态(例如进程正在binder通信读写数据)，它会等待这个状态结束再冻结，也可能会取消冻结。
-2. FreezerV1 很早便在内核中支持，3.x/4.x/5.x内核都会支持。部分内核的FreezerV1存在缺陷，进程PID被Freezer持有时(即冻结状态)无法被杀死，依旧占据内存，类似内存泄漏，需要解冻(thaw)才能结束进程并释放内存。这是内核级缺陷，应用层大概率无法解决，只能缓解，因此冻它依靠 打开应用(解冻) 和 定时解冻 操作来彻底结束这些异常的进程并释放其内存。
-	- PS：厂商基于V1的墓碑机制(例如FreezerV1版Millet)会捕获 杀进程信号 进而为其解冻，不存在内存无法释放问题。
-3. FreezerV2 在 5.4 内核(Android11)起 完整支持 ，该冻结模式的系统体验最好。部分厂商会移植到4.14~4.19内核中，但是可能没有完整移植而缺失 BINDER_FREEZE 特性，导致进程在冻结期间，binder驱动依旧为其工作，若此时应用收到 binder同步 请求，超时未响应则会被系统认为异常而杀掉，而FreezerV1、SIGSTOP也会这样。
-	- PS1：MIUI的 FreezerV1版Millet 通过修改了内核binder驱动来获得binder同步事件进行解冻，避免了这个问题。而完整版FreezerV2则不用担心binder同步问题(异步binder请求会被系统缓存起来，等应用解冻了再处理，暂不清楚会不会像广播那样导致缓存溢出堵塞)。
-	- PS2：一般 4.14-4.19 内核支持 不完整 的FreezerV2，默认没有启用，如果想开启这种不完整FreezerV2，在冻它设置里开启挂载，重启即可，如果无法挂载，可在冻它群文件寻找其他挂载V2模块，若仍旧失败则说明内核不支持(部分高通设备才支持)。
-	- PS3：主线 5.4 版本内核(Android11)起支持 <u>[`BINDER_FREEZE`](https://cs.android.com/android/kernel/superproject/+/common-android11-5.4:common/drivers/android/binder.c;drc=da97a10882ba78cc036cc6b7b006dd057029b2e4;l=5043 "BINDER_FREEZE")</u> 特性。
-4. SIGSTOP 是Linux中编号19的系统信号，不能被进程捕获，一旦进程收到该信号则被立即强制暂停运行。这是底层Linux系统原始的进程控制机制，并不会考虑到上层安卓框架层应用的状态是否合适进行冻结，所以应用被 SIGSTOP 冻结时，其运行状态可能已经被破坏，重新回到前台解冻时，更容易发生闪退，重载等等现象。其冻结 最为彻底 ，但 容易出问题 (闪退，重载等)。
-5. FreezerV2(frozen) 和 FreezerV2(uid) 仅仅是操作路径不同，效果没有区别，V1版同理。
-
-```
-1. FreezerV2(frozen)路径:
-/sys/fs/cgroup/[frozen/unfrozen]
-
-2. FreezerV2(uid)路径:
-/sys/fs/cgroup/uid_10xxx/pid_xxx
-
-3. FreezerV1(frozen)路径:
-/dev/jark_freezer/[frozen/unfrozen]
-
-4. FreezerV1(uid)路径:
-/dev/jark_freezer/uid_10xxx
-```
-
-6. 各种模式在冻它模块下的体验排行如下，仅从原理考虑出发，不一定符合全部情况，以个人实际体验为准：
-
-```
-FreezerV2 FreezerV2半残 = FreezerV1 FreezerV1泄漏 ≈ SIGSTOP
-```
-
-总体区别
-1. Freezer 会等待应用结束特殊运行状态再冻结，可能会推迟冻结，也可能无限推迟。
-2. SIGSTOP 不考虑后果直接冻结，即使会导致应用异常
-
-### <i id="Help11"></i>帮助11：如何看出Millet禁用成功与否以及到底禁用了什么(MIUI专属)
-- 打开Termux终端：<u>[**`官网`**](https://termux.dev/cn/index.html "官网")</u>
-
-1. 进入管理员账户：
-
-```
-su
-```
-
-2. 输入下方代码
-
-```
-cmd greezer ls lsfz
-```
-[![](img/uploadfile/202210/6d2e1664968988.jpg)](img/uploadfile/202210/6d2e1664968988.jpg)
-
-3. 再接着继续输入以下代码
-
-```
-getprop | grep millet
-```
-
-4. 根据下面解释来看自己Termux终端上显示的
-
-```
-1. 必须false
-persist.sys.gz.enable
-persist.sys.brightmillet.enable
-persist.sys.powmillet.enable
-
-2. 为true则可以使用v1不泄露
-(部分内核支持查看，图片示例再下方)
-persist.sys.millet.cgroup1
-
-3. 新版millet最好为false
-persist.sys.millet.newversion
-
-4. 为true则可以使用网络解冻，false则不行
-persist.sys.millet.handshake
-```
-[![](img/uploadfile/202210/74501665050098.jpg)](img/uploadfile/202210/74501665050098.jpg)
-TIP：<font color="red">上图内容，只是**部分内核**支持，不是**所有**内核都可以</font>
-
-5. 如果跟第2步与图片不同或者第三步中的(必须false)不满足，请下载并刷入到Magisk中<u>[**`Millet禁用`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/%E4%BD%9C%E8%80%85%E7%9A%84millet%E9%85%8D%E7%BD%AE%E7%A6%81%E7%94%A8%E6%94%B9%E7%89%883.zip "Millet禁用")</u>
-PS：刷入须知，没有所谓的启用Millet，想启用可以试试f19没有新欢的MiT Lite，<u>[下载官网](mitlite.tf19.co "下载官网")</u>)
-
-### <i id="Help12"></i>帮助12：MIUI如何挂载V2
-- 摘自<u>[**`HanderSama`**](http://www.coolapk.com/u/449971 "HanderSama")</u>所写的<u>[**`MIUI使用NoActive心得`**](https://www.coolapk.com/feed/39752028?shareKey=Nzg2N2JhMGY4MzZjNjM0MDA3ZjA~&shareUid=3571197&shareFrom=com.coolapk.market_12.5.0 "MIUI使用NoActive心得")</u>
-- **前提**
-- 内核在4.14和4.19下
-
-- 具体操作
-- 一般4.14和4.19都是不支持v2或者是残疾版，这里首推电视内核<u>[**`Thevoyager`**](http://www.coolapk.com/u/2502654 "Thevoyager")</u>
-- 他的内核对Millet做了支持和补全，很好用！
-(如果没法换内核，也可以做下面步骤，不过是否成功冻结，以两个命令检测结果为准)
-- 其次我们要挂载cgroup2，这里用了<u>[**`f19没有新欢`**](http://www.coolapk.com/u/629316 "@f19没有新欢")</u>的挂载模块。
-- 怎么看有没有挂载生效呢？
->	 - 目录 /sys/fs/cgroup 下，出现了frozen和unfrozen，那就是挂载成功了
-- 这样挂载的v2目前是不支持binder解冻的，可能会闪弹重载，出现了这种现象，记得打开<u>[**`轮番解冻`**](#26)</u>
-
-- 下载链接
-- 挂载模块：<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/cgroup%E6%8C%82%E8%BD%BD(%E5%98%9F%E5%98%9F%E6%96%AF%E5%9F%BA).zip "挂载模块")</u>
-2. 内核作者：Thevoyager
-
-	- <u>[**`群聊1`**](https://jq.qq.com/?_wv=1027&k=FdE5Y97F)</u><u>[**`群聊2`**](https://jq.qq.com/?_wv=1027&k=A0iSAlSW "群聊")</u><u>[**`群聊2`**](https://jq.qq.com/?_wv=1027&k=1TSh1SHu)</u>
-- 855内核网盘地址
-	1. LG G8：<u>[**`下载`**](https://the-voyager.lanzouv.com/b01868n0h)</u>密码:ec24
-	2. K20pro/米9：<u>[**`下载`**](https://the-voyager.lanzouv.com/b01868mpg)</u>密码:3scm
-- 865/870内核：<u>[**`下载`**](https://the-voyager.lanzouv.com/b018671fe)</u>密码:ef1z
-
-### <i id="Help13"></i>帮助13：使用NoActive压不住怎么办(Freezerv1/v2)
-- 看前须知
-1. 使用<u>[**`帮助9`**](#Help9)</u>中的脚本查看当前挂咋情况
-2. 如果你选择的模式都没有挂载，压不住是你的手机内核的问题，建议换内核
-
-### <i id="Help14"></i>帮助14：内存泄漏
-1. 用FreezerV1的Millet才会泄漏
-2. 因为第三方墓碑没处理好死亡进程的解冻才导致泄漏，官方的并不会泄。
-3. <u>[**`内存泄漏的解释`**](#内存泄漏)</u>
-PS：内核版本决定支持V1/V2, 和MIUI版本无关，因为都是MIUI13
+- 优先推荐myflavor的软件查看：【<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/冻结查询/NoActive-Monitor "下载")</u>】
 
 ### <i id="Help15"></i>帮助15：挂载V2没效果，挂载不上？
 1. 挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核
 2. 挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核
 3. 挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核
 
-- 挂载模块：<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/NoActive/cgroup%E6%8C%82%E8%BD%BD(%E5%98%9F%E5%98%9F%E6%96%AF%E5%9F%BA).zip "挂载模块")</u>
+- 挂载模块：<u>[**`下载`**](https://backup.bzmshang.top/Software/Tombstone/Other/cgroup挂载 "挂载模块")</u>
 
 ### <i id="Help-Last"></i>帮助Last：(如何卸载干净NoActive)
 1. 将NoActive卸载
