@@ -9,9 +9,9 @@ index_img: img/uploadfile/202302/57a41675408064.jpg
 
 # <i id="指南版本"></i>指南版本
 ```
-ver=v0.7.5
+ver=v0.7.6
 
-latest-update=2022.10.16
+latest-update=2022.10.19
 
 以下内容全文为MiPush Framework使用指南，请分享给有需要的人
 ```
@@ -20,7 +20,7 @@ latest-update=2022.10.16
 > 1. 本文档
 > 	- 依据MiPush版本:`v0.3.10-XXXXXXXX`即群内最新内测版
 > 	- 依据设备：`一加9PRO Color13`
-> 2. 本文档是大量搬运群内精华消息然后重新排版优化
+> 2. 本文档是原Q群内精华消息，现已重新排版优化，并加入自己的理解，欢迎指正
 > 3. 如搬运本文档的任何内容，请说明文档来源
 ：本文作者：<u>[**`冰之梦殇520`**](https://www.coolapk.com/u/3571197 "冰之梦殇520")</u>
 MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "NihilityT")</u>
@@ -42,7 +42,7 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 2. 可以以应用身份发出通知，而不是以推送服务的身份
 - 好处：以目标应用身份来通知，像应用本身发出的
 3. 该应用为XP模块，需勾`选系统框架`并`重启`才能进行分应用通知
-4. 此外，MiPush也有伪装的作用
+4. 此外，MiPush也有【伪装】的作用
 
 ### <i id="什么是透传消息"></i>2. 什么是透传消息？
 - 直接发送给APP的消息，不会在通知栏显示
@@ -70,8 +70,9 @@ MiPushFramework维护者：<u>[**`NihilityT`**](https://github.com/NihilityT "Ni
 ## <i id="指南"></i>指南
 ### <i id="MiPush使用教程-ROOT"></i>1. MiPush使用教程-ROOT
 #### <i id="MiPush使用教程-ROOT-Version Code为1003003000"></i>1-1. Version Code为1003003000
-PS1:此版本不适合Color使用(在我手机上是这样的)
-PS2:小米推荐使用此版本，无需精简，安装成功后，推送服务为系统应用
+PS1：此版本不适合Color使用(在我手机上是这样的)
+PS2：小米推荐使用此版本，无需精简，安装成功后，推送服务为系统应用
+PS3：1-4步为正常使用米推步骤，从第5步开始，则为完善推送服务的步骤，强烈推送有ROOT的使用
 
 - <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/Download "云盘下载")</u>
 - 具体操作
@@ -79,8 +80,14 @@ PS2:小米推荐使用此版本，无需精简，安装成功后，推送服务�
 	 - 由于第四项【安装时始终使用已装APP的签名】还是比较危险的，顾安装完成后，请关闭该功能，并重启手机
 2. 重启手机
 3. 安装推送服务
-4. 接下来就可以正常使用了
+4. 接下来就可以正常使用`推送服务`来推送消息了
 - **如果使用【核心破解】安装【versionCode=1003003000】版，切勿不可再使用【精简】方案**
+5. 安装MiPush模块【<u>[**`下载`**](https://backup.bzmshang.top/Software/MiPush/Download/MiPush(分应用-兼伪装) "下载")</u>】
+6. 勾选【推荐作用域】
+- 注：MiPush的作用【<u>[**`查看`**](#什么是分应用 "查看")</u>】
+7. 重启手机
+8. 你成功激活了分应用推送的重要步骤
+	- 如果想优化【推送通知可】查看【<u>[配置文件使用介绍](#配置文件使用介绍(非写法仅使用) "配置文件使用介绍")</u>】
 
 #### <i id="MiPush使用教程-ROOT-Version Code为105"></i>1-2. Version Code为105
 - 图文版：<u>[**`查看`**](https://www.coolapk.com/feed/41357294?shareKey=ZmQ2MWNhZTgxMzI4NjNjYjlmODk~&shareUid=330645&shareFrom=com.coolapk.market_12.4.2 "查看")</u>
