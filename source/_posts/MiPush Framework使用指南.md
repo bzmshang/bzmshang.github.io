@@ -782,6 +782,6 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 - 作者：极客无极
 - 内容：<u>[**`查看`**](https://b23.tv/6vqqYWs "查看")</u>
 
-### <i id="免root解决微信qq签名不一致的问题"></i>4. 免root解决微信qq签名不一致的问题
+### <i id="免root解决微信qq签名不一致的问题"></i>4. 免root解决微信qq签名不一致的问题(其余应用也可参考)
 - 作者：本_为_以
 - 内容：<u>[**`查看`**](https://www.coolapk.com/feed/45863471?shareKey=NWNlNzg0ZDdmM2VhNjQ1OWQ5YTM~&shareUid=7095588&shareFrom "查看")</u>
