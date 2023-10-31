@@ -1,3 +1,12 @@
+---
+title: MiPush Framework使用指南
+permalink: MiPush-Framework_User-Guide.html
+date: 2023-02-03
+tags:
+banner_img: img/uploadfile/202302/57a41675408064.jpg
+index_img: img/uploadfile/202302/57a41675408064.jpg
+---
+
 # <i id="指南版本"></i>指南版本
 ```
 ver=v0.7.7
