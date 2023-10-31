@@ -10,7 +10,7 @@ latest-update=2023.10.31
 # <i id="声明"></i>声明
 > 1. 本文档
 >    - 依据MiPush版本:`v0.3.11+`即频道最新内测版
->        - 【<u>[*`查看`*](https://cloud.bzmshang.top/Software/MiPush/Download/MiPushFramework/Alpha "查看")</u>】
+>        - 【<u>[*`查看`*](https://backup.bzmshang.top/Software/MiPush/Download/MiPushFramework/Alpha "查看")</u>】
 >    - 依据设备：`一加9PRO Color13`
 > 2. 本文档是原Q群内精华消息，现已重新排版优化，并加入自己的理解，欢迎指正
 > 3. 如搬运本文档的任何内容，请说明文档来源
@@ -57,15 +57,15 @@ latest-update=2023.10.31
 ### <i id="0-2"></i>0.2 依赖工具
 1. 推送服务(通)
     - <u>[`官方下载`](https://github.com/NihilityT/MiPushFramework/releases "官方下载")</u>
-    - <u>[`云盘下载`](https://cloud.bzmshang.top/Software/MiPush/Download/MiPushFramework "云盘下载")</u>
+    - <u>[`云盘下载`](https://backup.bzmshang.top/Software/MiPush/Download/MiPushFramework "云盘下载")</u>
 2. MiPus(通)
     - <u>[`官方下载`](https://github.com/NihilityT/MiPush/releases "官方下载")</u>
-    - <u>[`云盘下载`](https://cloud.bzmshang.top/Software/MiPush/Download/MiPush(分应用-兼伪装) "云盘下载")</u>
+    - <u>[`云盘下载`](https://backup.bzmshang.top/Software/MiPush/Download/MiPush(分应用-兼伪装) "云盘下载")</u>
 3. 配置文件(通)
     - <u>[`官方下载`](https://github.com/NihilityT/MiPushConfigurations "官方下载")</u>
-    - <u>[`云盘下载`](https://cloud.bzmshang.top/Software/MiPush/Download/MiPushConfigurations "云盘下载")</u>
+    - <u>[`云盘下载`](https://backup.bzmshang.top/Software/MiPush/Download/MiPushConfigurations "云盘下载")</u>
 4. 伪装模块(非MIUI)
-    - <u>[`云盘下载`](https://cloud.bzmshang.top/Software/MiPush/Download/伪装模块 "云盘下载")</u>
+    - <u>[`云盘下载`](https://backup.bzmshang.top/Software/MiPush/Download/伪装模块 "云盘下载")</u>
 
 
 ## <i id="0-3"></i>0.3 应用获取
@@ -83,8 +83,8 @@ PS：部分应用使用其他应用商城下载的包可能存在伪装没效果
 2. 华为应用市场网页版下载应用安装包方法：
 > 1. 手机浏览器输入网址： appgallery.huawei.com
 > 2. 选择一个应用，例如酷安，点击进入，这时网址显示为： appgallery.huawei.com/app/C10414599
-> 3. 把网址改成： appgallery.cloud.huawei.com/appdl/C10414599
->    1. 在 `huawei.com` 前增加个 `cloud.`
+> 3. 把网址改成： appgallery.backup.huawei.com/appdl/C10414599
+>    1. 在 `huawei.com` 前增加个 `backup.`
 > 	 2. 在 `app` 后面加入 `dl`
 > 4. 回车，下载
 
@@ -99,7 +99,7 @@ PS1：此版本不推荐Color系统的手机使用
 PS2：MIUI推荐使用此版本，无需精简
 ``````
 1. 打开 `核心破解` 的前四个功能开关
-[![](https://bzmshang.top/content/uploadfile/202308/1bee1693100355.jpg)](https://bzmshang.top/content/uploadfile/202308/1bee1693100355.jpg)
+[![](img/uploadfile/202308/1bee1693100355.jpg)](img/uploadfile/202308/1bee1693100355.jpg)
 2. 安装 ***推送服务***
 3. 安装 ***MiPush模块***
 4. 勾选 ***推荐作用域***
@@ -244,17 +244,17 @@ PS：方法由群友【wyj809】提出
 
 ### <i id="2-2-3"></i>2.2.3 强制注册
 - 具体操作
-[![](https://bzmshang.top/content/uploadfile/202302/b4961676027252.jpg)](https://bzmshang.top/content/uploadfile/202302/b4961676027252.jpg)
+[![](img/uploadfile/202302/b4961676027252.jpg)](img/uploadfile/202302/b4961676027252.jpg)
 
 - 强制注册成功
-[![](https://bzmshang.top/content/uploadfile/202302/d97c1676016787.jpg)](https://bzmshang.top/content/uploadfile/202302/d97c1676016787.jpg)
+[![](img/uploadfile/202302/d97c1676016787.jpg)](img/uploadfile/202302/d97c1676016787.jpg)
 	 - 如果出现上图情况，基本问题不大，强制停止一次该应用，再打开基本就注册成功了
 	 - 注册成功，能不能推是另外一回事（大部分能注册成功就能推送，除了一些奇葩的，比如：酷安、抖音）
 	 - 咸鱼为例(框出来的是应用包名，每个应用都不一样)
 
 - 强制注册失败
 如果出现下图情况
-[![](https://bzmshang.top/content/uploadfile/202302/00061676016787.jpg)](https://bzmshang.top/content/uploadfile/202302/00061676016787.jpg)
+[![](img/uploadfile/202302/00061676016787.jpg)](img/uploadfile/202302/00061676016787.jpg)
 	 - Color系统的就没必要关注了，直接去推送服务里面看就行，根据我Color13使用来看，这个提示跟注册成功与否，没有半毛钱关系
 	 - 非Color系统,出现这个，大概率就是注册失败
 
@@ -317,12 +317,12 @@ PS：后置配置由可以理解为全局配置
  	- PS：使用任何`2_后置配置_xxx`都需要其配合其使用
 
 2. `2_后置配置_自动提取意图.json`
- 	- PS1：提取意图即从数据里面提取出 intent[![](https://bzmshang.top/content/uploadfile/202307/47181688821935.jpg)](https://bzmshang.top/content/uploadfile/202307/47181688821935.jpg)
+ 	- PS1：提取意图即从数据里面提取出 intent[![](img/uploadfile/202307/47181688821935.jpg)](img/uploadfile/202307/47181688821935.jpg)
  	- PS2：直观的效果是通知点击的处理逻辑不走推送服务，可以下拉小窗。
  	- PS3：与`直接打开意图相`配合：【`直接打开意图是`让通知有可能通过小窗打开，`自动提取意图`是增加这个支持的范围】
 
 3. `2_后置配置_移除通知副标题.json`
- 	- PS：如图[![](https://bzmshang.top/content/uploadfile/202307/74801688815746.jpg)](https://bzmshang.top/content/uploadfile/202307/74801688815746.jpg)
+ 	- PS：如图[![](img/uploadfile/202307/74801688815746.jpg)](img/uploadfile/202307/74801688815746.jpg)
 
 4. `2_后置配置_只显示一条消息-白名单.json`
  	- PS：添加入该白名单的应用，收到新消息时会覆盖旧消息，且不分联系人及消息类型，只显示最新一条消息。
@@ -342,11 +342,11 @@ PS：后置配置由可以理解为全局配置
 
 9. `2_后置配置_将透传消息作为通知显示-白名单.json`
  	- PS1：原MiPushFramework的按钮功能，新版改为配置文件实现功能
- 	- PS2：部分消息为透传消息[![](https://bzmshang.top/content/uploadfile/202307/16321688817897.jpg)](https://bzmshang.top/content/uploadfile/202307/16321688817897.jpg)
+ 	- PS2：部分消息为透传消息[![](img/uploadfile/202307/16321688817897.jpg)](img/uploadfile/202307/16321688817897.jpg)
 
 10. `2_后置配置_屏蔽运营消息-黑/白名单.json`
  	- PS1：运营消息一般为广告通知，在MiPush中有专门的通知渠道，该配置将会把所有运营消息渠道的通知全部拦截，即MiPush不通知运营消息渠道的消息
- 	- PS2：该配置属于全局拦截，有些APP例如抖音等，运营消息发送的是正常的消息，所以，自行斟酌使用黑/白名单[![](https://bzmshang.top/content/uploadfile/202307/861e1688816846.jpg)](https://bzmshang.top/content/uploadfile/202307/861e1688816846.jpg)
+ 	- PS2：该配置属于全局拦截，有些APP例如抖音等，运营消息发送的是正常的消息，所以，自行斟酌使用黑/白名单[![](img/uploadfile/202307/861e1688816846.jpg)](img/uploadfile/202307/861e1688816846.jpg)
 
 11. `2_后置配置_直接打开意图-黑/白名单.json`
  	- PS1：直接打开意图可以理解为使用小窗打开该APP
@@ -441,7 +441,7 @@ https://github.com/NihilityT/MiPushConfigurations
 	 1. 设置配置目录，入口位于：推送服务 - 设置
 	 2. 下载所需配置放入该目录中
 	 3. （可选）若需自定义通知图标，可以在配置目录下创建icon文件夹，将AndroidNotifyIconAdapt仓库的json文件放入其中
-		 - 可从<u>[*`GitHub下载`*](https://github.com/fankes/AndroidNotifyIconAdapt "GitHub下载")</u>或<u>[*`云盘下载`*](https://cloud.bzmshang.top/Software/MiPush/通知图标/自定义通知图标 "云盘下载")</u>中获取
+		 - 可从<u>[*`GitHub下载`*](https://github.com/fankes/AndroidNotifyIconAdapt "GitHub下载")</u>或<u>[*`云盘下载`*](https://backup.bzmshang.top/Software/MiPush/通知图标/自定义通知图标 "云盘下载")</u>中获取
 
 3. 配置类型
 	 配置共分为两类：
@@ -498,7 +498,7 @@ https://github.com/NihilityT/MiPushConfigurations
 - 对MIUI_CN和Flyme无作用
 1. 安装推送服务最新版
 2. 在配置目录下面创一个**icon**文件夹，把图标**.json**放进去;
-3. 图标下载：<u>[*`GitHub下载`*](https://github.com/fankes/AndroidNotifyIconAdapt "GitHub下载")</u>或<u>[*`云盘下载`*](https://cloud.bzmshang.top/Software/MiPush/通知图标/自定义通知图标 "云盘下载")</u>
+3. 图标下载：<u>[*`GitHub下载`*](https://github.com/fankes/AndroidNotifyIconAdapt "GitHub下载")</u>或<u>[*`云盘下载`*](https://backup.bzmshang.top/Software/MiPush/通知图标/自定义通知图标 "云盘下载")</u>
 4. 强行停止推送服务
 
 ### <i id="4-1-2"></i>4.1.2 MIUI通知图标
@@ -516,23 +516,23 @@ https://github.com/NihilityT/MiPushConfigurations
 - 没有相应参数的时候就是用首字作为头像
 
 ### <i id="4-2-2"></i>4.2.2 为什么我没有推送服务几个字
-[![](https://bzmshang.top/content/uploadfile/202302/ff041676027895.jpg)](https://bzmshang.top/content/uploadfile/202302/ff041676027895.jpg)
+[![](img/uploadfile/202302/ff041676027895.jpg)](img/uploadfile/202302/ff041676027895.jpg)
 - 没用MiPush模块勾选系统框架且能推送才这么显示
 
 ### <i id="4-2-3"></i>4.2.3 如何关闭-推送服务运行中
 - 进入推送服务的系统通知设置界面，关闭status组通知，强行停止推送服务
-[![](https://bzmshang.top/content/uploadfile/202303/d0131679626729.jpg)](https://bzmshang.top/content/uploadfile/202303/d0131679626729.jpg)
+[![](img/uploadfile/202303/d0131679626729.jpg)](img/uploadfile/202303/d0131679626729.jpg)
 
 ### <i id="4-2-4"></i>4.2.4 通知渠道
 - 只有推送过相关消息才有，不是注册完就有了，下图QQ为例
-[![](https://bzmshang.top/content/uploadfile/202302/69a21676186811.jpg)](https://bzmshang.top/content/uploadfile/202302/69a21676186811.jpg)
+[![](img/uploadfile/202302/69a21676186811.jpg)](img/uploadfile/202302/69a21676186811.jpg)
 
 ### <i id="4-2-5"></i>4.2.5 铃声/悬浮通知
 - 怎么开启悬浮通知(QQ群聊消息为例)
-[![](https://bzmshang.top/content/uploadfile/202302/d3c11676187466.jpg)](https://bzmshang.top/content/uploadfile/202302/d3c11676187466.jpg)
+[![](img/uploadfile/202302/d3c11676187466.jpg)](img/uploadfile/202302/d3c11676187466.jpg)
 
 - 操作方法
-[![](https://bzmshang.top/content/uploadfile/202302/faad1676202329.jpg)](https://bzmshang.top/content/uploadfile/202302/faad1676202329.jpg)
+[![](img/uploadfile/202302/faad1676202329.jpg)](img/uploadfile/202302/faad1676202329.jpg)
 
 ### <i id="4-2-6"></i>4.2.6 无法收到推送
 - 如果您无法收到任何推送，请按以下方法排查：
@@ -550,14 +550,14 @@ https://github.com/NihilityT/MiPushConfigurations
 	 1. MIUI会折叠一些推送消息，归类为不重要通知
 	 2. 但是根据缘由来看，消息就 ≈ 无了
 	 3. 所以要全部设置通知为重要
-[![](https://bzmshang.top/content/uploadfile/202302/9fdd1676971050.jpg)](https://bzmshang.top/content/uploadfile/202302/9fdd1676971050.jpg)
+[![](img/uploadfile/202302/9fdd1676971050.jpg)](img/uploadfile/202302/9fdd1676971050.jpg)
 
 - 操作：
 	 1. 通知过滤规则设成重要
 		 - 否则有推送消息记录，通知栏因缘由被吞
 		 - 把不重要消息的收纳栏显示出来了
 	 - 如果默认还不出现在通知栏。去MIUI原生通知图标那可以开启收纳栏
-[![](https://bzmshang.top/content/uploadfile/202302/13651676970319.jpg)](https://bzmshang.top/content/uploadfile/202302/13651676970319.jpg)
+[![](img/uploadfile/202302/13651676970319.jpg)](img/uploadfile/202302/13651676970319.jpg)
 
 ### <i id="4-2-8"></i>4.2.8. 如何解决QQ只显示最新一条消息
 - **注意：下面两种办法不要同时使用，可能会有bug**
@@ -565,13 +565,13 @@ https://github.com/NihilityT/MiPushConfigurations
 	 - 使用<u>[*`应用配置`*](#3-1-4 "应用配置")</u> 中的关于QQ的拉满，简单粗暴
 2. 不推荐堆叠开关
 	 - 在推送服务里面设置QQ堆叠(新版已将开关改为配置文件)
-[![](https://bzmshang.top/content/uploadfile/202302/2a9a1676984515.jpg)](https://bzmshang.top/content/uploadfile/202302/2a9a1676984515.jpg)
+[![](img/uploadfile/202302/2a9a1676984515.jpg)](img/uploadfile/202302/2a9a1676984515.jpg)
 
 ### <i id="4-2-9"></i>4.2.9 通知上的按钮
 - 如果遇到下图中类似的按钮，且不喜欢的，请换用release版本
 - 推送服务v0.3.9+，该功能做成开关了，默认关闭的
-[![](https://bzmshang.top/content/uploadfile/202302/e6ca1675765006.jpg)](https://bzmshang.top/content/uploadfile/202302/e6ca1675765006.jpg)
-[![](https://bzmshang.top/content/uploadfile/202302/2a611675765006.jpg)](https://bzmshang.top/content/uploadfile/202302/2a611675765006.jpg)
+[![](img/uploadfile/202302/e6ca1675765006.jpg)](img/uploadfile/202302/e6ca1675765006.jpg)
+[![](img/uploadfile/202302/2a611675765006.jpg)](img/uploadfile/202302/2a611675765006.jpg)
 
 ### <i id="4.3.10"></i>4.3.10. 通知数量
 - 每个 APP 的通知同时显示数量是有上限的，可能是50，可能是24。
@@ -602,7 +602,7 @@ PS：使用VCD=1003003000版，在更新时可能会被恢复成官方版，
 
 ## <i id="5-2"></i>5.2 权限设置
 ### <i id="5-2-1"></i>5.2.1 修改设置
-[![](https://bzmshang.top/content/uploadfile/202302/50cd1676984120.jpg)](https://bzmshang.top/content/uploadfile/202302/50cd1676984120.jpg)
+[![](img/uploadfile/202302/50cd1676984120.jpg)](img/uploadfile/202302/50cd1676984120.jpg)
 
 - ~~该目录里面的所有开关，无特殊需求，默认即可，无需开关~~ 新版已经全部改为<u>[*`后置配置`*`](#3-1-3 "后置配置")</u>
 - ~~如果非要开关，除非你明白它的含义~~ 能看懂配置文件的作用即可
@@ -708,7 +708,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 ## <i id="7-1"></i>7.1 常用应用问题解决
 ### <i id="7-1-1"></i>7.1.1 QQ
 #### <i id="7-1-1-1"></i>7.1.1.1 QQ注册
-- <u>[**`云盘下载`**](https://cloud.bzmshang.top/Software/MiPush/Download/MiPush "云盘下载")</u>
+- <u>[**`云盘下载`**](https://backup.bzmshang.top/Software/MiPush/Download/MiPush "云盘下载")</u>
 1. 安装MiPush、推送通知
 2. 前往LSPosed中，勾选推荐作用域、QQ
 3. 重启手机
@@ -718,7 +718,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 		 - 若一直为尚未注册，可以试试<u>[*`强制注册`*](#2-2-2 "强制注册")</u>
 		 - 则尝试使用MiPushDeviceFake或MiPushfaker，倘若变成注册失败，请看下面
 	 - 注册失败
-		 [![](https://bzmshang.top/content/uploadfile/202302/bb401675496609.jpg)](https://bzmshang.top/content/uploadfile/202302/bb401675496609.jpg)
+		 [![](img/uploadfile/202302/bb401675496609.jpg)](img/uploadfile/202302/bb401675496609.jpg)
 
 #### <i id="7-1-1-2"></i>7.1.1.2 QQ注册-不推送
 - 注册成功后，需要重启注册应用，切记
@@ -727,7 +727,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 3. 使用墓碑，来迫使QQ走推送通道
 > - 如果使用墓碑后QQ推送，仍不走MiPush，可以使用Thanox或者Scene来配合
 > 1. 使用`Thanox`情景模式中Process trim(可从`Thanox`的示例中导入)，然后添加全局变量：process_trim_list，并添加QQ的推送服务MSF，如图所示
-> [![](https://bzmshang.top/content/uploadfile/202302/ecad1675932698.jpg)](https://bzmshang.top/content/uploadfile/202302/ecad1675932698.jpg)
+> [![](img/uploadfile/202302/ecad1675932698.jpg)](img/uploadfile/202302/ecad1675932698.jpg)
 > 2. 使用`Scene`的应用偏见，直接选择QQ即可
 
 ### <i id="7-1-1-3"></i>7.1.1.3 QQ无法接通QQ推送电话
@@ -759,7 +759,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 
 ### <i id="7-2-1"></i>7.2.1 酷安
 #### <i id="7-2-1-1"></i>7.2.1.1 酷安注册-不推送
-- <u>[*`云盘下载`*](https://cloud.bzmshang.top/Software/MiPush/酷安 "云盘下载")</u>
+- <u>[*`云盘下载`*](https://backup.bzmshang.top/Software/MiPush/酷安 "云盘下载")</u>
 - MIUI
 	 1. 卸载酷安，安装官方酷安12.4.2版
 	 2. 先不要启动酷安
@@ -779,7 +779,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 	- Tip1：酷安注册很容易，难就难在注册成功不推送，所以，使用内置版的13.0.1酷安注册成功后，划卡酷安，测试推送，如果刚注册完，划卡推送没用，重启手机并打开酷安，再次测试
 	- Tip2：如果不行，也对酷安隐藏root后再启动酷安进行注册推送
 	- Tip3：(需要ROOT)如果你推送没有问题了，且不喜欢修改的酷安，可以通过核心破解并打开图中功能，进行酷安版本切换
-[![](https://bzmshang.top/content/uploadfile/202302/56f01676008356.jpg)](https://bzmshang.top/content/uploadfile/202302/56f01676008356.jpg)
+[![](img/uploadfile/202302/56f01676008356.jpg)](img/uploadfile/202302/56f01676008356.jpg)
 
 ### <i id="7-3-1"></i>7.3.1 抖音
 #### <i id="7-3-1-1"></i>7.3.1 .1 抖音注册-推送
@@ -826,7 +826,7 @@ appops set --user 999 com.xiaomi.xmsf SYSTEM_ALERT_WINDOW allow
 
 #### <i id="7-2-4-2"></i>Q2：使用配置文件后没有会话通知？
 - A2：如果使用配置文件后，会话消息无法通知的话，打开相应软件的添加桌面快捷方式的权限试试
-[![](https://bzmshang.top/content/uploadfile/202302/d8ce1676971871.jpg)](https://bzmshang.top/content/uploadfile/202302/d8ce1676971871.jpg)
+[![](img/uploadfile/202302/d8ce1676971871.jpg)](img/uploadfile/202302/d8ce1676971871.jpg)
 
 #### <i id="7-2-4-3"></i>Q3：为什么配置文件里面包名不可以用 `|` 或 `其他字符` 进行连接？
 - A3：那样的话就会出现下面2种情况时就不知道应用顺序了，会有问题
