@@ -9,9 +9,9 @@ index_img: img/uploadfile/202209/5a3e1663656468.jpg
 
 # <i id="情景模式版本"></i>情景模式版本
 ```
-ver=v0.2.9
+ver=v0.3.0
 
-latest-update=2023.07.31
+latest-update=2023.11.11
 
 以下内容全文为Thanox的情景模式收集，请告诉给有需要的人
 
@@ -35,8 +35,8 @@ latest-update=2023.07.31
 > 	 - 电脑版：请看顶部导航栏
 
 # <i id="实用情景模式"></i>实用情景模式
-## <i id="清理后台"></i>1. 清理后台
-### <i id="划卡即清"></i>1-1. 划卡即清
+## <i id="1"></i>1. 清理后台
+### <i id="1-1"></i>1.1 划卡即清
 - 注意事项
 > 1. 非常适用于Color系统移除Athena（雅典娜）后，划卡无法清理后台
 > 2. 全局变量为：HUAKA（将所有APP都加入全局变量即可）
@@ -55,7 +55,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="自动划掉最近任务中没有运行的应用"></i>1-2. 自动划掉最近任务中没有运行的应用
+### <i id="1-2"></i>1.2 自动划掉最近任务中没有运行的应用
 - 注意事项
 > 1. 即食即用
 
@@ -74,7 +74,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="返回桌面移除任务卡片"></i>1-3. 返回桌面移除任务卡片
+### <i id="1-3"></i>1.3 返回桌面移除任务卡片
 - <u>[**`原帖`**](https://www.coolapk.com/feed/45419920?shareKey=NmEzNjg2ODU1Y2YxNjQ0NGU5MDc~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -92,7 +92,7 @@ latest-update=2023.07.31
 ] 
 ```
 
-### <i id="息屏关数据，清理后台"></i>1-4. 息屏关数据，清理后台
+### <i id="1-4"></i>1.4 息屏关数据，清理后台
 - <u>[**`原帖`**](https://www.coolapk.com/feed/35805896?shareKey=MGU1YjZlMjcwZThlNjQ0ODhjZTI~&shareUid=2521387&shareFrom "**`原帖`**")</u>
 
 ```
@@ -111,7 +111,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="返回桌面或灭屏清理后台"></i>1-5. 返回桌面或灭屏清理后台
+### <i id="1-5"></i>1.5 返回桌面或灭屏清理后台
 - NoActive群友提供
 
 ```
@@ -128,7 +128,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="5分钟未前台自动杀后台"></i>1-6. 5分钟未前台自动杀后台
+### <i id="1-6"></i>1.6 5分钟未前台自动杀后台
 
 ```
 [
@@ -146,7 +146,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="移除通知杀后台"></i>1-7. 移除通知杀后台
+### <i id="1-7"></i>1.7 移除通知杀后台
 - <u>[**`原帖`**](https://www.coolapk.com/feed/22576717?shareKey=ZjgwNzRhYjg4ODgxNjQ0MjJiMDE~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -163,7 +163,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="移除通知杀后台优化版"></i>1-8. 移除通知杀后台优化版
+### <i id="1-8"></i>1.8 移除通知杀后台优化版
 - 作者：<u>[**`苹果技术开发人员`**](http://www.coolapk.com/u/20080849 "苹果技术开发人员")</u>
 - 优化：前台应用推送消息时清除通知不杀应用
 
@@ -181,7 +181,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="应用被杀死，则移除卡片"></i>1-9. 应用被杀死，则移除卡片
+### <i id="1-9"></i>1.9 应用被杀死，则移除卡片
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
 - 应用被后台杀死，记录被杀死的应用和被杀死的时间到日志文件里。该情景模式不记录你自己划走卡片杀死的应用，只记录在最近任务里被后台杀死的应用。如何查看？日志文件路径"/data/system/thanos_ynokiMHEVHZWWdDH/profile_user_io/kill/killLog.txt"，打开日志文件即可查看。代码如下，请用情景模式json编写。
 ```
@@ -199,7 +199,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="开机工作"></i>1-10. 开机工作
+### <i id="1-10"></i>1.10 开机工作
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
 - 开机划掉没有运行的卡片，并且删除旧日志，同时后台开启一些需要自启动的应用。使用方法，全局变量: all_app 是开机后需要在最近任务划掉的应用集; ziqidong 是开机需要后台启动的应用集。代码如下:
 
@@ -223,7 +223,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="游戏时清理部分后台"></i>1-11. 游戏时清理部分后台
+### <i id="1-11"></i>1.11 游戏时清理部分后台
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
 - 游戏时清理一些顽固后台，变量notNitian_apps放需要被杀的应用，注意该应用如果在最近任务，将不会被杀。变量qlapps是你要打卡的游戏应用或其他应用。代码如下:
 
@@ -242,7 +242,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="应用被杀，自动复活"></i>1-12. 应用被杀，自动复活
+### <i id="1-12"></i>1.12 应用被杀，自动复活
 - 来自酷友提供<u>[**`eriswu`**](http://www.coolapk.com/u/21207768 "**`eriswu`**")</u>
 
 ```
@@ -261,8 +261,8 @@ latest-update=2023.07.31
 ]
 ```
 
-## <i id="保活"></i>2. 保活
-### <i id="应用保活(方案1)"></i>2-1. 应用保活(方案1)
+## <i id="2"></i>2. 保活
+### <i id="2-1"></i>2.1 应用保活(方案1)
 - 注意事项
 > 1. 把需要保活的应用放在 全局变量里，当应用被杀死后，该应用就会重新启动
 > 2. 全局变量为：baohuo
@@ -284,7 +284,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="应用保活(方案2)"></i>2-2. 应用保活(方案2)
+### <i id="2-2"></i>2.2 应用保活(方案2)
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39717161?shareKey=M2ZmZmI5M2ZmZWQxNjQ0MzU4OTA~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -301,7 +301,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="保活APP"></i>2-3. 保活APP
+### <i id="2-3"></i>2.3 保活APP
 - <u>[**`原帖`**](https://www.coolapk.com/feed/45419920?shareKey=NmEzNjg2ODU1Y2YxNjQ0NGU5MDc~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -321,7 +321,7 @@ latest-update=2023.07.31
 
 
 
-### <i id="微信保活"></i>2-4. 微信保活
+### <i id="2-4"></i>2.4 微信保活
 - <u>[**`原帖`**](https://www.coolapk.com/feed/45338524?shareKey=MzA4ZTQ5ZDdmMWI0NjQ0MzRkZjU~&shareUid=3571197&shareFrom "原帖")</u>
 
 ```
@@ -339,7 +339,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="QQ保活"></i>2-5. QQ保活
+### <i id="2-5"></i>2.5 QQ保活
 - <u>[**`原帖`**](https://www.coolapk.com/feed/35808050?shareKey=ZTczOTFmYWE5Y2ZkNjQ0MzViMWQ~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -358,7 +358,7 @@ latest-update=2023.07.31
 }
 ]
 ```
-### <i id="无障碍保活"></i>2-6. 无障碍保活
+### <i id="2-6"></i>2.6 无障碍保活
 
 ```
 [
@@ -376,7 +376,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="一键启动很多应用"></i>2-7. 一键启动很多应用
+### <i id="2-7"></i>2.7 一键启动很多应用
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
 - 一键启动很多很多应用，每隔4秒启动一个应用，把需要启动的应用放在变量 hd 里面，新建一个qdyy 的快捷应用连接，快捷名字随意。代码如下:
 
@@ -394,8 +394,8 @@ latest-update=2023.07.31
 ]
 ```
 
-## <i id="GPS"></i>3. 定位
-### <i id="自动GPS"></i>3-1. 自动GPS
+## <i id="3"></i>3. 定位
+### <i id="3-1"></i>3.1 自动GPS
 - <u>[**`原帖`**](https://www.coolapk.com/feed/45564367?shareKey=Mjc5YTBlMDU1YjE0NjQ0YjZjNDk~&shareUid=3044819&shareFrom "原帖")</u>
 - 全局变量分两个
 	 - GPSApp
@@ -423,7 +423,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="自动开关GPS"></i>3-2. 自动开关GPS
+### <i id="3-2"></i>3.2 自动开关GPS
 - 注意事项
 > 1. 全局变量为：GPSapp
 > 2. 作者：默认2234077 <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=ZjUxZmQyOTExYjdjNjMxYzdmMDU~&shareUid=3571197&shareFrom "原帖")</u>
@@ -441,7 +441,7 @@ latest-update=2023.07.31
     }
 ]
 ```
-### <i id="微信位置共享"></i>3-3. 微信位置共享
+### <i id="3-3"></i>3.3 微信位置共享
 - <u>[**`原帖`**](https://www.coolapk.com/feed/20272935?shareKey=ZTdlNjhmZTU0NGFkNjQ0MjJiOTM~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -457,8 +457,8 @@ latest-update=2023.07.31
 ]
 ```
 
-## <i id="打盹"></i>4. 打盹
-### <i id="息/亮屏进/退打盹"></i>4-1. 息/亮屏进/退打盹
+## <i id="4"></i>4. 打盹
+### <i id="4-1"></i>4.1 息/亮屏进/退打盹
 - 注意事项
 > 1. 下面两个分开，且都要刷
 > 2. 以下2个情景模式摘自 作者：l奋斗的小青年
@@ -500,7 +500,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="息/亮屏进/退打盹进阶"></i>4-2. 息/亮屏进/退打盹进阶
+### <i id="4-2"></i>4.2 息/亮屏进/退打盹进阶
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39314021?shareKey=YmRmY2UwNWM3OTYzNjQ0MzVjY2Y~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 1. 息屏进入打盹
@@ -541,7 +541,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="深度doze并屏蔽传感器延迟版"></i>4-3. 深度doze并屏蔽传感器延迟版
+### <i id="4-3"></i>4.3 深度doze并屏蔽传感器延迟版
 - <u>[**`原帖`**](https://www.coolapk.com/feed/40016015?shareKey=NTg3MjAwMWM5OGI1NjQ0MzVlYTQ~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 - 安卓13要把8改9才能用
 
@@ -597,7 +597,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="开机关闭打盹"></i>4-4. 开机关闭打盹
+### <i id="4-4"></i>4.4 开机关闭打盹
 - <u>[**`原帖`**](https://www.coolapk.com/feed/37649574?shareKey=NTVmNGI4YTEzZTg3NjQ0MzVmOTQ~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -615,8 +615,8 @@ latest-update=2023.07.31
 ]
 ```
 
-## <i id="WIFI"></i>5. WIFI
-### <i id="WiFi与移动数据网络的自动切换"></i>5-1. WiFi与移动数据网络的自动切换
+## <i id="5"></i>5. WIFI
+### <i id="5-1"></i>5.1 WiFi与移动数据网络的自动切换
 - 注意事项
 > 1. 下面三个情景模式是一套的，都需要刷入
 > 2. 开发者模式中的 “始终开启移动数据网络” 需要关闭，如果开启，情景模式将失效
@@ -671,7 +671,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="自动开关WIFI"></i>5-2. 自动开关WIFI
+### <i id="5-2"></i>5.2 自动开关WIFI
 - <u>[**`原帖`**](https://www.coolapk.com/feed/23374387?shareKey=YWQyYTI5ODc2YThkNjQ0MjJhN2E~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -688,7 +688,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="数据和wifi"></i>5-3. 数据和wifi
+### <i id="5-3"></i>5.3 数据和wifi
 - <u>[**`原帖`**](https://www.coolapk.com/feed/45338524?shareKey=MzA4ZTQ5ZDdmMWI0NjQ0MzRkZjU~&shareUid=3571197&shareFrom "原帖")</u>
 
 ```
@@ -704,8 +704,8 @@ latest-update=2023.07.31
 ]
 ```
 
-## <i id="FCM"></i>6. FCM
-### <i id="墓碑模式FCM推送"></i>6-1. 墓碑模式FCM推送
+## <i id="6"></i>6. FCM
+### <i id="6-1"></i>6.1 墓碑模式FCM推送
 - 来自NoActive群友投稿
 - <u>[**`索尼CBO`**](http://www.coolapk.com/u/427700 "**`索尼CBO`**")</u>
 - 该情景模式只适配了FreezeV2 UID模式
@@ -760,8 +760,8 @@ latest-update=2023.07.31
 ]
 ```
 
-## <i id="QW优化"></i>7. QW优化
-### <i id="微信FCM推送"></i>7-1. 微信FCM推送
+## <i id="7"></i>7. QW优化
+### <i id="7-1"></i>7.1 微信FCM推送
 1. 一代
 - <u>[**`原帖`**](https://www.coolapk.com/feed/43891503?shareKey=ZGEzOTUyODY5MjE4NjQxYjAzM2E~&shareUid=23911084&shareFrom "**`原帖`**")</u>
 
@@ -800,7 +800,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="QQ/微信后台优化"></i>7-2. QQ/微信后台优化
+### <i id="7-2"></i>7.2 QQ/微信后台优化
 - <u>[**`原帖`**](https://www.coolapk.com/feed/42184751?shareKey=Y2EzZWNiMTdjYjU4NjQ0MjFlYmI~&shareFrom "**`原帖`**")</u>
 - QQ：
 
@@ -838,7 +838,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="QQ进程优化"></i>7-3. QQ进程优化
+### <i id="7-3"></i>7.3 QQ进程优化
 - 一位不愿透露姓名的群友提供由<u>[**`QQ/微信后台优化`**](#QQ/微信后台优化)</u>改版
 
 ```
@@ -856,7 +856,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="AutoKill-QQMSF"></i>7-4. AutoKill-QQMSF
+### <i id="7-4"></i>7.4 AutoKill-QQMSF
 - 一代：
 	 - <u>[**`原帖`**](https://www.coolapk.com/feed/45019763?shareKey=YTcyMzg0OWM4NjJkNjQ0MjIzMzI~&shareFrom "**`原帖`**")</u>
 
@@ -893,7 +893,7 @@ latest-update=2023.07.31
 ```
 
 
-### <i id="QQ进程优化双进程"></i>7-5. QQ进程优化双进程
+### <i id="7-5"></i>7.5 QQ进程优化双进程
 - <u>[**`原帖`**](https://www.coolapk.com/feed/35808050?shareKey=ZTczOTFmYWE5Y2ZkNjQ0MzViMWQ~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -912,7 +912,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="QQ微信电池优化管理"></i>7-6. QQ微信电池优化管理
+### <i id="7-6"></i>7.6 QQ微信电池优化管理
 - <u>[**`原帖`**](https://www.coolapk.com/feed/37649574?shareKey=NTVmNGI4YTEzZTg3NjQ0MzVmOTQ~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -930,8 +930,8 @@ latest-update=2023.07.31
 ```
 
 
-## <i id="充电"></i>8. 充电
-### <i id="充电控制"></i>8-1. 充电控制(**无效**)
+## <i id="8"></i>8. 充电
+### <i id="8-1"></i>8.1 充电控制(**无效**)
 - 充电恢复
 
 ```
@@ -964,7 +964,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="充电停止"></i>8-2. 充电停止
+### <i id="8-2"></i>8.2. 充电停止
 > 下面两种充电停止自己选一个就行
 > 来自酷友提供
 
@@ -1003,8 +1003,8 @@ latest-update=2023.07.31
 ```
 
 
-## <i id="NFC/蓝牙"></i>9. NFC/蓝牙
-### <i id="自动开关NFC"></i>9-1. 自动开关NFC
+## <i id="9"></i>9. NFC/蓝牙
+### <i id="9-1"></i>9.1 自动开关NFC
 - <u>[**`原帖`**](https://www.coolapk.com/feed/20776215?shareKey=NmZkM2NhN2VhZGJjNjQ0MjJiNTU~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -1021,7 +1021,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="自动开关蓝牙"></i>9-2. 自动开关蓝牙
+### <i id="9-2"></i>9.2 自动开关蓝牙
 - <u>[**`原帖`**](https://www.coolapk.com/feed/20061143?shareKey=OTM1OGI3MmVmNzUxNjQ0MjJlOTU~&shareUid=3571197&shareFrom "**`原帖`**")</u>
 
 ```
@@ -1038,7 +1038,7 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="蓝牙断开自动关闭"></i>9-3. 蓝牙断开自动关闭
+### <i id="9-3"></i>9.3 蓝牙断开自动关闭
 - <u>[**`原帖`**](https://www.coolapk.com/feed/45338524?shareKey=MzA4ZTQ5ZDdmMWI0NjQ0MzRkZjU~&shareUid=3571197&shareFrom "原帖")</u>
 
 ```
@@ -1056,8 +1056,8 @@ latest-update=2023.07.31
 ```
 
 
-## <i id="核心控制"></i>10. 核心控制
-### <i id="CPU核心开关"></i>10-1. 亮/息屏开关核心
+## <i id="10"></i>10. 核心控制
+### <i id="10-1"></i>10.1 亮/息屏开关核心
 - <u>[**`原帖`**](https://www.coolapk.com/feed/30684555?shareKey=NDM0MjdhYzI4YjQ4NjQ0MzVjMjM~&shareUid=3571197&shareFrom "原帖")</u>
 - 息屏关核
 
@@ -1091,17 +1091,17 @@ latest-update=2023.07.31
 ]
 ```
 
-### <i id="吃大核锁小核"></i>10-2. 吃大核锁小核
+### <i id="10-2"></i>10.2 吃大核锁小核
 - 注意事项：
 > 1. 该情景模式来自酷友投稿
 > 2. 全局变量：background
 > 	 - 把需要的软件加进去
 > 3. 适用情景：有的app，用起来的电流超级高，可以给它分配小核，这样使用可能有点卡，但是相对省电很多（也要分情况看什么app,有的只用小核，反而耗电量会增加）
 > 4. 其中，框住的地方就是你【线程分配.sh】的路径，可以自定义
-> [![](img/uploadfile/202304/50711682307838.jpg)](img/uploadfile/202304/50711682307838.jpg)
+> [![](https://bzmshang.top/content/uploadfile/202304/50711682307838.jpg)](https://bzmshang.top/content/uploadfile/202304/50711682307838.jpg)
 > 5. 你可以修改boost background改成boost audio-app，进程就分配成audio-app的cpu了
 > 	 - cpuset有top-app、background、foreground、restricted、system-background、audio-app等
-> [![](img/uploadfile/202304/ebda1682308150.jpg)](img/uploadfile/202304/ebda1682308150.jpg)
+> [![](https://bzmshang.top/content/uploadfile/202304/ebda1682308150.jpg)](https://bzmshang.top/content/uploadfile/202304/ebda1682308150.jpg)
 > 6. 当你在全局变量添加的包名后，比如你添加了微信，那么你打开微信后，过了5秒后，就会变成你想要的background了。你可以把scene开启小窗模式，然后查看微信进程的cpuset。一般前台应用的命令行是/foreground，如果成功，/foreground会变成你想要的模式
 
 
@@ -1135,8 +1135,8 @@ done
 ]
 ```
 
-## <i id="通知"></i>11. 通知
-### <i id="弹幕通知"></i>11-1. 弹幕通知
+## <i id="11"></i>11. 通知
+### <i id="11-1"></i>11.1 弹幕通知
 - 全局变量：danmu_app
 - 在变量里面的软件才会进行弹幕通知
 - 来自酷友提供
@@ -1157,8 +1157,25 @@ done
 ]
 ```
 
-## <i id="Google"></i>12. Google
-### <i id="开启谷歌系软件，解冻谷歌服务和框架"></i>12-1. 开启谷歌系软件，解冻谷歌服务和框架
+### <i id="11-2"></i>11.2 弹幕通知
+- <u>[**`原帖`**](https://www.coolapk.com/feed/51054436?shareKey=ODJmNTJjOWZiYWQ0NjU0ZjNiM2Y~&shareUid=3571197&shareFrom "原帖")</u>
+
+```
+[
+{
+"name": "弹幕通知",
+"description": "收到通知或通知更新时时用弹幕展示;设置全局变量danmuapps，添加需要弹幕显示其通知的应用包名;设置全局变量gameapps，添加当该应用在前台不显示弹幕的应用包名;",
+"priority": 1,
+"condition": "(notificationRemoved == false && (notificationAdded || notificationUpdated)) && !notification.isForegroundService && pkgName != \"android\" && globalVarOf$danmuapps.contains(pkgName)&&(! globalVarOf$gameApps.contains(activity.getFrontAppPackage()))",
+"actions": [
+"ui.showDanmu(\"app://\" + pkgName,thanos.pkgManager.getAppInfo(pkgName).appLabel + \" :\" + notificationTitle + \":\" + notificationContent);"
+]
+}
+]
+```
+
+## <i id="12"></i>12. Google
+### <i id="12-1"></i>12.1 开启谷歌系软件，解冻谷歌服务和框架
 - <u>[**`原帖`**](https://www.coolapk.com/feed/33693395?shareKey=Y2FjYjNiYTYyMTM0NjQ0OTFjMDE~&shareUid=2521387&shareFrom "原帖")</u>
 - 如果需要自己添加启动某个应用时解冻只要在||to == \"com.google.android.youtube\"后面再加||to == \"xxx应用的包名\"就行
 
@@ -1193,7 +1210,7 @@ done
 }
 ]
 ```
-### <i id="开启谷歌系软件，解冻谷歌服务和框架进阶版"></i>12-2. 开启谷歌系软件，解冻谷歌服务和框架进阶版
+### <i id="12-2"></i>12.2 开启谷歌系软件，解冻谷歌服务和框架进阶版
 - 全局变量：Google
 - 全局变量里面选择谷歌系软件，当打开那个软件时，解冻谷歌服务
 ```
@@ -1211,8 +1228,8 @@ done
 ]
 ```
 
-## <i id="电池"></i>13. 电池
-### <i id="电池白名单"></i>13-1. 电池白名单
+## <i id="13"></i>13. 电池
+### <i id="13-1"></i>13.1 电池白名单
 - <u>[**`原帖`**](https://www.coolapk.com/feed/44585473?shareKey=ODc3MmQ5MDFmYzIyNjQ0OTFmMzE~&shareUid=3571197&shareFrom "原帖")</u>
 - MIUI系统在重启或者某些情况下，电池优化白名单中的企鹅等流氓等应用会被恢复。每次启动或熄屏自动删除电池优化白名单，重新设置为自己的，使MIUI无机会恢复厂家设置的流氓名单：来自Jinamin
 - 全局变量：PowerWhiteList 添加你想要保后台的应用
@@ -1232,8 +1249,8 @@ done
 ]
 ```
 
-## <i id="到点执行"></i>14. 到点执行
-### <i id="到点重启"></i>14-1. 到点重启
+## <i id="14"></i>14. 到点执行
+### <i id="14-1"></i>14.1 到点重启
 - 作者：诗里沧海怨怼
 - 全局变量：timedApp
 - 缺点：手机打盹得时候，可能不会执行，最好把时间设置到睡觉时间之外得其它时间，或者你能让打盹不影响灭霸也行
@@ -1256,7 +1273,7 @@ done
 ]
 ```
 
-### <i id="到点杀死"></i>14-2. 到点杀死
+### <i id="14-2"></i>14.2 到点杀死
 - 作者：诗里沧海怨怼
 - 全局变量：timedApp
 - 缺点：手机打盹得时候，可能不会执行，最好把时间设置到睡觉时间之外得其它时间，或者你能让打盹不影响灭霸也行
@@ -1279,8 +1296,8 @@ done
 ]
 ```
 
-## <i id="冻结"></i>15. 冻结
-### <i id="智能冻结"></i>15-1. 智能冻结
+## <i id="15"></i>15. 冻结
+### <i id="15-1"></i>15.1 智能冻结
 - <u>[**`原帖`**](https://www.coolapk.com/feed/45832695?shareKey=MTY5NTcyYmNlOWFjNjQ1ODkxOGI~&shareUid=2929582&shareFrom "**`原帖`**")</u>
 - 智能冻结，thanox提供有两种冻结方式，如果使用PM suspend方式冻结，对于流氓软件，虽然图标变成了灰色，但其组件仍然在后台运行。所以针对这类软件，我的方法仍是情景模式，直接使用pm disable 甚至叠加pm hide的方式冻结。注意！情景模式冻结应用不能并列在智能冻结列表，冻结的应用要启动可以thanox设置该应用智能触冻，桌面启动图标可以用快挗方式软件设置快挗方式。
 
@@ -1298,8 +1315,8 @@ done
 ]
 ```
 
-## <i id="屏幕"></i>16. 屏幕
-## <i id="开关屏日志"></i>16-1. 开关屏日志
+## <i id="16"></i>16. 屏幕
+## <i id="16-1"></i>16.1 开关屏日志
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
 - 开关屏日志，该情景模式记录你开屏和关屏的时间到日志里，这样你可以更直观的知道应用是在亮屏时候杀死的还是灭屏后杀死的。日志文件路径"/data/system/thanos_ynokiMHEVHZWWdDH/profile_user_io/kill/killLog.txt"，打开日志文件即可查看。代码如下，请用情景模式json编写。
 
@@ -1317,9 +1334,10 @@ done
 ]
 ```
 
-## <i id="管家流"></i>17. 管家流
-### <i id="多后台管家"></i>17-1. 多后台管家
-群里有教程，等我旅游完也写一份
+
+## <i id="17"></i>17. 管家流
+### <i id="17-1"></i>17.1 多后台管家
+群里有教程
 <details>
 <summary>点击查看</summary>
 加群获取最新：528265424
