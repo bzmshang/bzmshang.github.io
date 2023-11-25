@@ -225,7 +225,7 @@ latest-update=2023.11.11
 
 ### <i id="1-11"></i>1.11 游戏时清理部分后台
 - <u>[**`原帖`**](https://www.coolapk.com/feed/39045897?shareKey=NzQ1YTJkMWQwZTk2NjRjNjNjZTM~&shareUid=3119350&shareFrom "**`原帖`**")</u>
-- 游戏时清理一些顽固后台，变量notNitian_apps放需要被杀的应用，注意该应用如果在最近任务，将不会被杀。变量qlapps是你要打卡的游戏应用或其他应用。代码如下:
+- 游戏时清理一些顽固后台，变量notNitian_apps放需要被杀的应用，注意该应用如果在最近任务，将不会被杀。变量qlapps是你要打开的游戏应用或其他应用。代码如下:
 
 ```
 [
