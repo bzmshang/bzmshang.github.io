@@ -1,0 +1,628 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Xposed墓碑模块-NoActive专属文档 | 冰梦博客的备份</title><meta name="author" content="备份:bzmshang.top"><meta name="copyright" content="备份:bzmshang.top"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文档版本12345ver&#x3D;v2.9.7latest-update&#x3D;2023.08.02以下内容全文为NoActive的介绍与使用，请分享给有需要的人  声明  本文档 依据NoActive版本:v2.9-Alpha(282)下载 依据设备：一加9PRO Color13   本文档是借鉴NoActive墓碑Xposed模块究极改良 如搬运本文档的任何内容，请说明文档来源：本文作者： 冰之梦殇520">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xposed墓碑模块-NoActive专属文档">
+<meta property="og:url" content="https://blog.bzmshang.top/NoActive_Tombstone.html">
+<meta property="og:site_name" content="冰梦博客的备份">
+<meta property="og:description" content="文档版本12345ver&#x3D;v2.9.7latest-update&#x3D;2023.08.02以下内容全文为NoActive的介绍与使用，请分享给有需要的人  声明  本文档 依据NoActive版本:v2.9-Alpha(282)下载 依据设备：一加9PRO Color13   本文档是借鉴NoActive墓碑Xposed模块究极改良 如搬运本文档的任何内容，请说明文档来源：本文作者： 冰之梦殇520">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2022-08-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-01-23T01:14:02.130Z">
+<meta property="article:author" content="备份:bzmshang.top">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.bzmshang.top/NoActive_Tombstone.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Xposed墓碑模块-NoActive专属文档',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-23 09:14:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="冰梦博客的备份"><span class="site-name">冰梦博客的备份</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Xposed墓碑模块-NoActive专属文档</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-13T16:00:00.000Z" title="发表于 2022-08-14 00:00:00">2022-08-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-23T01:14:02.130Z" title="更新于 2024-01-23 09:14:02">2024-01-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Xposed墓碑模块-NoActive专属文档"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="文档版本"><a href="#文档版本" class="headerlink" title="文档版本"></a><i id="文档版本"></i>文档版本</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ver=v2.9.7</span><br><span class="line"></span><br><span class="line">latest-update=2023.08.02</span><br><span class="line"></span><br><span class="line">以下内容全文为NoActive的介绍与使用，请分享给有需要的人</span><br></pre></td></tr></table></figure>
+
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a><i id="声明"></i>声明</h2><blockquote>
+<ol>
+<li>本文档<ul>
+<li>依据NoActive版本:<code>v2.9-Alpha(282)</code><u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive%E5%AE%98%E6%96%B9%E7%89%88/%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC" title="下载"><strong><code>下载</code></strong></a></u></li>
+<li>依据设备：<code>一加9PRO Color13</code></li>
+</ul>
+</li>
+<li>本文档是借鉴<u><a target="_blank" rel="noopener" href="https://www.myflv.cn/mobile/282.html" title="NoActive墓碑Xposed模块"><strong><code>NoActive墓碑Xposed模块</code></strong></a></u>究极改良</li>
+<li>如搬运本文档的任何内容，请说明文档来源<br>：本文作者： <u><a target="_blank" rel="noopener" href="https://www.coolapk.com/u/3571197" title="冰之梦殇520"><strong><code>冰之梦殇520</code></strong></a></u></li>
+<li>NoActive：<u><a target="_blank" rel="noopener" href="https://app.myflv.cn/" title="官网"><strong><code>官网</code></strong></a></u></li>
+<li><strong>QQ频道</strong>：<u><a target="_blank" rel="noopener" href="https://pd.qq.com/s/95pl09232" title="点击加入"><strong><code>点击加入</code></strong></a></u></li>
+</ol>
+<ul>
+<li>更多：(加群，教程，文件)<ul>
+<li>手机版：请点击左上角三条杠查看更多</li>
+<li>电脑版：请看顶部导航栏</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="1-模块介绍："><a href="#1-模块介绍：" class="headerlink" title="1. 模块介绍："></a><i id="模块介绍"></i>1. 模块介绍：</h2><h3 id="1-1-功能："><a href="#1-1-功能：" class="headerlink" title="1-1. 功能："></a><i id="功能"></i>1-1. 功能：</h3><ul>
+<li>通过Hook系统框架实现Android墓碑</li>
+</ul>
+<h3 id="1-2-版本："><a href="#1-2-版本：" class="headerlink" title="1-2. 版本："></a><i id="版本"></i>1-2. 版本：</h3><ol>
+<li>NoActive群内版本(内测版)</li>
+<li>myflavor博客版本(公测版)</li>
+<li>LSPosed版本(稳定版)</li>
+</ol>
+<h2 id="2-作用域说明："><a href="#2-作用域说明：" class="headerlink" title="2. 作用域说明："></a><i id="作用域说明"></i>2. 作用域说明：</h2><h3 id="2-1-系统框架："><a href="#2-1-系统框架：" class="headerlink" title="2-1. 系统框架："></a><i id="系统框架"></i>2-1. 系统框架：</h3><ol>
+<li>Hook应用切换事件，冻结切换至后台的应用，解冻切换至前台的应用</li>
+<li>Hook广播分发事件，屏蔽被冻结的应用接收广播，从而避免触发广播ANR</li>
+<li><del>Hook计算oom_adj事件，修改后台应用的oom_adj，白名单主进程500子进程700，冻结名单主进程700+子进程900+</del></li>
+<li>Hook系统ANR事件，由于冻结之后，应用无法做出响应被系统认为是ANR，所以需要屏蔽ANR避免系统误杀被冻结的APP</li>
+<li>Hook系统是否开启暂停执行已缓存变量获取，由于系统自带的暂停执行已缓存在收到广播后可能解冻再次活跃</li>
+</ol>
+<h3 id="2-2-电量和性能-MIUI专属-："><a href="#2-2-电量和性能-MIUI专属-：" class="headerlink" title="2-2. 电量和性能(MIUI专属)："></a><i id="电量和性能"></i>2-2. 电量和性能(MIUI专属)：</h3><ul>
+<li>以下是<code>NoActive</code> 跟 <code>NoActive Plugin</code> Hook <code>电量和性能</code>的作用</li>
+</ul>
+<ol>
+<li>NoActive：防止夜间后台掉卡片<ul>
+<li><u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive%E5%AE%98%E6%96%B9%E7%89%88/%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC" title="下载"><strong><code>下载</code></strong></a></u></li>
+</ul>
+</li>
+<li>NoActive Plugin：防止杀掉后台<ul>
+<li><u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive+Plugin_1.0.apk" title="下载"><strong><code>下载</code></strong></a></u></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>PS：<code>NoActive</code> 跟 <code>NoActive Plugin</code> Hook <code>电量和性能</code>不与任何模块冲突</li>
+</ul>
+<h2 id="3-冻结方式说明："><a href="#3-冻结方式说明：" class="headerlink" title="3. 冻结方式说明："></a><i id="冻结方式说明"></i>3. 冻结方式说明：</h2><ul>
+<li><p>目前Linux进程冻结方式有：</p>
+<ol>
+<li>Kill -19</li>
+<li>Kill -20</li>
+<li>Cgroup Freezer v1</li>
+<li>Cgroup Freezer v2</li>
+</ol>
+</li>
+<li><p>其中Kill -19和Kill -20兼容性最好，但是冻结过久，依然重载</p>
+</li>
+<li><p>Google官方使用Cgroup Freezer v2</p>
+</li>
+<li><p>Kill使用Android的Process.sendSignal，该方法为安卓封装间接调用Kill，所以可能存在部分系统19有效或者20有效，需要自测</p>
+</li>
+<li><p>Cgroup Freezer v1和v2采用NoActive参考millet自行实现并封装，或v2调用安卓Process.setProcessFrozen实现</p>
+</li>
+<li><p>所以NoActive支持5种冻结方式分别为：</p>
+<ol>
+<li>Kill -19</li>
+<li>Kill -20</li>
+<li>Cgroup Freezer v1(NoActive)</li>
+<li>Cgroup Freezer v2(NoActive)</li>
+<li>Cgroup Freezer v2(系统API)</li>
+</ol>
+</li>
+<li><p>推荐冻结方式 API &amp; V2 &gt; Kill -19 &amp; Kill -20</p>
+</li>
+</ul>
+<p><strong>如果5种模式和提权模式都无法生效，可以切换Kill -19模式，在每次开机后执行下面两行命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">magiskpolicy --live &quot;allow system_server * process &#123;sigstop&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-配置文件说明："><a href="#4-配置文件说明：" class="headerlink" title="4. 配置文件说明："></a><i id="配置文件说明"></i>4. 配置文件说明：</h2><ul>
+<li>目录 &#x2F;data&#x2F;system&#x2F;NoActive</li>
+</ul>
+<h3 id="4-1-即时生效配置："><a href="#4-1-即时生效配置：" class="headerlink" title="4-1. 即时生效配置："></a><i id="即时生效配置"></i>4-1. 即时生效配置：</h3><ol>
+<li>blackSystemApp.conf 系统黑名单(系统APP默认白名单)</li>
+<li>directApp.conf 强制冻结</li>
+<li>topApp.conf 可见窗口</li>
+<li>killProcess.conf 杀死进程名单(后台3S杀死进程)</li>
+<li>socketApp.conf 保持连接(保持App后台网络连接)</li>
+<li>whiteApp.conf 白名单APP(用户APP默认黑名单)</li>
+<li>whiteProcess.conf 白名单进程(添加白名单APP无需添加)</li>
+<li>highApp.conf 定时解冻(每3min解冻一次APP，5s后冻结APP,针对单应用)</li>
+</ol>
+<h3 id="4-2-重启生效配置："><a href="#4-2-重启生效配置：" class="headerlink" title="4-2. 重启生效配置："></a><i id="重启生效配置"></i>4-2. 重启生效配置：</h3><ol>
+<li>debug 开启调试日志</li>
+<li><del>disable.oom 禁用修改oom_adj功能</del></li>
+<li><del>color.os ColorOS专属配置(特殊oom_adj方式)(新版本已去除此功能)</del></li>
+<li>冻结方式<br>  4-1. kill.19 使用Kill -19冻结<br>  4-2. kill.20 使用kill -20冻结<br>  4-3. freezer.v1 使用Cgroup Freezer v1(NoActive)冻结<br>  4-4. freezer.v2 使用Cgroup Freezer v2(NoActive)冻结<br>  4-5. freezer.api 使用Cgroup Freezer API(系统API)冻结</li>
+<li>interval.freeze 定时冻结（1分钟重新冻结一次所有黑名单应用）</li>
+<li>interval.unfreeze <u><a href="#%E8%BD%AE%E7%95%AA%E8%A7%A3%E5%86%BB"><strong><code>轮番解冻</code></strong></a></u></li>
+<li>su.excute <u><a href="#%E6%8F%90%E6%9D%83%E6%A8%A1%E5%BC%8F"><strong><code>提权模式</code></strong></a></u></li>
+<li>v1.plus 缓解部分系统使用v1内存泄露</li>
+</ol>
+<h2 id="5-日志文件说明："><a href="#5-日志文件说明：" class="headerlink" title="5. 日志文件说明："></a><i id="日志文件说明"></i>5. 日志文件说明：</h2><ul>
+<li>目录 &#x2F;data&#x2F;system&#x2F;NoActive&#x2F;log 会出现的两个文件</li>
+</ul>
+<ol>
+<li>current.log (本次开机日志)</li>
+<li>last.log (上一次开机日志)<br><a href="img/uploadfile/202208/312a1660985666.jpg"><img src="/img/uploadfile/202208/312a1660985666.jpg"></a></li>
+</ol>
+<h3 id="5-1-如何开启详细日志："><a href="#5-1-如何开启详细日志：" class="headerlink" title="5-1. 如何开启详细日志："></a><i id="如何开启详细日志"></i>5-1. 如何开启详细日志：</h3><p><font color="red">(PS：正常无需开启，一般用于跟作者讨论bug时所需)</font></p>
+<ul>
+<li>NoActive版本在2.0+的可以在APP的设置里面打开详细日志这个按钮，并重启<br><a href="img/uploadfile/202210/fc601664966003.jpg"><img src="/img/uploadfile/202210/fc601664966003.jpg"></a></li>
+</ul>
+<h3 id="5-2-日志级别："><a href="#5-2-日志级别：" class="headerlink" title="5-2. 日志级别："></a><i id="日志级别"></i>5-2. 日志级别：</h3><ol>
+<li>DEBUG(调试信息)</li>
+<li>INFO(基本信息)</li>
+<li>WARN(警告信息)</li>
+<li>ERROR(错误信息)</li>
+</ol>
+<h2 id="6-NoActive常用关键词说明："><a href="#6-NoActive常用关键词说明：" class="headerlink" title="6. NoActive常用关键词说明："></a><i id="NoActive常用关键词说明"></i>6. NoActive常用关键词说明：</h2><h3 id="6-1-重载："><a href="#6-1-重载：" class="headerlink" title="6-1. 重载："></a><i id="重载"></i>6-1. 重载：</h3><ul>
+<li>解释1：挂在后台的应用长时间不打开，等到下次打开，明明后台和进程都还在，但是应用会重新冷启动</li>
+<li>解释2：应用卡片依旧存在于多任务界面，切换应用或是亮屏后进入应用（从多任务界面进入或是直接点击应用图标进入），该应用冷启动，丢失离开时的界面<br><a href="img/uploadfile/202210/868b1666883078.gif"><img src="/img/uploadfile/202210/868b1666883078.gif"></a></li>
+</ul>
+<h3 id="6-2-闪弹："><a href="#6-2-闪弹：" class="headerlink" title="6-2. 闪弹："></a><i id="闪弹"></i>6-2. 闪弹：</h3><ul>
+<li>解释1：应用进入后台之后，你再次打开，应用在动画没结束之前闪退，你必须点击第二次，闪弹触发条件不明</li>
+<li>解释2：应用卡片依旧存在于多任务界面，切换应用或是亮屏后进入应用（从多任务界面进入或是直接点击应用图标进入），该应用对操作无反应或是短时间内掉出应用界面，打开多任务界面任务卡片丢失，应用将冷启动</li>
+<li>其中搜图神器出现的问题就是经典的闪弹<br><a href="img/uploadfile/202210/2a241666765033.gif"><img src="/img/uploadfile/202210/2a241666765033.gif"></a></li>
+</ul>
+<h3 id="6-3-内存泄漏："><a href="#6-3-内存泄漏：" class="headerlink" title="6-3. 内存泄漏："></a><i id="memory_leak"></i>6-3. 内存泄漏：</h3><ul>
+<li>解释1：当你打开软件，然后清掉后台，重复操作，内存占用会一直累加，等到内存耗尽，就会出现卡顿和死机</li>
+<li>解释2：正常情况下杀死应用后会回收应用占用内存（如QQ占用1.7G内存，杀死QQ及其后台以后系统应能空闲出1.7G左右内存），但是内存泄漏情况下杀死应用后内存不会被回收，导致内存占用越来越多。目前仅freezer.v1存在此问题。</li>
+<li><font color="red">下图中的只是比较经典的内存泄漏（多生进程），并不代表，这就是内存泄漏的唯一样式</font><br><a href="img/uploadfile/202210/26851666766142.jpg"><img src="/img/uploadfile/202210/26851666766142.jpg"></a></li>
+</ul>
+<h3 id="6-4-掉卡片："><a href="#6-4-掉卡片：" class="headerlink" title="6-4. 掉卡片："></a><i id="掉卡片"></i>6-4. 掉卡片：</h3><ul>
+<li>解释1：软件进程还在，但是后台卡片被系统清理了</li>
+<li>解释2：长时间待机的应用在划出多任务界面后，该应用卡片消失，有可能该应用进程也被杀。</li>
+<li><font color="red">下图中以<strong>抖音</strong>为例</font><br><a href="img/uploadfile/202210/79c91666792638.jpg"><img src="/img/uploadfile/202210/79c91666792638.jpg"></a></li>
+</ul>
+<h3 id="7-所需软件："><a href="#7-所需软件：" class="headerlink" title="7. 所需软件："></a><i id="所需软件"></i>7. 所需软件：</h3><ol>
+<li>NoActive：<u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive%E5%AE%98%E6%96%B9%E7%89%88/%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC" title="下载"><strong><code>下载</code></strong></a></u>、<u><a target="_blank" rel="noopener" href="https://app.myflv.cn/" title="官网"><strong><code>官网</code></strong></a></u></li>
+<li>MT管理器：<u><a target="_blank" rel="noopener" href="https://mt2.cn/" title="MT管理器"><strong><code>官网</code></strong></a></u></li>
+<li>查看CPU占比：<blockquote>
+<ol>
+<li>Scene：<u><a target="_blank" rel="noopener" href="https://www.coolapk.com/apk/com.omarea.vtools" title="酷安下载"><strong><code>酷安下载</code></strong></a></u></li>
+<li>Thanox：<u><a target="_blank" rel="noopener" href="https://www.coolapk.com/apk/github.tornaco.android.thanos" title="酷安下载"><strong><code>酷安下载</code></strong></a></u></li>
+</ol>
+</blockquote>
+</li>
+<li>Termux终端：<u><a target="_blank" rel="noopener" href="https://termux.dev/cn/index.html" title="官网"><strong><code>官网</code></strong></a></u></li>
+</ol>
+<h2 id="8-模块内设置介绍："><a href="#8-模块内设置介绍：" class="headerlink" title="8. 模块内设置介绍："></a><i id="模块内设置介绍"></i>8. 模块内设置介绍：</h2><h3 id="8-1-模块设置："><a href="#8-1-模块设置：" class="headerlink" title="8-1. 模块设置："></a><i id="模块设置"></i>8-1. 模块设置：</h3><ul>
+<li>打开NoActive，并点击右上角的设置 <strong>(如下)</strong><br><a href="img/uploadfile/202209/03171663724011.jpg"><img src="/img/uploadfile/202209/03171663724011.jpg"></a></li>
+</ul>
+<h4 id="8-1-1-冻结方式："><a href="#8-1-1-冻结方式：" class="headerlink" title="8-1-1. 冻结方式："></a><i id="冻结方式"></i>8-1-1. 冻结方式：</h4><ul>
+<li><code>v1+</code>用来 <strong>缓解</strong> 部分系统使用v1造成内存泄露导致手机卡死所使用的冻结模式</li>
+<li>其余冻结方式详情请查看<u><a href="#%E5%86%BB%E7%BB%93%E6%96%B9%E5%BC%8F%E8%AF%B4%E6%98%8E"><strong><code>冻结方式说明</code></strong></a></u><br><a href="img/uploadfile/202212/e75e1672220923.jpg"><img src="/img/uploadfile/202212/e75e1672220923.jpg"></a></li>
+</ul>
+<h4 id="8-1-2-提权模式："><a href="#8-1-2-提权模式：" class="headerlink" title="8-1-2. 提权模式："></a><i id="提权模式"></i>8-1-2. 提权模式：</h4><ul>
+<li>使原本NoActive的XP权限提升至ROOT权限</li>
+<li>可以尝试使之前冻结失败或者无法使用的模式，可以正常使用</li>
+<li>目前支持的提权模式仅有四种：Freezer v1&#x2F;v2、kill-19&#x2F;20</li>
+<li>提权后，NoActive会自己给自己拉成白名单</li>
+<li>需要<code>手动给</code>NoActive<code>自启动权限</code>，且不要用任何软件限制他(否则会导致系统卡死等等bug)，然后划卡后，就可以不再管他即可，工作时会自己启动</li>
+</ul>
+<h4 id="8-1-3-定时冻结："><a href="#8-1-3-定时冻结：" class="headerlink" title="8-1-3. 定时冻结："></a><i id="定时冻结"></i>8-1-3. 定时冻结：</h4><ul>
+<li>1分钟重新冻结一次所有黑名单应用</li>
+</ul>
+<h4 id="8-1-4-轮番解冻："><a href="#8-1-4-轮番解冻：" class="headerlink" title="8-1-4. 轮番解冻："></a><i id="轮番解冻"></i>8-1-4. 轮番解冻：</h4><p>(该模式非常适合非MIUI系统的后台保活，建议非MIUI系统开启此功能)</p>
+<ul>
+<li>目的：冻结过久，APP就死了，所以让他透透气，不让他憋死</li>
+<li>顾名思义，就是一段时间，解冻一次，之前冻结的APP</li>
+<li>具体：<br>  1分钟解冻一次，一次只解冻一个APP 3s，并且解冻的是最久没有打开的那个APP</li>
+<li>详细：<br>  A-B-C-D依次为打开顺序<br>  会先解冻A，重新排序<br>  B-C-D-A<br>  然后解冻B<br>  此时顺序为<br>  C-D-A-B<br>  如果此时C被打开了<br>  那么就是<br>  D-A-B-C<br>  接下来就会解冻D<br><a href="img/uploadfile/202209/b0191663999135.jpg"><img src="/img/uploadfile/202209/b0191663999135.jpg"></a></li>
+</ul>
+<h4 id="8-1-5-详细日志："><a href="#8-1-5-详细日志：" class="headerlink" title="8-1-5. 详细日志："></a><i id="详细日志"></i>8-1-5. 详细日志：</h4><ul>
+<li>其实就是开启debug，一般无需开启， <strong>除非作者跟你说你需要开启，才开启</strong></li>
+</ul>
+<h4 id="8-1-6-开发者："><a href="#8-1-6-开发者：" class="headerlink" title="8-1-6. 开发者："></a><i id="开发者"></i>8-1-6. 开发者：</h4><ul>
+<li>就是作者，没啥好解释的</li>
+</ul>
+<h4 id="8-1-7-交流群："><a href="#8-1-7-交流群：" class="headerlink" title="8-1-7. 交流群："></a><i id="交流群"></i>8-1-7. 交流群：</h4><ul>
+<li>跟文档右上角的加群一样的，也没啥好解释的</li>
+</ul>
+<h4 id="8-1-8-打赏："><a href="#8-1-8-打赏：" class="headerlink" title="8-1-8. 打赏："></a><i id="打赏"></i>8-1-8. 打赏：</h4><ul>
+<li>懂得都懂</li>
+</ul>
+<h3 id="8-2-APP设置-QQ为例-："><a href="#8-2-APP设置-QQ为例-：" class="headerlink" title="8-2. APP设置(QQ为例)："></a><i id="APP设置"></i>8-2. APP设置(QQ为例)：</h3><h4 id="8-2-1-APP主页："><a href="#8-2-1-APP主页：" class="headerlink" title="8-2-1. APP主页："></a><i id="APP主页"></i>8-2-1. APP主页：</h4><ul>
+<li>打开NoActive，映入眼帘的是APP的主页面<br>PS：(每个人使用的APP不一样，所以展示的仅为本人自用的)</li>
+<li>在搜索框中搜索QQ，并打开他，在这，就是单独设置QQ（）<br>PS：(设置完成即可回到主页面)<br><a href="img/uploadfile/202208/41ea1660543582.jpg"><img src="/img/uploadfile/202208/41ea1660543582.jpg"></a></li>
+</ul>
+<h5 id="8-2-1-1-应用白名单："><a href="#8-2-1-1-应用白名单：" class="headerlink" title="8-2-1(1). 应用白名单："></a><i id="应用白名单"></i>8-2-1(1). 应用白名单：</h5><ul>
+<li>让整个应用成为白名单</li>
+<li>PS：就是NoActvie不对QQ做任何操作</li>
+</ul>
+<h5 id="8-2-1-1-1-电池优化："><a href="#8-2-1-1-1-电池优化：" class="headerlink" title="8-2-1(1&#x2F;1). 电池优化："></a><i id="电池优化"></i>8-2-1(1&#x2F;1). 电池优化：</h5><ul>
+<li><p>Tip：NoActive只要安装并激活后，就会接管<code>电池优化</code></p>
+</li>
+<li><p>想要不限制应用又想优化续航</p>
+</li>
+<li><p>此功能在激活NoActive后，就会接管系统的电池优化</p>
+<ul>
+<li>例如使用第三方MiPush的时候就需要他来开关电池优化<u><a href="https://blog.bzmshang.top/MiPush-Framework_User-Guide#%E7%94%B5%E6%B1%A0%E4%BC%98%E5%8C%96" title="查看"><strong><code>查看</code></strong></a></u></li>
+</ul>
+</li>
+<li><p>PS：只有白名单情况下可开启</p>
+</li>
+<li><p>QQ<br><a href="img/uploadfile/202210/365d1665990544.jpg"><img src="/img/uploadfile/202210/365d1665990544.jpg"></a><br><a href="img/uploadfile/202210/4df11665990838.jpg"><img src="/img/uploadfile/202210/4df11665990838.jpg"></a></p>
+</li>
+<li><p>Play商店<br><a href="img/uploadfile/202210/ada71665990544.jpg"><img src="/img/uploadfile/202210/ada71665990544.jpg"></a><br><a href="img/uploadfile/202210/81231665990394.jpg"><img src="/img/uploadfile/202210/81231665990394.jpg"></a></p>
+</li>
+</ul>
+<h5 id="8-2-1-2-保持连接："><a href="#8-2-1-2-保持连接：" class="headerlink" title="8-2-1(2). 保持连接："></a><i id="保持连接"></i>8-2-1(2). 保持连接：</h5><ol>
+<li><del>网络解冻（MIUI专属）</del></li>
+<li>是否使用HMS、mipush这类第三方推送通道，而不使用APP自身的推送通道<ul>
+<li>开启时使用APP自身的推送，不使用HMS或者mipush这类第三方推送通道</li>
+<li>关闭时不使用APP自身的推送，使用HMS或者mipush这类第三方推送通道</li>
+</ul>
+</li>
+</ol>
+<h5 id="8-2-1-3-定时解冻："><a href="#8-2-1-3-定时解冻：" class="headerlink" title="8-2-1(3). 定时解冻："></a><i id="定时解冻"></i>8-2-1(3). 定时解冻：</h5><ul>
+<li>定时解冻，每3min解冻一次APP，解冻后3s再冻结APP</li>
+<li>定时解冻跟轮番解冻是相对的，定时解冻只针对单应用，轮番解冻则是全部在后台冻结的</li>
+<li>如果开了定时解冻也开了轮番解冻，那么轮番解冻将会忽略开启定时解冻的APP</li>
+</ul>
+<h5 id="8-2-1-4-后台级别："><a href="#8-2-1-4-后台级别：" class="headerlink" title="8-2-1(4). 后台级别："></a><i id="后台级别"></i>8-2-1(4). 后台级别：</h5><ul>
+<li>原名：忽略前台</li>
+</ul>
+<h5 id="8-2-2-4-1-前台服务"><a href="#8-2-2-4-1-前台服务" class="headerlink" title="8-2-2(4&#x2F;1). 前台服务"></a><i id="前台服务"></i>8-2-2(4&#x2F;1). 前台服务</h5><ul>
+<li>默认的冻结方式</li>
+<li>切换应用或回到桌面3s后冻结</li>
+<li>前台服务就是原先的默认模式</li>
+<li>前台服务≠前台窗口</li>
+<li>前台服务包括：可以看见窗口、通知栏、可以听到声音看到视频，只要你能凭借感官感知到这个应用在运行，他都是前台服务</li>
+<li>图标长相（啥也不显示）<br><a href="img/uploadfile/202210/31361665137564.jpg"><img src="/img/uploadfile/202210/31361665137564.jpg"></a></li>
+</ul>
+<h5 id="8-2-2-4-2-可见窗口："><a href="#8-2-2-4-2-可见窗口：" class="headerlink" title="8-2-2(4&#x2F;2). 可见窗口："></a><i id="可见窗口"></i>8-2-2(4&#x2F;2). 可见窗口：</h5><ul>
+<li><p>切换应用或回到桌面3s后冻结</p>
+</li>
+<li><p>可见窗口：范围就很窄了，你看得见的前台窗口(当前界面显示的应用)，系统小窗(反应在oomadj分数上，就是0.1.2的应用)<br><a href="img/uploadfile/202210/295e1665137989.jpg"><img src="/img/uploadfile/202210/295e1665137989.jpg"></a></p>
+</li>
+<li><p>图标长相<br><a href="img/uploadfile/202210/093e1665137564.jpg"><img src="/img/uploadfile/202210/093e1665137564.jpg"></a></p>
+</li>
+</ul>
+<h5 id="8-2-2-4-3-强制冻结："><a href="#8-2-2-4-3-强制冻结：" class="headerlink" title="8-2-2(4&#x2F;3). 强制冻结："></a><i id="强制冻结"></i>8-2-2(4&#x2F;3). 强制冻结：</h5><ul>
+<li>切换应用或回到桌面0s后冻结（俗称秒冻）</li>
+<li>无脑冻结，只要不再当前应用的界面，就直接冻结</li>
+<li>猜测是oomadj除了0，全都冻结</li>
+<li>图标长相<br><a href="img/uploadfile/202210/afa61665137564.jpg"><img src="/img/uploadfile/202210/afa61665137564.jpg"></a></li>
+</ul>
+<h5 id="8-2-1-5-进程设置："><a href="#8-2-1-5-进程设置：" class="headerlink" title="8-2-1(5). 进程设置："></a><i id="进程设置"></i>8-2-1(5). 进程设置：</h5><ul>
+<li>剩下的就是QQ的进程，我们可以对每一个进程进行单独设置</li>
+<li>PS：例如：冻结、杀死、白名单(只是单个进程的白名单，跟APP白名单同理)<br><a href="img/uploadfile/202303/d7ac1677723655.jpg"><img src="/img/uploadfile/202303/d7ac1677723655.jpg"></a></li>
+</ul>
+<h4 id="8-2-2-黑白名单介绍："><a href="#8-2-2-黑白名单介绍：" class="headerlink" title="8-2-2. 黑白名单介绍："></a><i id="黑白名单介绍"></i>8-2-2. 黑白名单介绍：</h4><ul>
+<li>用户应用（QQ为例）</li>
+</ul>
+<ol>
+<li>黑名单<br><a href="img/uploadfile/202210/31361664967021.jpg"><img src="/img/uploadfile/202210/31361664967021.jpg"></a></li>
+<li>白名单<br><a href="img/uploadfile/202210/e12b1664967021.jpg"><img src="/img/uploadfile/202210/e12b1664967021.jpg"></a></li>
+</ol>
+<ul>
+<li>系统应用（谷歌商店为例）</li>
+</ul>
+<ol>
+<li>黑名单<br><a href="img/uploadfile/202210/2e881664967021.jpg"><img src="/img/uploadfile/202210/2e881664967021.jpg"></a></li>
+<li>白名单<br><a href="img/uploadfile/202210/e4d61664967021.jpg"><img src="/img/uploadfile/202210/e4d61664967021.jpg"></a></li>
+</ol>
+<h2 id="9-如何使用NoActive："><a href="#9-如何使用NoActive：" class="headerlink" title="9. 如何使用NoActive："></a><i id="How_to_use_NoActive"></i>9. 如何使用NoActive：</h2><ol>
+<li><p>下载《NoActive》<u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/NoActive/NoActive%E5%AE%98%E6%96%B9%E7%89%88/%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC" title="下载"><strong><code>下载</code></strong></a></u></p>
+</li>
+<li><p>安装NoActive，并在LSPosed中，将NoActive的作用域勾选为《系统框架》<br><a href="img/uploadfile/202209/f6521663559631.jpg"><img src="/img/uploadfile/202209/f6521663559631.jpg"></a></p>
+</li>
+<li><p>在LSPosed勾选玩作用域后，打开NoActive，这时候，就是跳出申请ROOT权限的提示，允许即可<br><a href="img/uploadfile/202209/5f301663725944.jpg"><img src="/img/uploadfile/202209/5f301663725944.jpg"></a><br>(<font color="red">如果没有弹出，请自行前往Magisk授予权限</font>)<br><a href="img/uploadfile/202209/a05e1663725944.jpg"><img src="/img/uploadfile/202209/a05e1663725944.jpg"></a></p>
+</li>
+<li><p>重启手机</p>
+<blockquote>
+<pre><code> - PS:
+</code></pre>
+<ol>
+<li>如果是MIUI系统需在重启前多一步，刷入<u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/NoActive/%E4%BD%9C%E8%80%85%E7%9A%84millet%E9%85%8D%E7%BD%AE%E7%A6%81%E7%94%A8%E6%94%B9%E7%89%883.zip" title="Millet禁用"><strong><code>Millet禁用</code></strong></a></u>，NoActive默认是禁用Millet的，但是my写NoActive的时候是基于米10开发版7月那一版，所以后面版本的MIUI都需要刷入Millet禁用(NoActive的理念就是干掉Millet，所以没有所谓的启用Millet，想启用可以试试f19没有新欢的MiT Lite，<u><a href="mitlite.tf19.co" title="下载官网">下载官网</a></u>)</li>
+<li>如果重启手你设置的配置没有了，请看<u><a href="#Help3" title="帮助3"><strong><code>帮助3</code></strong></a></u>)</li>
+</ol>
+</blockquote>
+</li>
+<li><p>因为NoActive默认第三方APP都是黑名单，所以打开NoActive，并(<strong>强烈建议</strong>)将以下软件添加至白名单<u><a href="#Help0" title="查看帮助14"><strong><code>查看帮助0</code></strong></a>、</u>（不了解黑白名单请看<u><a href="#%E9%BB%91%E7%99%BD%E5%90%8D%E5%8D%95%E4%BB%8B%E7%BB%8D"><strong><code>黑白名单介绍</code></strong></a></u>）</p>
+</li>
+<li><p>下面我们用抖音为例<br>(PS：如果你不清楚你要测试的APP是白名单还是黑名单<u><a href="#%E9%BB%91%E7%99%BD%E5%90%8D%E5%8D%95%E4%BB%8B%E7%BB%8D"><strong><code>黑白名单介绍</code></strong></a></u>)</p>
+</li>
+<li><p>打开抖音，当页面加载完成后回到桌面<br>(PS：<font color="red">目前NoActive默认3s后开始冻结,所以在Scene或者Thanox查看的时候，一定需要在回到桌面后的3s后，查看CPU的占用</font>)</p>
+<blockquote>
+<ol>
+<li>使用Scene<br> a. 打开Scene<br> b. 点击功能，选择进程管理<br> <a href="img/uploadfile/202210/ee831664968988.jpg"><img src="/img/uploadfile/202210/ee831664968988.jpg"></a><br> c. 在搜索框中搜索《<strong>抖音</strong>》，如果抖音的CPU为0%，则说明冻结成功，反之，则冻结失败<br> <a href="img/uploadfile/202210/439a1664968988.jpg"><img src="/img/uploadfile/202210/439a1664968988.jpg"></a></li>
+<li>Thanox<br> a. 打开Thanox<br> b. 点击箭头的地方<br> <a href="img/uploadfile/202210/7c8d1664968988.jpg"><img src="/img/uploadfile/202210/7c8d1664968988.jpg"></a><br> c. 进来后，找到《<strong>抖音</strong>》，如果抖音的CPU为0%，则说明冻结成功，反之，则冻结失败<br> <a href="img/uploadfile/202210/1cf31664968988.jpg"><img src="/img/uploadfile/202210/1cf31664968988.jpg"></a></li>
+</ol>
+</blockquote>
+</li>
+<li><p>如果冻结成功，请继续第9步，如果冻结失败，请<u><a href="#Help7"><strong><code>切换冻结方式</code></strong></a></u></p>
+</li>
+<li><p><font color="Darkgreen">你可以正常使用NoActive了</font><br>PS1：NoActive是不需要保留后台就可以运行的，所以你设置好后，就可以将NoActive划卡了<br>PS2：其中关于“定时冻结”与“轮番解冻”，建议所有非MIUI系统的都开启该选项，开启后，须重启手机<br>PS3：提权模式，如果你将，v1、v2、kill-（19、20）四种冻结方式都使用后，还是冻结失败，你可以开启提权模式再次尝试，该配置须重启<br>(PS3-1：关于<u><a href="#%E6%8F%90%E6%9D%83%E6%A8%A1%E5%BC%8F"><strong><code>提权模式</code></strong></a></u>)<br><a href="img/uploadfile/202209/cdf01663723844.jpg"><img src="/img/uploadfile/202209/cdf01663723844.jpg"></a></p>
+</li>
+</ol>
+<h3 id="帮助0：白名单使用推荐"><a href="#帮助0：白名单使用推荐" class="headerlink" title="帮助0：白名单使用推荐"></a><i id="Help0"></i>帮助0：白名单使用推荐</h3><ol>
+<li><p><code>Magiak</code>(任何版本，包括第三方)</p>
+<blockquote>
+<p>理由：如果不给白名单，大概率会发现，打开Magisk的时候，会导致Magisk卡住，无法操作<br>如果随机包名了请将随机后的Magisk白名单</p>
+</blockquote>
+</li>
+<li><p><code>Thanox/Thanox Pro</code>&#x2F;<code>Scene</code></p>
+<blockquote>
+<p>理由：这两种软件有些功能需要自启动，墓碑可能会导致他启动不起来，而引发功能失效</p>
+</blockquote>
+</li>
+<li><p><code>输入法</code>(第三方非系统)</p>
+<blockquote>
+<p>理由：由于NoActive对于第三方应用都是默认黑名单，而经过我多次测试，输入法如果不给白名单，大概率用着用着，就无法唤醒了</p>
+</blockquote>
+</li>
+<li><p><code>微信</code></p>
+<blockquote>
+<p>由于微信FCM推送，且国内环境原因，FCM很鸡肋，所以就有以下两种方法<br>[推荐] 将微信直接白名单，最保险<br>[不推荐] 将微信主进程和推送进程白名单</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">com.tencent.mm</span><br><span class="line">com.tencent.mm:push</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p><code>QQ</code></p>
+<blockquote>
+<p>对于QQ两种态度</p>
+<ol>
+<li>将QQ白名单，使用QQ自己的推送</li>
+<li>将QQ主进程和推送进程白名单<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">com.tencent.mobileqq</span><br><span class="line">com.tencent.mobileqq:MSF</span><br></pre></td></tr></table></figure></li>
+<li>将QQ黑名单，使用MiPush&#x2F;Hms推送<ul>
+<li>关于MiPush推送，可以查阅<u><a href="https://blog.bzmshang.top/MiPush-Framework_User-Guide" title="MiPush Framework使用指南"><strong><code>MiPush Framework使用指南</code></strong></a></u></li>
+</ul>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p><code>需要自启动的第三方APP</code></p>
+<blockquote>
+<p>Color中最常用的模块<code>Luckytools</code>，由于他有部分功能，例如磁贴，强制刷新率等等需要软件自启动，所以，就需要给予<code>Luckytools</code>白名单<br>其他类似于这种软件的请自行给予白名单</p>
+</blockquote>
+</li>
+<li><p><code>电池优化</code></p>
+<blockquote>
+<p>最经典的就是<code>第三方的MiPush推送服务</code>，由于NoActive接管了电池优化，所以，需要将推送服务白名单<br>其他类似于这种软件的请自行给予白名单</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="帮助1：保后台"><a href="#帮助1：保后台" class="headerlink" title="帮助1：保后台"></a><i id="Help1"></i>帮助1：保后台</h3><ul>
+<li>用前须知</li>
+</ul>
+<ol>
+<li>本方法是跟我我自身使用的<code>一加9pro，Color13</code>所写，可能并不适用所有人</li>
+<li>操作方法<blockquote>
+<ul>
+<li>方法1：</li>
+<li>使用保后台Magisk模块</li>
+</ul>
+<ol>
+<li>下载并安装<code>保后台</code>，该模块内置了<code>Don&#39;t Kill</code>，且针对Color系统，会自动禁用雅典娜<ul>
+<li><u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/%E4%BF%9D%E5%90%8E%E5%8F%B0/Magisk%E7%89%88-%E7%84%95%E6%99%A8" title="焕晨"><strong><code>云盘下载</code></strong></a></u></li>
+</ul>
+</li>
+<li>重启手机</li>
+</ol>
+<ul>
+<li><i id="Help1-方法2"></i>方法2：</li>
+<li>使用Don’t KillXP模块</li>
+<li>仅Color13可以不用管雅典娜了，Color11&#x2F;12雅典娜依然是神一般的存在，请自行精简&#x2F;冻结&#x2F;卸载等</li>
+</ul>
+<ol>
+<li>下载并安装<code>Don&#39;t Kill</code><ul>
+<li><u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/%E4%BF%9D%E5%90%8E%E5%8F%B0/Don.t.Kill" title="云盘下载"><strong><code>云盘下载</code></strong></a></u>、作者：<u><a target="_blank" rel="noopener" href="http://www.coolapk.com/u/1755624" title="海浪逃向岛屿"><strong><code>海浪逃向岛屿</code></strong></a></u></li>
+</ul>
+</li>
+<li>重启手机</li>
+</ol>
+<ul>
+<li>方法3：</li>
+<li>使用超强保后台Magisk模块</li>
+<li>仅Color13可以不用管雅典娜了，Color11&#x2F;12雅典娜依然是神一般的存在，请自行精简&#x2F;冻结&#x2F;卸载等</li>
+</ul>
+<ol start="2">
+<li>下载并安装<code>超强保后台</code><ul>
+<li><u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/%E4%BF%9D%E5%90%8E%E5%8F%B0/Magisk%E7%89%88-%E5%BC%80%E5%BF%83%E5%B0%8F%E9%98%B3%E5%85%89" title="云盘下载"><strong><code>云盘下载</code></strong></a></u>、作者：<u><a target="_blank" rel="noopener" href="http://www.coolapk.com/u/3520868" title="开心小阳光"><strong><code>开心小阳光</code></strong></a></u></li>
+</ul>
+</li>
+<li>重启手机</li>
+</ol>
+<ul>
+<li>方法4：</li>
+<li>使用<code>Thanox</code>的新功能<code>后台保护</code>，将自己需要保后台的应用选上<br>PS1：这个是新版本才有的功能，如果自己当前版本的<code>Thanox</code>没有这个功能，请升级<br><a href="img/uploadfile/202212/165e1672220923.jpg"><img src="/img/uploadfile/202212/165e1672220923.jpg"></a><br>PS2：<code>Thanox</code>的<code>后台保护</code>属于让系统认为该应用在前台运行，会导致墓碑失效，导致在后台冻结失败，所以使用此方法保后台，不建议对大量应用使用</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><p>重要须知</p>
+<blockquote>
+<ol>
+<li>上文中的方法2&#x2F;3&#x2F;4可以自行组合或单一使用，由于每个人手机不一样，所以，最终效果请自行测试</li>
+<li>上文中的方法1不适合给Color13用，因在本机上，杀后台比官方自己还严重，建议，使用方法2<code>Don&#39;t Kill</code></li>
+</ol>
+</blockquote>
+</li>
+<li><p>以上方法可能已经过时，其余方法请自行实验，此部分只是提供思路</p>
+</li>
+<li><p>接下来你配合着NoActive就可以体验水果墓碑的感受</p>
+</li>
+</ul>
+<h3 id="帮助2：NoActive支持到安卓几"><a href="#帮助2：NoActive支持到安卓几" class="headerlink" title="帮助2：NoActive支持到安卓几"></a><i id="Help2"></i>帮助2：NoActive支持到安卓几</h3><ul>
+<li>【NoActive3.0之前的版本】最低支持到安卓10，但体验较好的是12-13</li>
+</ul>
+<h3 id="帮助3：NoActive重启后配置没了"><a href="#帮助3：NoActive重启后配置没了" class="headerlink" title="帮助3：NoActive重启后配置没了"></a><i id="Help3"></i>帮助3：NoActive重启后配置没了</h3><ol>
+<li>在LSPosed里面给NoActive勾选推荐作用域</li>
+<li>给予NoActive ROOT权限</li>
+<li>重启手机，这时候设置好再重启手机就不会丢配置了</li>
+</ol>
+<h3 id="帮助4：冲突"><a href="#帮助4：冲突" class="headerlink" title="帮助4：冲突"></a><i id="Help4"></i>帮助4：冲突</h3><ul>
+<li><p>系统冲突<br>NoActive会屏蔽系统自己的墓碑，所以无需在意系统墓碑的开关<br>PS：此系统墓碑为开发者模式中的暂停应用缓存</p>
+</li>
+<li><p>模块冲突<br>由于NoActive自身就是墓碑模块，所以，只要是墓碑模块，就不能与NoActive共存，<strong>任何</strong></p>
+</li>
+<li><p>作用域冲突<br>暂未发现</p>
+</li>
+<li><p>情景模式冲突<br>依靠Thanox中的情景模式的墓碑，例如早期myflaver写的<u><a target="_blank" rel="noopener" href="https://www.myflv.cn/other/281.html" title="情景模式墓碑"><strong><code>情景模式墓碑</code></strong></a></u></p>
+</li>
+</ul>
+<h3 id="帮助5：Millet在MIUI几出现"><a href="#帮助5：Millet在MIUI几出现" class="headerlink" title="帮助5：Millet在MIUI几出现"></a><i id="Help5"></i>帮助5：Millet在MIUI几出现</h3><ol>
+<li>MIUI13开始支持, 由电量与性能负责运行，分为FreezerV1和V2两个版本</li>
+<li>MIUI13开发版最先支持，有最新特性，而MIUI稳定版在慢慢紧跟(开发板的运行稳定了再下放到稳定版)</li>
+</ol>
+<h3 id="帮助7：切换冻结方式"><a href="#帮助7：切换冻结方式" class="headerlink" title="帮助7：切换冻结方式"></a><i id="Help7"></i>帮助7：切换冻结方式</h3><ol>
+<li>打开NoActive，点击右上角的设置会进入设置界面(如下)<br><a href="img/uploadfile/202209/03171663724011.jpg"><img src="/img/uploadfile/202209/03171663724011.jpg"></a></li>
+<li>更改冻结方式<ul>
+<li>冻结方式，只需右边选择即可<br> <a href="img/uploadfile/202212/e75e1672220923.jpg"><img src="/img/uploadfile/202212/e75e1672220923.jpg"></a></li>
+</ul>
+</li>
+<li>选择好冻结方式后，就可以重启手机，例如我这换成v2模式的<br><font color="Dark green">冻结方式推荐：API &amp; V2 &gt; Kill -19 &amp; Kill -20 </font><br><a href="img/uploadfile/202212/ff6a1672220923.jpg"><img src="/img/uploadfile/202212/ff6a1672220923.jpg"></a></li>
+<li>重启完成后即可<br>(PS：<u><a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8NoActive"><strong><code>如何使用NoActive</code></strong></a></u>的6~9步，讲述的如何确定冻结模式生效)</li>
+</ol>
+<h3 id="帮助8：查看冻结状态-通用"><a href="#帮助8：查看冻结状态-通用" class="headerlink" title="帮助8：查看冻结状态(通用)"></a><i id="Help8"></i>帮助8：查看冻结状态(通用)</h3><ul>
+<li>优先推荐myflavor的软件查看：【<u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/%E5%86%BB%E7%BB%93%E6%9F%A5%E8%AF%A2/NoActive-Monitor" title="下载"><strong><code>下载</code></strong></a></u>】</li>
+</ul>
+<h3 id="帮助15：挂载V2没效果，挂载不上？"><a href="#帮助15：挂载V2没效果，挂载不上？" class="headerlink" title="帮助15：挂载V2没效果，挂载不上？"></a><i id="Help15"></i>帮助15：挂载V2没效果，挂载不上？</h3><ol>
+<li>挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核</li>
+<li>挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核</li>
+<li>挂载V2需要你的内核支持V2才能挂载，如果挂载不了请换内核</li>
+</ol>
+<ul>
+<li>挂载模块：<u><a target="_blank" rel="noopener" href="https://backup.bzmshang.top/Software/Tombstone/Other/cgroup%E6%8C%82%E8%BD%BD" title="挂载模块"><strong><code>下载</code></strong></a></u></li>
+</ul>
+<h3 id="帮助Last：-如何卸载干净NoActive"><a href="#帮助Last：-如何卸载干净NoActive" class="headerlink" title="帮助Last：(如何卸载干净NoActive)"></a><i id="Help-Last"></i>帮助Last：(如何卸载干净NoActive)</h3><ol>
+<li>将NoActive卸载</li>
+<li>删除在&#x2F;data&#x2F;system目录下的NoActive文件夹</li>
+<li>重启手机</li>
+<li>你获得了新生</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blog.bzmshang.top">备份:bzmshang.top</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.bzmshang.top/NoActive_Tombstone.html">https://blog.bzmshang.top/NoActive_Tombstone.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.bzmshang.top" target="_blank">冰梦博客的备份</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/Practical_directives.html" title="实用指令"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">实用指令</div></div></a></div><div class="next-post pull-right"><a href="/Mi-Freeform_Trivia.html" title="米窗小知识"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">米窗小知识</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">备份:bzmshang.top</div><div class="author-info__description">一切如初，常怀于心。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E7%89%88%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">文档版本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-number">1.1.</span> <span class="toc-text">声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">1. 模块介绍：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">1-1. 功能：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%89%88%E6%9C%AC%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">1-2. 版本：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%9C%E7%94%A8%E5%9F%9F%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">2. 作用域说明：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%B3%BB%E7%BB%9F%E6%A1%86%E6%9E%B6%EF%BC%9A"><span class="toc-number">1.3.1.</span> <span class="toc-text">2-1. 系统框架：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E7%94%B5%E9%87%8F%E5%92%8C%E6%80%A7%E8%83%BD-MIUI%E4%B8%93%E5%B1%9E-%EF%BC%9A"><span class="toc-number">1.3.2.</span> <span class="toc-text">2-2. 电量和性能(MIUI专属)：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%86%BB%E7%BB%93%E6%96%B9%E5%BC%8F%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">3. 冻结方式说明：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-number">1.5.</span> <span class="toc-text">4. 配置文件说明：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%8D%B3%E6%97%B6%E7%94%9F%E6%95%88%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">1.5.1.</span> <span class="toc-text">4-1. 即时生效配置：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E9%87%8D%E5%90%AF%E7%94%9F%E6%95%88%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">1.5.2.</span> <span class="toc-text">4-2. 重启生效配置：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-number">1.6.</span> <span class="toc-text">5. 日志文件说明：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E8%AF%A6%E7%BB%86%E6%97%A5%E5%BF%97%EF%BC%9A"><span class="toc-number">1.6.1.</span> <span class="toc-text">5-1. 如何开启详细日志：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%97%A5%E5%BF%97%E7%BA%A7%E5%88%AB%EF%BC%9A"><span class="toc-number">1.6.2.</span> <span class="toc-text">5-2. 日志级别：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-NoActive%E5%B8%B8%E7%94%A8%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-number">1.7.</span> <span class="toc-text">6. NoActive常用关键词说明：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E9%87%8D%E8%BD%BD%EF%BC%9A"><span class="toc-number">1.7.1.</span> <span class="toc-text">6-1. 重载：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E9%97%AA%E5%BC%B9%EF%BC%9A"><span class="toc-number">1.7.2.</span> <span class="toc-text">6-2. 闪弹：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%EF%BC%9A"><span class="toc-number">1.7.3.</span> <span class="toc-text">6-3. 内存泄漏：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E6%8E%89%E5%8D%A1%E7%89%87%EF%BC%9A"><span class="toc-number">1.7.4.</span> <span class="toc-text">6-4. 掉卡片：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%89%80%E9%9C%80%E8%BD%AF%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.7.5.</span> <span class="toc-text">7. 所需软件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%A8%A1%E5%9D%97%E5%86%85%E8%AE%BE%E7%BD%AE%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-number">1.8.</span> <span class="toc-text">8. 模块内设置介绍：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E6%A8%A1%E5%9D%97%E8%AE%BE%E7%BD%AE%EF%BC%9A"><span class="toc-number">1.8.1.</span> <span class="toc-text">8-1. 模块设置：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-1-%E5%86%BB%E7%BB%93%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">8-1-1. 冻结方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-2-%E6%8F%90%E6%9D%83%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">8-1-2. 提权模式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-3-%E5%AE%9A%E6%97%B6%E5%86%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">1.8.1.3.</span> <span class="toc-text">8-1-3. 定时冻结：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-4-%E8%BD%AE%E7%95%AA%E8%A7%A3%E5%86%BB%EF%BC%9A"><span class="toc-number">1.8.1.4.</span> <span class="toc-text">8-1-4. 轮番解冻：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-5-%E8%AF%A6%E7%BB%86%E6%97%A5%E5%BF%97%EF%BC%9A"><span class="toc-number">1.8.1.5.</span> <span class="toc-text">8-1-5. 详细日志：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-6-%E5%BC%80%E5%8F%91%E8%80%85%EF%BC%9A"><span class="toc-number">1.8.1.6.</span> <span class="toc-text">8-1-6. 开发者：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-7-%E4%BA%A4%E6%B5%81%E7%BE%A4%EF%BC%9A"><span class="toc-number">1.8.1.7.</span> <span class="toc-text">8-1-7. 交流群：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-8-%E6%89%93%E8%B5%8F%EF%BC%9A"><span class="toc-number">1.8.1.8.</span> <span class="toc-text">8-1-8. 打赏：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-APP%E8%AE%BE%E7%BD%AE-QQ%E4%B8%BA%E4%BE%8B-%EF%BC%9A"><span class="toc-number">1.8.2.</span> <span class="toc-text">8-2. APP设置(QQ为例)：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-1-APP%E4%B8%BB%E9%A1%B5%EF%BC%9A"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">8-2-1. APP主页：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-1-1-%E5%BA%94%E7%94%A8%E7%99%BD%E5%90%8D%E5%8D%95%EF%BC%9A"><span class="toc-number">1.8.2.1.1.</span> <span class="toc-text">8-2-1(1). 应用白名单：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-1-1-1-%E7%94%B5%E6%B1%A0%E4%BC%98%E5%8C%96%EF%BC%9A"><span class="toc-number">1.8.2.1.2.</span> <span class="toc-text">8-2-1(1&#x2F;1). 电池优化：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-1-2-%E4%BF%9D%E6%8C%81%E8%BF%9E%E6%8E%A5%EF%BC%9A"><span class="toc-number">1.8.2.1.3.</span> <span class="toc-text">8-2-1(2). 保持连接：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-1-3-%E5%AE%9A%E6%97%B6%E8%A7%A3%E5%86%BB%EF%BC%9A"><span class="toc-number">1.8.2.1.4.</span> <span class="toc-text">8-2-1(3). 定时解冻：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-1-4-%E5%90%8E%E5%8F%B0%E7%BA%A7%E5%88%AB%EF%BC%9A"><span class="toc-number">1.8.2.1.5.</span> <span class="toc-text">8-2-1(4). 后台级别：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-2-4-1-%E5%89%8D%E5%8F%B0%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.8.2.1.6.</span> <span class="toc-text">8-2-2(4&#x2F;1). 前台服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-2-4-2-%E5%8F%AF%E8%A7%81%E7%AA%97%E5%8F%A3%EF%BC%9A"><span class="toc-number">1.8.2.1.7.</span> <span class="toc-text">8-2-2(4&#x2F;2). 可见窗口：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-2-4-3-%E5%BC%BA%E5%88%B6%E5%86%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">1.8.2.1.8.</span> <span class="toc-text">8-2-2(4&#x2F;3). 强制冻结：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-1-5-%E8%BF%9B%E7%A8%8B%E8%AE%BE%E7%BD%AE%EF%BC%9A"><span class="toc-number">1.8.2.1.9.</span> <span class="toc-text">8-2-1(5). 进程设置：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-2-%E9%BB%91%E7%99%BD%E5%90%8D%E5%8D%95%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">8-2-2. 黑白名单介绍：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8NoActive%EF%BC%9A"><span class="toc-number">1.9.</span> <span class="toc-text">9. 如何使用NoActive：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A90%EF%BC%9A%E7%99%BD%E5%90%8D%E5%8D%95%E4%BD%BF%E7%94%A8%E6%8E%A8%E8%8D%90"><span class="toc-number">1.9.1.</span> <span class="toc-text">帮助0：白名单使用推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A91%EF%BC%9A%E4%BF%9D%E5%90%8E%E5%8F%B0"><span class="toc-number">1.9.2.</span> <span class="toc-text">帮助1：保后台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A92%EF%BC%9ANoActive%E6%94%AF%E6%8C%81%E5%88%B0%E5%AE%89%E5%8D%93%E5%87%A0"><span class="toc-number">1.9.3.</span> <span class="toc-text">帮助2：NoActive支持到安卓几</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A93%EF%BC%9ANoActive%E9%87%8D%E5%90%AF%E5%90%8E%E9%85%8D%E7%BD%AE%E6%B2%A1%E4%BA%86"><span class="toc-number">1.9.4.</span> <span class="toc-text">帮助3：NoActive重启后配置没了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A94%EF%BC%9A%E5%86%B2%E7%AA%81"><span class="toc-number">1.9.5.</span> <span class="toc-text">帮助4：冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A95%EF%BC%9AMillet%E5%9C%A8MIUI%E5%87%A0%E5%87%BA%E7%8E%B0"><span class="toc-number">1.9.6.</span> <span class="toc-text">帮助5：Millet在MIUI几出现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A97%EF%BC%9A%E5%88%87%E6%8D%A2%E5%86%BB%E7%BB%93%E6%96%B9%E5%BC%8F"><span class="toc-number">1.9.7.</span> <span class="toc-text">帮助7：切换冻结方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A98%EF%BC%9A%E6%9F%A5%E7%9C%8B%E5%86%BB%E7%BB%93%E7%8A%B6%E6%80%81-%E9%80%9A%E7%94%A8"><span class="toc-number">1.9.8.</span> <span class="toc-text">帮助8：查看冻结状态(通用)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A915%EF%BC%9A%E6%8C%82%E8%BD%BDV2%E6%B2%A1%E6%95%88%E6%9E%9C%EF%BC%8C%E6%8C%82%E8%BD%BD%E4%B8%8D%E4%B8%8A%EF%BC%9F"><span class="toc-number">1.9.9.</span> <span class="toc-text">帮助15：挂载V2没效果，挂载不上？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9Last%EF%BC%9A-%E5%A6%82%E4%BD%95%E5%8D%B8%E8%BD%BD%E5%B9%B2%E5%87%80NoActive"><span class="toc-number">1.9.10.</span> <span class="toc-text">帮助Last：(如何卸载干净NoActive)</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Noactive-starrhymelodge.html" title="最好用的安卓毕业第三方墓碑-Noactive的完整教程">最好用的安卓毕业第三方墓碑-Noactive的完整教程</a><time datetime="2023-08-21T16:00:00.000Z" title="发表于 2023-08-22 00:00:00">2023-08-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Mi-Freeform-Branches_Collecting.html" title="米窗分支版收集">米窗分支版收集</a><time datetime="2023-03-26T16:00:00.000Z" title="发表于 2023-03-27 00:00:00">2023-03-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/MiPush-Framework_User-Guide.html" title="MiPush Framework使用指南">MiPush Framework使用指南</a><time datetime="2023-02-02T16:00:00.000Z" title="发表于 2023-02-03 00:00:00">2023-02-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/DataBackup_Cloud.html" title="数据备份-云端备份">数据备份-云端备份</a><time datetime="2023-01-28T16:00:00.000Z" title="发表于 2023-01-29 00:00:00">2023-01-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Mi-Freeform_Tutorial.html" title="全局小窗软件-米窗">全局小窗软件-米窗</a><time datetime="2022-11-23T16:00:00.000Z" title="发表于 2022-11-24 00:00:00">2022-11-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 备份:bzmshang.top</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
